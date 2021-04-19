@@ -1,5 +1,5 @@
 header {
-  background: url('../images/header_bg.svg') no-repeat 60% center/cover;
+  background: url('../images/header_bg--red.svg') no-repeat 60% center/cover;
   background-size: 150%;
   background-position: bottom;
   min-height: 100vh;
@@ -74,18 +74,11 @@ header {
 
   .hero {
     display: flex;
-    margin: auto;
-    padding: 100px 20px;
-    max-width: 1400px;
-    width: 100%;
     align-items: center;
+    @include container(100px);
 
     .hero__content {
       width: 50%;
-
-      p {
-        font-weight: 500;
-      }
 
       .button {
         display: inline-block;
@@ -106,9 +99,19 @@ header {
   }
 }
 
-@include maxWidth($bp-mobile) {
-}
-@include maxWidth($bp-mobile) {
-}
-@include maxWidth($bp-mobile) {
+@include maxWidth(850px) {
+  header {
+    .hero {
+      flex-direction: column-reverse;
+      @include container(0px);
+
+      .hero__content {
+        width: 100%;
+      }
+
+      .hero__img {
+        width: 80%;
+      }
+    }
+  }
 }
