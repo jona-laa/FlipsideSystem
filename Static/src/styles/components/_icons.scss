@@ -1,0 +1,23 @@
+i {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+.stars i {
+  font-size: 20px;
+  color: #f2d410;
+}
+
+.read-more {
+  span {
+    font-size: 1.6rem;
+  }
+
+  i {
+    font-size: 5rem;
+  }
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}

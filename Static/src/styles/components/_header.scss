@@ -1,0 +1,114 @@
+header {
+  background: url('../images/header_bg.svg') no-repeat 60% center/cover;
+  background-size: 150%;
+  background-position: bottom;
+  min-height: 100vh;
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include container(40px);
+
+    @include maxWidth(1250px) {
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    @include maxWidth(850px) {
+      text-align: right;
+      width: 100%;
+      z-index: 100;
+    }
+
+    #nav__menu-toggle {
+      display: none;
+
+      @include maxWidth(850px) {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 30px;
+      }
+    }
+
+    .nav__menu {
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include minWidth(851px) {
+        display: flex !important;
+      }
+
+      @include maxWidth(850px) {
+        display: none;
+        position: absolute;
+        top: 20px;
+        right: 0;
+        width: 100%;
+        z-index: 100;
+        margin-top: 50px;
+        background-color: transparent;
+      }
+    }
+
+    .nav__logo {
+      max-width: 300px;
+      padding-right: 20px;
+    }
+
+    .nav__link {
+      display: inline;
+
+      @include maxWidth(850px) {
+        display: block;
+        line-height: 5.8rem;
+        padding-right: 20px;
+      }
+    }
+  }
+
+  .hero {
+    display: flex;
+    margin: auto;
+    padding: 100px 20px;
+    max-width: 1400px;
+    width: 100%;
+    align-items: center;
+
+    .hero__content {
+      width: 50%;
+
+      p {
+        font-weight: 500;
+      }
+
+      .button {
+        display: inline-block;
+        margin: 20px 0;
+      }
+
+      .stars {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+      }
+    }
+
+    .hero__img {
+      width: 50%;
+      height: auto;
+    }
+  }
+}
+
+@include maxWidth($bp-mobile) {
+}
+@include maxWidth($bp-mobile) {
+}
+@include maxWidth($bp-mobile) {
+}

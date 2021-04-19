@@ -1,0 +1,223 @@
+a {
+  text-decoration: none;
+  font-size: 1.8rem;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: $SemiBold;
+  line-height: 7rem;
+  margin-bottom: 100px;
+}
+
+h2 {
+  font-weight: $SemiBold;
+  font-size: 4.6rem;
+  line-height: 5.6rem;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 3.6rem;
+  font-weight: $SemiBold;
+  line-height: 4.2rem;
+}
+
+h4 {
+  font-size: 2.8rem;
+  font-weight: $SemiBold;
+}
+
+.sup-h {
+  font-size: 2.2rem;
+  font-weight: $Meduim;
+  color: $lightgray;
+  line-height: 3rem;
+}
+
+.sub-h {
+  font-size: 2rem;
+  font-weight: $Regular;
+  color: $lightgray;
+  line-height: 2.8rem;
+}
+
+p,
+li {
+  color: $darkgray;
+  font-size: 1.8rem;
+  font-weight: $Lighter;
+  line-height: 3rem;
+  margin: 10px 0;
+}
+
+.gray {
+  color: $darkgray;
+}
+
+.highlighted {
+  font-weight: $SemiBold;
+}
+
+.small {
+  font-size: 1.6rem;
+}
+
+.form__label {
+  font-size: 1.6rem;
+  color: $lightgray;
+  font-weight: $SemiBold;
+}
+
+.form__label--small {
+  font-size: 1.4rem;
+  font-weight: $SemiBold;
+}
+
+.testi__text {
+  color: $darkgray;
+  font-size: 1.8rem;
+  font-style: italic;
+  line-height: 2.8rem;
+}
+
+.testi__name {
+  color: $blue;
+  font-size: 2rem;
+  font-weight: $SemiBold;
+}
+
+.testi__title {
+  color: $black;
+  font-size: 1.5rem;
+  font-weight: $Regular;
+}
+
+.team__title {
+  font-size: 1.5rem;
+  font-weight: $SemiBold;
+}
+
+.team__name {
+  font-size: 2rem;
+  font-weight: $SemiBold;
+}
+
+.nav__link {
+  color: $lightgray;
+  font-size: 2rem;
+  font-weight: $Regular;
+}
+
+.nav__link--current {
+  color: $black;
+  font-weight: $SemiBold;
+}
+
+.prod-nav__link {
+  color: $lightgray;
+  font-size: 2.2rem;
+  font-weight: $Regular;
+}
+
+.prod-nav__link--current {
+  font-weight: $SemiBold;
+  color: $black;
+}
+
+.faq__heading {
+  font-size: 2rem;
+  font-weight: $SemiBold;
+}
+
+.pitch--blue {
+  font-size: 2.6rem;
+  color: $blue;
+  font-weight: $Bold;
+  line-height: 3rem;
+}
+
+.try-us {
+  font-size: 2.2rem;
+  color: $orange;
+  font-weight: $Regular;
+}
+
+.copy {
+  color: $lightgray;
+  font-size: 1.8rem;
+}
+
+.footer__heading {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.footer__text {
+  font-size: 1.6rem;
+}
+
+.footer__copy {
+  color: $lightgray;
+  font-size: 1.4rem;
+}
+
+.btn {
+  color: $white;
+  font-size: 18px;
+  font-weight: $Bold;
+}
+
+@include maxWidth($bp-mobile) {
+  h1 {
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+
+  h2 {
+    font-size: 2.6rem;
+    line-height: 3.6rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+  }
+
+  .sup-h {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  .sub-h {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+
+  .testi__name {
+    font-size: 1.6rem;
+  }
+
+  .testi__text {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+
+  .testi__title {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    font-size: 1.6rem;
+  }
+
+  .faq__heading {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}
