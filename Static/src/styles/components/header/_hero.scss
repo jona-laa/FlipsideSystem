@@ -1,7 +1,7 @@
 .hero.row-duo {
   display: flex;
   align-items: center;
-  @include container(200px);
+  @include container(200px 20px);
   padding-bottom: 0px;
 
   .hero__content {
@@ -25,7 +25,7 @@
   }
 }
 
-@include maxWidth(950px) {
+@include maxWidth($bp-tablet) {
   header {
     .hero.row-duo {
       flex-direction: column-reverse;
