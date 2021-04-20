@@ -41,12 +41,67 @@
 .grid-3x {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  @include container(125px);
 
   .grid-3x__item {
-    flex: 0 32%;
-    height: 100px;
-    margin-bottom: 2%;
+    border: 1px solid #edf1f8;
+    padding: 30px 20px;
+    width: 33%;
+
+    @include minWidth(1081px) {
+      &:nth-of-type(1n) {
+        border-left: none;
+      }
+
+      &:nth-of-type(3n) {
+        border-right: none;
+      }
+
+      &:nth-of-type(1),
+      &:nth-of-type(2),
+      &:nth-of-type(3) {
+        border-top: none;
+      }
+
+      &:nth-last-of-type(1),
+      &:nth-last-of-type(2),
+      &:nth-last-of-type(3) {
+        border-bottom: none;
+      }
+    }
+
+    @include maxWidth(1080px) {
+      width: 50%;
+
+      &:nth-of-type(1n) {
+        border-left: none;
+      }
+
+      &:nth-of-type(2n) {
+        border-right: none;
+      }
+
+      &:nth-of-type(1),
+      &:nth-of-type(2) {
+        border-top: none;
+      }
+
+      &:last-of-type() {
+        border-bottom: none;
+      }
+    }
+
+    @include maxWidth(700px) {
+      width: 100%;
+      border-left: none;
+      border-right: none;
+    }
+
+    img {
+      height: 55px;
+      width: auto;
+    }
   }
 }
 
