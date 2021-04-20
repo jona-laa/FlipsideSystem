@@ -3,16 +3,14 @@
 @import 'base/base';
 @import 'base/typography';
 
-@import 'components/header';
+// Blocks & Elements
+@import 'components/header/header';
+@import 'components/header/hero';
+@import 'components/footer';
 @import 'components/buttons';
 @import 'components/icons';
-// @import 'components/header/hero';
 // @import 'components/header/main-menu';
 // @import 'components/about';
-// @import 'components/skillset';
-// @import 'components/resume';
-// @import 'components/portfolio';
 // @import 'components/forms';
-@import 'components/footer';
 
 @import 'layout/layout';

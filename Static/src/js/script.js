@@ -1,68 +1,37 @@
-const nav = document.querySelector('.nav');
-const mainMenu = document.querySelector('.nav__menu');
-const mainMenuToggle = document.querySelector('#nav__menu-toggle');
+/* Changes background color of elements depending on window.pageYOffset - Used onscroll
+ * @param   {number}    offset     Negative offset on window.screen.height
+ * @param   {string}    col1       Color if scrolled > (screen height - offset)
+ * @param   {string}    col2       Color if scrolled < (screen height - offset)
+ * @param   {DOM Eleme} elements   Element/elements to alter
+*/
+const alterBgColor = (offset, col1, col2, ...elements) => elements.forEach(element => window.pageYOffset > window.screen.height / offset ? element.style.background = col1 : element.style.background = col2);
 
 
 
-// Toggle mobile menu
-$(mainMenuToggle).click(function () {
-  if (mainMenu.getAttribute('aria-hidden') == 'false') {
-    mainMenu.setAttribute('aria-hidden', 'true');
-    mainMenuToggle.setAttribute('aria-expanded', 'false');
-  } else {
-    mainMenu.setAttribute('aria-hidden', 'false');
-    mainMenuToggle.setAttribute('aria-expanded', 'true');
-  }
-  $(mainMenu).toggle(200);
-
-  // $(mainMenu).slideToggle(200, function () {
-  // });
-});
+/* Toggle element from top or bottom
+ * @param   {DOM element}   element     Target DOM element to toggle
+ * @param   {string}        position    'top' or 'bottom'
+ * @param   {string}        offset      Offset in e.g. pixels, rem, em, etc.
+*/
+const elementToggle = (element, position, offset) => position === 'top' ? element.style.top = offset : element.style.bottom = offset;
 
 
 
-// Correct WAI-ARIA on resize
-window.onresize = () => {
-  if (window.innerWidth <= 950) {
-    mainMenu.style.display = 'none';
-    mainMenu.setAttribute('aria-hidden', 'true');
-    mainMenuToggle.setAttribute('aria-hidden', 'false');
-    mainMenuToggle.setAttribute('aria-expanded', 'false');
-  } else {
-    mainMenu.setAttribute('aria-hidden', 'false');
-    mainMenuToggle.setAttribute('aria-hidden', 'true');
-    mainMenuToggle.setAttribute('aria-expanded', 'true');
-  }
-}
+/* Change display attribute of element
+ * @param   {DOM element}   element     Target DOM element
+ * @param   {string}        value       Display attribute value, e.g. 'none', 'block', etc.
+*/
+const elementDisplay = (element, value) => element.style.display = value;
 
 
 
-// Toggle mobile menu
-$('#main-menu-toggle').click(function () {
-  if (mainMenu.getAttribute('aria-hidden') == 'false') {
-    mainMenu.setAttribute('aria-hidden', 'true');
-    mainMenuToggle.setAttribute('aria-expanded', 'false');
-  } else {
-    mainMenu.setAttribute('aria-hidden', 'false');
-    mainMenuToggle.setAttribute('aria-expanded', 'true');
-  }
-
-  $('.main-menu ul').slideToggle(200, function () {
-  });
-});
+// Hide "to top button"
+const hideToTopBtn = () => window.pageYOffset > window.screen.height ? elementToggle(toTopBtn, 'bottom', '20px') : elementToggle(toTopBtn, 'bottom', '-50px');
 
 
 
-//Smooth scrolling
-$('.arrow-link').on('click', function (e) {
-  if (this.hash !== '') {
-    e.preventDefault();
-
-    const hash = this.hash;
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top,
-    },
-      800
-    );
-  }
-});
+window.onscroll = () => {
+  hideMenu();
+  hideToTopBtn();
+  alterBgColor(5, 'rgba(255, 255, 255, 0.95)', 'transparent', nav);
+};

@@ -115,6 +115,7 @@ li {
 }
 
 .nav__link--current {
+  font-size: 2rem;
   color: $black;
   font-weight: $SemiBold;
 }
@@ -148,7 +149,7 @@ li {
   font-weight: $Regular;
 }
 
-.read-more {
+.read-more span {
   font-size: 1.6rem;
   color: $lightgray;
 }
@@ -175,7 +176,7 @@ li {
 .btn {
   color: $white;
   font-size: 18px;
-  font-weight: $Bold;
+  font-weight: $SemiBold;
 }
 
 @include maxWidth($bp-mobile) {
