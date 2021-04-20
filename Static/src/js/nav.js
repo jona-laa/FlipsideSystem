@@ -33,7 +33,7 @@ const hideMenu = () => {
         mainMenuToggle.setAttribute('aria-hidden', 'false');
       }
     } else {
-      elementToggle(nav, 'top', '-150px');
+      elementToggle(nav, 'top', '-180px');
       nav.setAttribute('aria-hidden', 'true');
       elementDisplay(mainMenu, 'none');
       mainMenuToggle.setAttribute('aria-hidden', 'true');

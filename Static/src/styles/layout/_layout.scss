@@ -20,7 +20,7 @@
 }
 
 .read-more {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .container {
@@ -31,6 +31,13 @@
 .row-duo {
   display: flex;
   justify-content: space-around;
+  width: 100%;
+  margin-bottom: 100px;
+  align-items: center;
+
+  &:last-of-type() {
+    margin-bottom: 0;
+  }
 
   .article__pitch {
     width: 40%;
@@ -96,12 +103,16 @@
   justify-content: center;
   @include container(125px);
 
+  @include maxWidth($bp-tablet) {
+    max-width: 650px;
+  }
+
   .grid-3x__item {
     border: 1px solid #edf1f8;
     padding: 30px 20px;
     width: 33%;
 
-    @include minWidth(1081px) {
+    @include minWidth($bp-tablet + 1) {
       &:nth-of-type(1n) {
         border-left: none;
       }
@@ -123,7 +134,7 @@
       }
     }
 
-    @include maxWidth(1080px) {
+    @include maxWidth($bp-tablet) {
       width: 50%;
 
       &:nth-of-type(1n) {
@@ -144,7 +155,7 @@
       }
     }
 
-    @include maxWidth(700px) {
+    @include maxWidth($bp-mobile) {
       width: 100%;
       border-left: none;
       border-right: none;
@@ -157,24 +168,43 @@
   }
 }
 
-@include maxWidth(950px) {
-  .row-duo.reverse {
+@include maxWidth($bp-tablet) {
+  .container {
+    @include container(100px);
+  }
+
+  .--reverse {
     flex-direction: column-reverse;
   }
 
   .row-duo {
     flex-direction: column;
-    @include container(100px 30px);
+    justify-content: center;
+
+    .article__text {
+      .btn {
+        margin-left: 50%;
+        transform: translate(-50%);
+        width: 250px;
+        text-align: center;
+      }
+    }
 
     .article__pitch {
       width: 100%;
+      max-width: 650px;
       margin-top: 50px;
 
       .article__pitch-item {
         width: 48%;
         margin: 1%;
         padding: 20px;
+        text-align: center;
       }
+    }
+
+    .article__spacer {
+      padding: 10px;
     }
 
     .article__figure {
@@ -183,18 +213,21 @@
       margin: auto;
     }
 
-    .spacer {
-      padding: 10px;
-    }
-
     .article__text {
       width: 100%;
+      max-width: 650px;
     }
   }
 }
 
-@include maxWidth(600px) {
+@include maxWidth($bp-mobile) {
+  .container {
+    @include container(75px);
+  }
+
   .row-duo {
+    margin-bottom: 75px;
+
     .article__pitch {
       .article__pitch-item {
         img {

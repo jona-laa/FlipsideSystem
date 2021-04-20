@@ -49,7 +49,7 @@ h4 {
 
 p,
 li {
-  color: $darkgray;
+  color: $black;
   font-size: 1.8rem;
   font-weight: $Regular;
   line-height: 3rem;
@@ -210,6 +210,12 @@ li {
     line-height: 3.4rem;
   }
 
+  p,
+  li {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+  }
+
   .sup-h {
     font-size: 1.8rem;
     line-height: 2.4rem;
@@ -240,5 +246,9 @@ li {
   .faq__heading {
     font-size: 1.6rem;
     line-height: 2.4rem;
+  }
+
+  .pitch--blue {
+    font-size: 2rem;
   }
 }
