@@ -1,3 +1,20 @@
+/* Modifiers */
+.--bg-blue-figure {
+  background: url('../images/section_bg--blue.svg') no-repeat 50% top/cover;
+}
+
+.--bg-pink {
+  background: rgba(235, 98, 63, 0.1);
+}
+
+.--reverse {
+  flex-direction: row-reverse;
+}
+
+.--align-center {
+  align-items: center;
+}
+
 .stars {
   padding-top: 30px;
 }
@@ -6,22 +23,14 @@
   margin-top: 50px;
 }
 
-.bg-figure--blue {
-  background: url('../images/section_bg--blue.svg') no-repeat 50% top/cover;
+.container {
+  @include container(125px);
 }
 
-.bg--pink {
-  background: rgba(235, 98, 63, 0.1);
-}
-
-.reverse {
-  flex-direction: row-reverse;
-}
-
+/* Article row 50% text/50% figure */
 .row-duo {
   display: flex;
   justify-content: space-around;
-  @include container(125px);
 
   .article__pitch {
     width: 40%;
@@ -53,7 +62,7 @@
     width: 50%;
   }
 
-  .spacer {
+  .article__spacer {
     padding: 20px;
   }
 
@@ -80,6 +89,7 @@
   }
 }
 
+/* 3x3 Grid - Benefits */
 .grid-3x {
   display: flex;
   flex-wrap: wrap;
