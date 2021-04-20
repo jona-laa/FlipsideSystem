@@ -137,10 +137,16 @@ li {
   font-weight: $SemiBold;
 }
 
+.article__pitch-item p {
+  font-size: 1.6rem;
+  font-weight: $SemiBold;
+  line-height: 2rem;
+}
+
 .pitch--blue {
   font-size: 2.6rem;
   color: $blue;
-  font-weight: $Bold;
+  font-weight: $SemiBold;
   line-height: 3rem;
 }
 
@@ -178,6 +184,14 @@ li {
   color: $white;
   font-size: 18px;
   font-weight: $SemiBold;
+}
+
+.--semi-bold {
+  font-weight: $SemiBold;
+}
+
+.--bold {
+  font-weight: $Bold;
 }
 
 @include maxWidth($bp-mobile) {
