@@ -9,6 +9,14 @@
   justify-content: space-between;
   @include container(100px);
 
+  @include maxWidth($bp-tablet) {
+    @include container(100px, 30px);
+  }
+
+  @include maxWidth($bp-mobile) {
+    @include container(100px, 20px);
+  }
+
   .footer__logo {
     max-width: 200px;
   }
