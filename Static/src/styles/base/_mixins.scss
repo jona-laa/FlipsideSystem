@@ -18,9 +18,13 @@
   flex-wrap: $wrap;
 }
 
-@mixin container($padding: 125px, $padding-side: 20px) {
+@mixin container(
+  $padding: 125px,
+  $padding-side: 20px,
+  $padding-bottom: $padding
+) {
   max-width: 1400px;
-  padding: $padding $padding-side;
+  padding: $padding $padding-side $padding-bottom;
   margin: auto;
   width: 100%;
 }

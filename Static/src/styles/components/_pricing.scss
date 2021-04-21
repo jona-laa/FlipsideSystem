@@ -1,0 +1,91 @@
+.pricing .row-trio {
+  @include maxWidth($bp-tablet) {
+    justify-content: space-around;
+  }
+
+  .pricing__card {
+    width: 32%;
+    max-width: 370px;
+    min-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 50px rgba(37, 37, 37, 0.1),
+      0px 1px 10px rgba(37, 37, 37, 0.1);
+
+    @include maxWidth($bp-tablet) {
+      width: 47%;
+      margin-bottom: 50px;
+
+      &:last-of-type() {
+        margin-bottom: 0;
+      }
+    }
+
+    @include maxWidth($bp-mobile) {
+      width: 100%;
+    }
+
+    .pricing__card-top {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 30px 30px 10px;
+
+      .pricing__card-price {
+        text-align: center;
+      }
+    }
+    .pricing__card-bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 30px 50px;
+
+      .pricing__card-select {
+        padding: 10px;
+        margin-bottom: 30px;
+        width: 100%;
+      }
+
+      .btn {
+        text-align: center;
+        max-width: 200px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Card border modifiers
+.--border-red {
+  border: 1px solid $texts-red;
+  border-top: 5px solid $texts-red;
+  border-bottom: none;
+}
+
+.--border-blue {
+  border: 1px solid $photos-blue;
+  border-top: 5px solid $photos-blue;
+  border-bottom: none;
+}
+
+.--border-yellow {
+  border: 1px solid $reviews-yellow;
+  border-top: 5px solid $reviews-yellow;
+  border-bottom: none;
+}
+
+.help .container {
+  @include container(0px, 20px, 125px);
+
+  .article__text {
+    @include maxWidth($bp-mobile) {
+      max-width: 370px;
+    }
+  }
+
+  .article__figure {
+    max-width: 400px;
+
+    @include maxWidth($bp-mobile) {
+      max-width: 370px;
+    }
+  }
+}

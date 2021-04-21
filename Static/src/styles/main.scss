@@ -3,9 +3,12 @@
 @import 'base/base';
 @import 'base/typography';
 
+// Sections
+@import 'components/header/hero';
+@import 'components/pricing';
+
 // Blocks & Elements
 @import 'components/header/header';
-@import 'components/header/hero';
 @import 'components/footer';
 @import 'components/buttons';
 @import 'components/icons';

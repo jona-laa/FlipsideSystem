@@ -12,10 +12,14 @@
 }
 
 .container {
-  @include container(125px);
+  @include container(125px, 20px);
 }
 
-/* Article row 50% text/50% figure */
+.--reverse {
+  flex-direction: row-reverse;
+}
+
+/* ROW DUO - Article with 50% text/50% figure/other */
 .row-duo {
   display: flex;
   justify-content: space-around;
@@ -23,7 +27,7 @@
   margin-bottom: 100px;
   align-items: center;
 
-  &:nth-of-type(odd) {
+  &:nth-of-type(even) {
     flex-direction: row-reverse;
   }
 
@@ -41,6 +45,7 @@
       background: $white;
       border-radius: 5px;
       width: 46%;
+      max-width: 200px;
       margin: 2%;
       padding: 30px 20px;
       z-index: 0;
@@ -81,27 +86,25 @@
     display: flex;
     justify-content: space-between;
 
-    a {
-      align-self: flex-end;
+    .btn {
+      align-self: flex-start;
       margin-bottom: 10px;
     }
   }
 }
 
-/* 3x3 Grid - Benefits */
+// ROW TRIO
+.row-trio {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+// 3x3 GRID - Used for section Benefits
 .grid-3x {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  @include container(125px);
-
-  @include maxWidth($bp-tablet) {
-    @include container(100px);
-  }
-
-  @include maxWidth($bp-mobile) {
-    @include container(75px);
-  }
 
   .grid-3x__item {
     border: 1px solid #edf1f8;
@@ -166,12 +169,16 @@
 
 @include maxWidth($bp-tablet) {
   .container {
-    @include container(100px);
+    @include container(100px, 30px);
   }
 
   .row-duo {
-    flex-direction: column !important;
-    justify-content: center;
+    flex-direction: column;
+    // justify-content: center;
+
+    &:nth-of-type(even) {
+      flex-direction: column;
+    }
 
     .article__text {
       .article__row {
@@ -189,6 +196,7 @@
         margin: 1%;
         padding: 20px;
         text-align: center;
+        max-width: none;
       }
     }
 
@@ -210,7 +218,7 @@
 
 @include maxWidth($bp-mobile) {
   .container {
-    @include container(75px);
+    @include container(75px, 20px);
   }
 
   .row-duo {
@@ -227,9 +235,13 @@
     .article__row {
       flex-direction: column;
 
-      a {
-        margin-top: 20px;
+      .btn {
       }
+    }
+
+    .btn {
+      margin-top: 20px;
+      min-width: 200px;
     }
   }
 }

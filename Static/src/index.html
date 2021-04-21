@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flipside® | World Class customer engagement for eCommerce</title>
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="icon" href="https://flipsidesystem.com/wp-content/uploads/cropped-favicon-32x32.png" sizes="32x32">
+  <link rel="icon" href="favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="./images/touch-icon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   <meta name="description"
@@ -32,7 +32,7 @@
         </a>
         <ul class="nav__menu">
           <li><a href="#" class="nav__link--current">Home</a></li>
-          <li><a href="#" class="nav__link">Pricing</a></li>
+          <li><a href="pages/pricing.html" class="nav__link">Pricing</a></li>
           <li><a href="#" class="nav__link">Products</a></li>
           <li><a href="#" class="nav__link">Customers</a></li>
           <li><a href="#" class="nav__link">Contact</a></li>
@@ -40,8 +40,11 @@
         </ul>
       </div>
     </nav>
-    <div class="hero row-duo">
-      <img class="hero__img" src="./images/header_img.png" alt="">
+
+    <div class="hero row-duo --reverse">
+      <figure class="article__figure">
+        <img src="./images/header_img.png" alt="">
+      </figure>
       <div class="hero__content">
         <span class="sup-h">Automation with a heart</span>
         <h2>Customer engagement Built for E-Commerce</h2>
@@ -101,85 +104,89 @@
       </div>
     </section>
 
-    <section id="benefits" class="grid-3x">
-      <div class="benefits__card grid-3x__item">
-        <img src="./images/icons/benefits/image-gallery.svg" alt="">
-        <h3 class="benefits__card-heading">Picture</h3>
-        <p>
-          Allow audience to upload their pictures directly to your relevant products & services.
-        </p>
-      </div>
+    <section class="benefits" id="benefits">
+      <div class="container">
+        <div class="grid-3x">
+          <div class="benefits__card grid-3x__item">
+            <img src="./images/icons/benefits/image-gallery.svg" alt="">
+            <h3 class="benefits__card-heading">Picture</h3>
+            <p>
+              Allow audience to upload their pictures directly to your relevant products & services.
+            </p>
+          </div>
 
-      <div class="benefits__card grid-3x__item">
-        <img src="./images/icons/benefits/review.svg" alt="">
-        <h3 class="benefits__card-heading">Reviews</h3>
-        <p>
-          Get Your audience trust by offering them to review products & services.
-        </p>
-      </div>
+          <div class="benefits__card grid-3x__item">
+            <img src="./images/icons/benefits/review.svg" alt="">
+            <h3 class="benefits__card-heading">Reviews</h3>
+            <p>
+              Get Your audience trust by offering them to review products & services.
+            </p>
+          </div>
 
-      <div class="benefits__card grid-3x__item">
-        <img src="./images/icons/benefits/text-info.svg" alt="">
-        <h3 class="benefits__card-heading">Text information</h3>
-        <p>
-          Get Your audience feedback on Your information directly relevant to products & services.
-        </p>
-      </div>
+          <div class="benefits__card grid-3x__item">
+            <img src="./images/icons/benefits/text-info.svg" alt="">
+            <h3 class="benefits__card-heading">Text information</h3>
+            <p>
+              Get Your audience feedback on Your information directly relevant to products & services.
+            </p>
+          </div>
 
-      <div class="benefits__card grid-3x__item">
-        <img src="./images/icons/benefits/crowdsourced.svg" alt="">
-        <h3 class="benefits__card-heading">Crowdsourced Product Information Management</h3>
-        <p>
-          Engage Your audience in data cleansing / User Generated Content while lowering support, increasing sales &
-          customer
-          loyalty.
-        </p>
-      </div>
+          <div class="benefits__card grid-3x__item">
+            <img src="./images/icons/benefits/crowdsourced.svg" alt="">
+            <h3 class="benefits__card-heading">Crowdsourced Product Information Management</h3>
+            <p>
+              Engage Your audience in data cleansing / User Generated Content while lowering support, increasing sales &
+              customer
+              loyalty.
+            </p>
+          </div>
 
-      <div class="benefits__card grid-3x__item">
-        <img src="./images/icons/benefits/hero-relationship.svg" alt="">
-        <h3 class="benefits__card-heading">Hero Relationship Management System</h3>
-        <p>
-          Keep track of Your Heroes. Configurable and dynamic measurement of frequency & quality.
-        </p>
-      </div>
+          <div class="benefits__card grid-3x__item">
+            <img src="./images/icons/benefits/hero-relationship.svg" alt="">
+            <h3 class="benefits__card-heading">Hero Relationship Management System</h3>
+            <p>
+              Keep track of Your Heroes. Configurable and dynamic measurement of frequency & quality.
+            </p>
+          </div>
 
-      <div class="benefits__card grid-3x__item">
-        <img src="./images/icons/benefits/contribution.svg" alt="">
-        <h3 class="benefits__card-heading">Contribution Que</h3>
-        <p>
-          Automated tracking of contributions.
-        </p>
-      </div>
+          <div class="benefits__card grid-3x__item">
+            <img src="./images/icons/benefits/contribution.svg" alt="">
+            <h3 class="benefits__card-heading">Contribution Que</h3>
+            <p>
+              Automated tracking of contributions.
+            </p>
+          </div>
 
-      <div class="benefits__card grid-3x__item">
-        <img src="./images/icons/benefits/integrations.svg" alt="">
-        <h3 class="benefits__card-heading">Integrations</h3>
-        <p>
-          Easy integrations with any PIM or CRM system.
-        </p>
-      </div>
+          <div class="benefits__card grid-3x__item">
+            <img src="./images/icons/benefits/integrations.svg" alt="">
+            <h3 class="benefits__card-heading">Integrations</h3>
+            <p>
+              Easy integrations with any PIM or CRM system.
+            </p>
+          </div>
 
-      <div class="benefits__card grid-3x__item">
-        <img src="./images/icons/benefits/partners.svg" alt="">
-        <h3 class="benefits__card-heading">Partners</h3>
-        <p>
-          Best of breed implementation- and system partners.
-        </p>
-      </div>
+          <div class="benefits__card grid-3x__item">
+            <img src="./images/icons/benefits/partners.svg" alt="">
+            <h3 class="benefits__card-heading">Partners</h3>
+            <p>
+              Best of breed implementation- and system partners.
+            </p>
+          </div>
 
-      <div class="benefits__card grid-3x__item">
-        <img src="./images/icons/benefits/contribution.svg" alt="">
-        <h3 class="benefits__card-heading">Contribution Que</h3>
-        <p>
-          Automated tracking of contributions.
-        </p>
+          <div class="benefits__card grid-3x__item">
+            <img src="./images/icons/benefits/contribution.svg" alt="">
+            <h3 class="benefits__card-heading">Contribution Que</h3>
+            <p>
+              Automated tracking of contributions.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="--bg-pink">
       <div class="container">
-        <article class="row-duo">
+        <article class="row-duo --reverse">
           <div class="article__pitch">
             <div class="article__pitch-item">
               <img src="./images/icons/benefits/reduced-support.svg" alt="">
@@ -221,7 +228,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="tools">
       <div class="container">
         <article class="row-duo --align-center">
           <figure class="article__figure">
@@ -334,7 +341,7 @@
           <li><a href="#">FAQ</a></li>
           <li><a href="#">Contact Us</a></li>
           <li><a href="#">Products</a></li>
-          <li><a href="#">Pricing</a></li>
+          <li><a href="pages/pricing.html">Pricing</a></li>
           <li><a href="#">About Flipside®</a></li>
         </ul>
       </div>

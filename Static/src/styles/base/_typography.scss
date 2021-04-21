@@ -12,7 +12,9 @@ h1 {
   font-size: 6rem;
   font-weight: $SemiBold;
   line-height: 7rem;
-  margin-bottom: 100px;
+  text-align: center;
+  padding-top: 160px;
+  margin-bottom: -25px;
 }
 
 h2 {
@@ -68,7 +70,28 @@ li {
   font-size: 1.6rem;
 }
 
+.pricing__card-heading {
+  font-size: 2.8rem;
+  font-weight: $SemiBold;
+  text-align: center;
+}
+
+.pricing__card-price {
+  font-size: 5rem;
+  font-weight: $Regular;
+}
+
+.pricing__card-select {
+  font-size: 1.6rem;
+}
+
 .form__label {
+  font-size: 1.6rem;
+  color: $lightgray;
+  font-weight: $SemiBold;
+}
+
+.form__label--small {
   font-size: 1.6rem;
   color: $lightgray;
   font-weight: $SemiBold;
@@ -194,10 +217,24 @@ li {
   font-weight: $Bold;
 }
 
+@include maxWidth($bp-tablet) {
+  h1 {
+    font-size: 4.6rem;
+    margin-bottom: -50px;
+  }
+}
+
+@include maxWidth(850px) {
+  h1 {
+    padding-top: 100px;
+  }
+}
+
 @include maxWidth($bp-mobile) {
   h1 {
     font-size: 3.2rem;
     line-height: 4rem;
+    margin-bottom: -40px;
   }
 
   h2 {
@@ -224,6 +261,14 @@ li {
   .sub-h {
     font-size: 1.8rem;
     line-height: 2.8rem;
+  }
+
+  .pricing__card-heading {
+    font-size: 2.4rem;
+  }
+
+  .pricing__card-price {
+    font-size: 3.4rem;
   }
 
   .testi__name {
