@@ -1,0 +1,50 @@
+.our-team {
+  .container {
+    @include container(30px, 20px, 150px);
+
+    @include maxWidth($bp-tablet) {
+      @include container(30px, 20px, 70px);
+    }
+
+    @include maxWidth($bp-mobile) {
+      @include container(10px, 20px, 70px);
+    }
+
+    .team {
+      //
+      .team__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include maxWidth($bp-tablet) {
+          margin-bottom: 30px;
+        }
+
+        .team__figure {
+          max-width: 150px;
+          width: 100%;
+          clip-path: circle(50%);
+
+          @include maxWidth($bp-mobile) {
+            max-width: 100px;
+          }
+
+          .team__img {
+          }
+        }
+
+        .team__info {
+          text-align: center;
+          .team__name {
+            //
+          }
+          .team__title {
+            //
+          }
+        }
+      }
+    }
+  }
+}

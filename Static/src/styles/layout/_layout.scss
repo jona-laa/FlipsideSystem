@@ -98,6 +98,47 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  @include maxWidth($bp-tablet) {
+    justify-content: space-around;
+  }
+
+  .row-trio__item {
+    width: 32%;
+    max-width: 370px;
+    min-width: 300px;
+
+    @include maxWidth($bp-tablet) {
+      width: 47%;
+      margin-bottom: 50px;
+
+      &:last-of-type() {
+        margin-bottom: 0;
+      }
+    }
+
+    @include maxWidth($bp-mobile) {
+      width: 100%;
+    }
+  }
+}
+
+.row-quad {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .row-quad__item {
+    max-width: 25%;
+
+    @include maxWidth($bp-tablet) {
+      min-width: 50%;
+    }
+
+    @include maxWidth($bp-mobile) {
+      min-width: 100%;
+    }
+  }
 }
 
 // 3x3 GRID - Used for section Benefits

@@ -1,0 +1,7 @@
+.avatar-figure {
+  width: 100%;
+  max-width: 150px;
+  .avatar-figure__img {
+    clip-path: circle(50%);
+  }
+}
