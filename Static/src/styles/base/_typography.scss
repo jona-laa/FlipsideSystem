@@ -159,9 +159,10 @@ li {
   color: $black;
 }
 
-.faq__heading {
+.faq__article-heading {
   font-size: 2rem;
   font-weight: $SemiBold;
+  display: inline-block;
 }
 
 .article__pitch-item p {
@@ -296,7 +297,7 @@ li {
     font-size: 1.6rem;
   }
 
-  .faq__heading {
+  .faq__article-heading {
     font-size: 1.6rem;
     line-height: 2.4rem;
   }
