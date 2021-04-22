@@ -77,12 +77,12 @@ header {
 
     .nav__logo {
       max-width: 230px;
+      z-index: 2;
 
       @include maxWidth(850px) {
         max-width: 200px;
         padding-top: 10px;
         padding-right: 20px;
-        z-index: 100;
       }
     }
   }

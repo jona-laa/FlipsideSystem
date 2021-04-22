@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flipside® | About Flipside®</title>
+  <title>Flipside® | FAQs</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="icon" href="../favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="../images/touch-icon.png">
@@ -43,67 +43,51 @@
   </header>
 
   <main id="main">
-    <h1>About Flipside®</h1>
-    <section class="about" id="about">
+    <h1>Book A Demo</h1>
+    <section class="demo" id="demo">
       <div class="container">
-        <div class="row-duo --reverse">
-          <figure class="article__figure">
-            <img src="../images/video-overlay.jpg" alt="">
-          </figure>
+        <div class="row-duo demo__article --reverse">
+          <form class="demo__form">
+            <div class="form__field">
+              <label for="first-name *">First Name *</label>
+              <input name="first-name" id="first-name" type="text" placeholder="Enter first name">
+            </div>
+            <div class="form__field">
+              <label for="last-name">Last Name *</label>
+              <input name="last-name" id="last-name" type="text" placeholder="Enter last name">
+            </div>
+            <div class="form__field">
+              <label for="email">Email *</label>
+              <input name="email" id="email" type="email" placeholder="Enter your email">
+            </div>
+            <div class="form__field">
+              <label for="phone">Phone Number *</label>
+              <input name="phone" id="phone" type="tel" placeholder="Enter phone number">
+            </div>
+            <div class="form__field">
+              <label for="company">Company Name *</label>
+              <input name="company" id="company" type="text" placeholder="Enter company name">
+            </div>
+            <div class="form__field">
+              <label for="website">Website URL *</label>
+              <input name="website" id="website" type="text" placeholder="Enter website URL">
+            </div>
+            <button class="btn" type="submit">Request Demo</button>
+          </form>
           <div class="article__spacer"></div>
-          <div class="article__text">
-            <h3>Flipside®</h3>
-            <p>We created Flipside® as a response to the challenges around the information explosion. As we are experts
-              in eCommerce
-              and Crowdsourcing, we saw an opportunity to build something truly disruptive. The technology behind
-              Flipside® empowers
-              Your visitors, increases loyalty and helps you mitigate faulty information.
+          <div class="artice__text">
+            <h3>Get Your personal demo today</h3>
+            <p class="gray">From onboarding, to quick tips and strategic advice, we are ready to help, whether it’s
+              1-on-1 calls,
+              webinars, email,
+              live chat, guides or our large help center.
             </p>
-            <a class="btn">Try Us Out!</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="our-team" id="our-team">
-      <h2>Our Team</h2>
-      <div class="container">
-        <div class="row-quad team">
-          <div class="row-quad__item team__item">
-            <figure class="team__figure">
-              <img class="team__img" src="../images/icons/user-tie-solid.svg" alt="Team Avatar">
-            </figure>
-            <div class="team__info">
-              <p class="team__name">Name Surname</p>
-              <p class="team__title">Title</p>
-            </div>
-          </div>
-          <div class="row-quad__item team__item">
-            <figure class="team__figure">
-              <img class="team__img" src="../images/icons/user-tie-solid.svg" alt="Team Avatar">
-            </figure>
-            <div class="team__info">
-              <p class="team__name">Name Surname</p>
-              <p class="team__title">Title</p>
-            </div>
-          </div>
-          <div class="row-quad__item team__item">
-            <figure class="team__figure">
-              <img class="team__img" src="../images/icons/user-tie-solid.svg" alt="Team Avatar">
-            </figure>
-            <div class="team__info">
-              <p class="team__name">Name Surname</p>
-              <p class="team__title">Title</p>
-            </div>
-          </div>
-          <div class="row-quad__item team__item">
-            <figure class="team__figure">
-              <img class="team__img" src="../images/icons/user-tie-solid.svg" alt="Team Avatar">
-            </figure>
-            <div class="team__info">
-              <p class="team__name">Name Surname</p>
-              <p class="team__title">Title</p>
-            </div>
+            <ul>
+              <li><i class="fas fa-check"></i>See Flipside® in action</li>
+              <li><i class="fas fa-check"></i>See everything on your own time</li>
+              <li><i class="fas fa-check"></i>Flipside® offers simple integration with any PIM or CMS</li>
+              <li><i class="fas fa-check"></i>No maintenance needed with Flipside®</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -160,6 +144,27 @@
   </footer>
   <script src="//code.jquery.com/jquery-latest.js"></script>
   <script src="../js/main.js"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", (event) => {
+      let buttons = document.querySelectorAll("#accordion button");
+      buttons.forEach((button) => {
+        let content = button.nextElementSibling;
+        button.addEventListener("click", (event) => {
+          if (button.classList.contains("active")) {
+            button.classList.remove("active");
+            button.setAttribute("aria-expanded", false);
+            content.style.maxHeight = null;
+            content.setAttribute("aria-hidden", true);
+          } else {
+            button.classList.add("active");
+            button.setAttribute("aria-expanded", true);
+            content.style.maxHeight = content.scrollHeight + "px";
+            content.setAttribute("aria-hidden", false);
+          }
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
