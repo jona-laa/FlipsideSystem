@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flipside® | Book A Demo</title>
+  <title>Flipside® | Contact Us</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="icon" href="../favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="../images/touch-icon.png">
@@ -35,7 +35,7 @@
           <li><a href="pricing.html" class="nav__link">Pricing</a></li>
           <li><a href="products.html" class="nav__link">Products</a></li>
           <li><a href="customers.html" class="nav__link">Customers</a></li>
-          <li><a href="contact.html" class="nav__link">Contact</a></li>
+          <li><a href="contact.html" class="nav__link--current">Contact</a></li>
           <li><a href="demo.html" class="btn">Book A Demo</a></li>
         </ul>
       </div>
@@ -43,11 +43,11 @@
   </header>
 
   <main id="main">
-    <h1>Book A Demo</h1>
-    <section class="demo" id="demo">
+    <h1>Contact Us</h1>
+    <section class="contact" id="contact">
       <div class="container">
         <div class="row-duo form-article --reverse">
-          <form class="form" aria-label="Book a demo">
+          <form class="form" aria-label="Send a message">
             <div class="form__fields">
               <div class="form__field">
                 <label class="form__label" for="first-name">First Name *</label>
@@ -57,45 +57,33 @@
                 <label class="form__label" for="last-name">Last Name *</label>
                 <input class="form__input" name="last-name" id="last-name" type="text" placeholder="Enter last name">
               </div>
-              <div class="form__field">
+              <div class="form__field full-width">
                 <label class="form__label" for="email">Email *</label>
                 <input class="form__input" name="email" id="email" type="email" placeholder="Enter your email">
               </div>
-              <div class="form__field">
-                <label class="form__label" for="phone">Phone Number *</label>
-                <input class="form__input" name="phone" id="phone" type="tel" placeholder="Enter phone number">
-              </div>
-              <div class="form__field">
-                <label class="form__label" for="company">Company Name *</label>
-                <input class="form__input" name="company" id="company" type="text" placeholder="Enter company name">
-              </div>
-              <div class="form__field">
-                <label class="form__label" for="website">Website URL *</label>
-                <input class="form__input" name="website" id="website" type="text" placeholder="Enter website URL">
+              <div class="form__field full-width">
+                <label class="form__label" for="message">Message *</label>
+                <textarea class="form__input" name="message" id="message" placeholder="Enter message"></textarea>
               </div>
             </div>
             <div class="form__submit">
-              <button class="btn form__submit-btn" type="submit">Request Demo</button>
-            </div>
-            <div class="form__info">
-              <span class="form__info-text">* By submitting this form you accepts to receive promotional material from
-                us.</span>
+              <button class="btn form__submit-btn" type="submit">Send Message</button>
             </div>
           </form>
           <div class="article__spacer"></div>
           <div class="article__text">
-            <h3>Get Your personal demo today</h3>
-            <p class="gray">From onboarding, to quick tips and strategic advice, we are ready to help, whether it’s
-              1-on-1 calls,
-              webinars, email,
-              live chat, guides or our large help center.
-            </p>
+            <h2>Get in touch</h2>
             <ul>
-              <li><i class="fas fa-check"></i>See Flipside® in action</li>
-              <li><i class="fas fa-check"></i>See everything on your own time</li>
-              <li><i class="fas fa-check"></i>Flipside® offers simple integration with any PIM or CMS</li>
-              <li><i class="fas fa-check"></i>No maintenance needed with Flipside®</li>
+              <li><i class="fas fa-clock" aria-label="Business hours"></i>Monday to Friday, 09:00 to 17:00</li>
+              <li><i class="fas fa-phone" aria-label="Phone number"></i>(+12) 345-678-91012</li>
+              <li><i class="fas fa-envelope" aria-label="Email"></i>some.one@gmail.com</li>
             </ul>
+            <h3>Have a question?</h3>
+            <p class="gray">Have questions about how Flipside® works?<br>
+              You might find what you’re looking for under frequently asked questions.
+            </p>
+            <a class="btn" href="faq.html">Go to FAQs</a>
+
           </div>
         </div>
       </div>

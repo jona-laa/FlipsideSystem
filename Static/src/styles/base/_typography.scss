@@ -22,7 +22,10 @@ h2 {
   font-size: 4.6rem;
   line-height: 5.6rem;
   margin-bottom: 20px;
-  text-align: center;
+}
+
+h2.section-heading {
+  display: none;
 }
 
 h3 {
@@ -222,6 +225,10 @@ li {
   font-weight: $Bold;
 }
 
+.--center-align {
+  text-align: center;
+}
+
 @include maxWidth($bp-tablet) {
   h1 {
     font-size: 4.6rem;
@@ -245,6 +252,7 @@ li {
   h2 {
     font-size: 2.6rem;
     line-height: 3.6rem;
+    margin-bottom: 10px;
   }
 
   h3 {

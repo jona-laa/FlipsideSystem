@@ -19,7 +19,12 @@
   flex-direction: row-reverse;
 }
 
-/* ROW DUO - Article with 50% text/50% figure/other */
+.full-width {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* ROW DUO - Article with 50%/50% row layout */
 .row-duo {
   display: flex;
   justify-content: space-around;
