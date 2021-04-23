@@ -249,12 +249,9 @@
       padding: 10px;
     }
 
-    .article__figure {
-      width: 100%;
-      max-width: 650px;
-    }
-
-    .article__text {
+    .article__figure,
+    .article__text,
+    form {
       width: 100%;
       max-width: 650px;
     }

@@ -46,36 +46,44 @@
     <h1>Book A Demo</h1>
     <section class="demo" id="demo">
       <div class="container">
-        <div class="row-duo demo__article --reverse">
-          <form class="demo__form">
-            <div class="form__field">
-              <label for="first-name *">First Name *</label>
-              <input name="first-name" id="first-name" type="text" placeholder="Enter first name">
+        <div class="row-duo form-article --reverse">
+          <form class="contact__form">
+            <div class="form__fields">
+              <div class="form__field">
+                <label class="form__label" for="first-name *">First Name *</label>
+                <input class="form__input" name="first-name" id="first-name" type="text" placeholder="Enter first name">
+              </div>
+              <div class="form__field">
+                <label class="form__label" for="last-name">Last Name *</label>
+                <input class="form__input" name="last-name" id="last-name" type="text" placeholder="Enter last name">
+              </div>
+              <div class="form__field">
+                <label class="form__label" for="email">Email *</label>
+                <input class="form__input" name="email" id="email" type="email" placeholder="Enter your email">
+              </div>
+              <div class="form__field">
+                <label class="form__label" for="phone">Phone Number *</label>
+                <input class="form__input" name="phone" id="phone" type="tel" placeholder="Enter phone number">
+              </div>
+              <div class="form__field">
+                <label class="form__label" for="company">Company Name *</label>
+                <input class="form__input" name="company" id="company" type="text" placeholder="Enter company name">
+              </div>
+              <div class="form__field">
+                <label class="form__label" for="website">Website URL *</label>
+                <input class="form__input" name="website" id="website" type="text" placeholder="Enter website URL">
+              </div>
             </div>
-            <div class="form__field">
-              <label for="last-name">Last Name *</label>
-              <input name="last-name" id="last-name" type="text" placeholder="Enter last name">
+            <div class="form__submit">
+              <button class="btn form__submit-btn" type="submit">Request Demo</button>
             </div>
-            <div class="form__field">
-              <label for="email">Email *</label>
-              <input name="email" id="email" type="email" placeholder="Enter your email">
+            <div class="form__info">
+              <span class="form__info-text">* By submitting this form you accepts to receive promotional material from
+                us.</span>
             </div>
-            <div class="form__field">
-              <label for="phone">Phone Number *</label>
-              <input name="phone" id="phone" type="tel" placeholder="Enter phone number">
-            </div>
-            <div class="form__field">
-              <label for="company">Company Name *</label>
-              <input name="company" id="company" type="text" placeholder="Enter company name">
-            </div>
-            <div class="form__field">
-              <label for="website">Website URL *</label>
-              <input name="website" id="website" type="text" placeholder="Enter website URL">
-            </div>
-            <button class="btn" type="submit">Request Demo</button>
           </form>
           <div class="article__spacer"></div>
-          <div class="artice__text">
+          <div class="article__text">
             <h3>Get Your personal demo today</h3>
             <p class="gray">From onboarding, to quick tips and strategic advice, we are ready to help, whether it’s
               1-on-1 calls,

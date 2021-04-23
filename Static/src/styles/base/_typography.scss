@@ -93,14 +93,14 @@ li {
 }
 
 .form__label--small {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: $lightgray;
   font-weight: $SemiBold;
 }
 
-.form__label--small {
+.form__info-text {
   font-size: 1.4rem;
-  font-weight: $SemiBold;
+  color: $lightgray;
 }
 
 .testi__text {
@@ -278,6 +278,10 @@ li {
 
   .pricing__card-price {
     font-size: 3.4rem;
+  }
+
+  .form__info-text {
+    font-size: 1.3rem;
   }
 
   .testi__name {

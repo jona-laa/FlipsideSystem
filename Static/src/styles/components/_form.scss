@@ -1,0 +1,73 @@
+.contact__form {
+  box-shadow: 0 6px 50px rgba(198, 198, 198, 0.2);
+  padding: 70px 5%;
+  width: 100%;
+
+  @include maxWidth($bp-tablet) {
+    padding: 70px;
+  }
+
+  @include maxWidth($bp-mobile) {
+    padding: 50px 30px;
+  }
+
+  .form__fields {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include maxWidth($bp-mobile) {
+      justify-content: center;
+    }
+
+    .form__field {
+      display: flex;
+      flex-direction: column;
+      width: 48%;
+      max-width: 250px;
+      margin-bottom: 25px;
+
+      @include maxWidth($bp-mobile) {
+        width: 300px;
+        max-width: none;
+      }
+
+      .form__label {
+        //
+      }
+
+      .form__input {
+        border: none;
+        border-bottom: 1px solid $darkgray;
+        padding: 10px 0;
+
+        &::-webkit-input-placeholder {
+          color: rgba(29, 42, 59, 0.3);
+        }
+
+        &:-ms-input-placeholder {
+          color: rgba(29, 42, 59, 0.3);
+        }
+
+        &::placeholder {
+          color: rgba(29, 42, 59, 0.3);
+        }
+      }
+    }
+  }
+
+  .form__submit {
+    display: flex;
+    justify-content: flex-end;
+    padding: 25px 10px;
+
+    @include maxWidth($bp-mobile) {
+      justify-content: center;
+    }
+  }
+
+  .form__info {
+    .form__info-text {
+    }
+  }
+}
