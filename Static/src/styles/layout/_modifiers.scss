@@ -1,0 +1,25 @@
+/* Modifiers */
+.--bg-blue-figure {
+  background: url('../images/section_bg--blue.svg') no-repeat 50% top/cover;
+}
+
+.--bg-pink {
+  background: rgba(235, 98, 63, 0.1);
+}
+
+.--align-center {
+  align-items: center;
+}
+
+.container {
+  @include container(125px, 20px);
+}
+
+.--reverse {
+  flex-direction: row-reverse;
+}
+
+.full-width {
+  width: 100% !important;
+  max-width: none !important;
+}

@@ -1,0 +1,145 @@
+/* ROW DUO - Article with 50%/50% row layout */
+.row-duo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 100px;
+  align-items: center;
+
+  &:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+
+  &:last-of-type() {
+    margin-bottom: 0;
+  }
+
+  .article__pitch {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .article__pitch-item {
+      background: $white;
+      border-radius: 5px;
+      width: 46%;
+      max-width: 200px;
+      margin: 2%;
+      padding: 30px 20px;
+      z-index: 0;
+
+      &:nth-of-type(odd) {
+        position: relative;
+        bottom: 30px;
+      }
+
+      img {
+        height: 55px;
+        width: auto;
+      }
+    }
+  }
+
+  .article__figure {
+    width: 50%;
+  }
+
+  .article__spacer {
+    padding: 20px;
+  }
+
+  .article__text {
+    width: 50%;
+
+    .pitch--blue {
+      margin: 20px 0;
+    }
+
+    .btn {
+      margin-top: 10px;
+    }
+  }
+
+  form {
+    width: 50%;
+  }
+
+  .article__row {
+    display: flex;
+    justify-content: space-between;
+
+    .btn {
+      align-self: flex-end;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@include maxWidth($bp-tablet) {
+  .row-duo {
+    flex-direction: column;
+    // justify-content: center;
+
+    &:nth-of-type(even) {
+      flex-direction: column;
+    }
+
+    .article__text {
+      .article__row {
+        flex-direction: column;
+      }
+    }
+
+    .article__pitch {
+      width: 100%;
+      max-width: 450px;
+      margin-top: 50px;
+
+      .article__pitch-item {
+        width: 48%;
+        margin: 1%;
+        padding: 20px;
+        // text-align: center;
+        max-width: none;
+      }
+    }
+
+    .article__spacer {
+      padding: 10px;
+    }
+
+    .article__figure,
+    .article__text,
+    form {
+      width: 100%;
+      max-width: 650px;
+    }
+  }
+}
+
+@include maxWidth($bp-mobile) {
+  .row-duo {
+    margin-bottom: 75px;
+
+    .article__pitch {
+      .article__pitch-item {
+        img {
+          height: 35px;
+        }
+      }
+    }
+
+    .article__row {
+      flex-direction: column;
+
+      .btn {
+      }
+    }
+
+    .btn {
+      margin-top: 20px;
+      min-width: 200px;
+    }
+  }
+}

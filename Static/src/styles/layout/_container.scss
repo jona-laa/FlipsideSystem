@@ -1,0 +1,15 @@
+.container {
+  @include container(125px, 20px);
+}
+
+@include maxWidth($bp-tablet) {
+  .container {
+    @include container(100px, 30px);
+  }
+}
+
+@include maxWidth($bp-mobile) {
+  .container {
+    @include container(75px, 20px);
+  }
+}

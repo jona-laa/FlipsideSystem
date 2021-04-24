@@ -1,0 +1,17 @@
+.row-quad {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .row-quad__item {
+    max-width: 25%;
+
+    @include maxWidth($bp-tablet) {
+      min-width: 50%;
+    }
+
+    @include maxWidth($bp-mobile) {
+      min-width: 100%;
+    }
+  }
+}

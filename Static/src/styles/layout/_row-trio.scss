@@ -1,0 +1,29 @@
+// ROW TRIO
+.row-trio {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include maxWidth($bp-tablet) {
+    justify-content: space-around;
+  }
+
+  .row-trio__item {
+    width: 32%;
+    max-width: 370px;
+    min-width: 300px;
+
+    @include maxWidth($bp-tablet) {
+      width: 47%;
+      margin-bottom: 50px;
+
+      &:last-of-type() {
+        margin-bottom: 0;
+      }
+    }
+
+    @include maxWidth($bp-mobile) {
+      width: 100%;
+    }
+  }
+}
