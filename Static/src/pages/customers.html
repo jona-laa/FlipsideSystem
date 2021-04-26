@@ -44,13 +44,138 @@
 
   <main id="main">
     <h1>Customers</h1>
-    <section class="customers" id="customers">
+    <section class="testimonials" id="testimonials">
       <div class="container">
         <h2 class="--center-align">We asked for customer expectations regarding Flipside®</h2>
         <span class="sub-h --center-align">Here's what they said</span>
-        <div class="row-trio testimonials">
-
-
+        <div class="carousel">
+          <div class="carousel__inner">
+            <div class="testimonial ">
+              <div class="testimonial__bubble">
+                <p class="testimonial__text">“Lower support. 30-40% lower support!”</p>
+              </div>
+              <div class="testimonial__info">
+                <img class="testimonial__avatar" src="../images/icons/Avatars/man (2).svg" alt="avatar">
+                <div class="testimonial__identity">
+                  <p class="testimonial__name">Large eCommerce vendor</p>
+                  <p class="testimonial__title">PIM Responsible, X</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial ">
+              <div class="testimonial__bubble">
+                <p class="testimonial__text">“Lower support. 30-40% lower support!”</p>
+              </div>
+              <div class="testimonial__info">
+                <img class="testimonial__avatar" src="../images/icons/Avatars/man (1).svg" alt="avatar">
+                <div class="testimonial__identity">
+                  <p class="testimonial__name">Large eCommerce vendor</p>
+                  <p class="testimonial__title">PIM Responsible, X</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial ">
+              <div class="testimonial__bubble">
+                <p class="testimonial__text">“Lower support. 30-40% lower support!”</p>
+              </div>
+              <div class="testimonial__info">
+                <img class="testimonial__avatar" src="../images/icons/Avatars/man copy.svg" alt="avatar">
+                <div class="testimonial__identity">
+                  <p class="testimonial__name">Large eCommerce vendor</p>
+                  <p class="testimonial__title">PIM Responsible, X</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial ">
+              <div class="testimonial__bubble">
+                <p class="testimonial__text">“Lower support. 30-40% lower support!”</p>
+              </div>
+              <div class="testimonial__info">
+                <img class="testimonial__avatar" src="../images/icons/Avatars/man.svg" alt="avatar">
+                <div class="testimonial__identity">
+                  <p class="testimonial__name">Large eCommerce vendor</p>
+                  <p class="testimonial__title">PIM Responsible, X</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial ">
+              <div class="testimonial__bubble">
+                <p class="testimonial__text">“Lower support. 30-40% lower support!”</p>
+              </div>
+              <div class="testimonial__info">
+                <img class="testimonial__avatar" src="../images/icons/Avatars/woman (1) copy.svg" alt="avatar">
+                <div class="testimonial__identity">
+                  <p class="testimonial__name">Large eCommerce vendor</p>
+                  <p class="testimonial__title">PIM Responsible, X</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial ">
+              <div class="testimonial__bubble">
+                <p class="testimonial__text">“Lower support. 30-40% lower support!”</p>
+              </div>
+              <div class="testimonial__info">
+                <img class="testimonial__avatar" src="../images/icons/Avatars/woman (1).svg" alt="avatar">
+                <div class="testimonial__identity">
+                  <p class="testimonial__name">Large eCommerce vendor</p>
+                  <p class="testimonial__title">PIM Responsible, X</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial ">
+              <div class="testimonial__bubble">
+                <p class="testimonial__text">“Lower support. 30-40% lower support!”</p>
+              </div>
+              <div class="testimonial__info">
+                <img class="testimonial__avatar" src="../images/icons/Avatars/woman.svg" alt="avatar">
+                <div class="testimonial__identity">
+                  <p class="testimonial__name">Large eCommerce vendor</p>
+                  <p class="testimonial__title">PIM Responsible, X</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial ">
+              <div class="testimonial__bubble">
+                <p class="testimonial__text">“Lower support. 30-40% lower support!”</p>
+              </div>
+              <div class="testimonial__info">
+                <img class="testimonial__avatar" src="../images/icons/Avatars/woman (2).svg" alt="avatar">
+                <div class="testimonial__identity">
+                  <p class="testimonial__name">Large eCommerce vendor</p>
+                  <p class="testimonial__title">PIM Responsible, X</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial ">
+              <div class="testimonial__bubble">
+                <p class="testimonial__text">“Lower support. 30-40% lower support!”</p>
+              </div>
+              <div class="testimonial__info">
+                <img class="testimonial__avatar" src="../images/icons/Avatars/woman copy.svg" alt="avatar">
+                <div class="testimonial__identity">
+                  <p class="testimonial__name">Large eCommerce vendor</p>
+                  <p class="testimonial__title">PIM Responsible, X</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial ">
+              <div class="testimonial__bubble">
+                <p class="testimonial__text">“Lower support. 30-40% lower support!”</p>
+              </div>
+              <div class="testimonial__info">
+                <img class="testimonial__avatar" src="../images/icons/Avatars/woman copy.svg" alt="avatar">
+                <div class="testimonial__identity">
+                  <p class="testimonial__name">Large eCommerce vendor</p>
+                  <p class="testimonial__title">PIM Responsible, X</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonials__nav">
+          <!-- <button class="first --current"></button>
+          <button class="second"></button>
+          <button class="third"></button> -->
         </div>
       </div>
     </section>
@@ -121,6 +246,31 @@
   </footer>
   <script src="//code.jquery.com/jquery-latest.js"></script>
   <script src="../js/main.js"></script>
+  <script>
+    const testimonialsNav = document.querySelector(".testimonials__nav");
+    const testimonialsInner = document.querySelector(".carousel__inner");
+
+    // Create carousel nav based on number of posts
+    const pages = Math.ceil(testimonialsInner.children.length / 3);
+
+    for (let i = 1; i <= pages; i++) {
+      i == 1 ? testimonialsNav.innerHTML += `<button class="page-${i} --current"></button>` :
+        testimonialsNav.innerHTML += `<button class="page-${i}"></button>`;
+    }
+
+
+    testimonialsNav.addEventListener("click", e => {
+      if (e.target.nodeName === "BUTTON") {
+        Array.from(testimonialsNav.children).forEach(item =>
+          item.classList.remove("--current")
+        );
+
+        const page = e.target.className.split('-')[1];
+        testimonialsInner.style.transform = `translateX(-${page - 1}00%)`;
+        e.target.classList.add('--current');
+      }
+    });
+  </script>
 </body>
 
 </html>

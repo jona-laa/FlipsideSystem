@@ -52,6 +52,7 @@ h4 {
   font-weight: $Regular;
   color: $lightgray;
   line-height: 2.8rem;
+  margin-bottom: 30px;
 }
 
 p,
@@ -113,24 +114,27 @@ li {
   color: $lightgray;
 }
 
-.testi__text {
-  color: $darkgray;
+.testimonial__text {
+  color: $lightgray;
   font-size: 1.8rem;
   font-style: italic;
   line-height: 2.8rem;
 }
 
-.testi__name,
+.testimonial__name,
 .benefits__card-heading {
   color: $blue;
   font-size: 2rem;
   font-weight: $SemiBold;
+  line-height: 2.8rem;
+  margin: 0;
 }
 
-.testi__title {
+.testimonial__title {
   color: $black;
   font-size: 1.5rem;
   font-weight: $Regular;
+  margin: 0;
 }
 
 .team__title {
@@ -185,7 +189,7 @@ li {
   font-size: 2.6rem;
   color: $blue;
   font-weight: $SemiBold;
-  line-height: 3rem;
+  line-height: 3.4rem;
 }
 
 .try-us {
@@ -302,16 +306,16 @@ li {
     font-size: 1.3rem;
   }
 
-  .testi__name {
+  .testimonial__name {
     font-size: 1.6rem;
   }
 
-  .testi__text {
+  .testimonial__text {
     font-size: 1.6rem;
     line-height: 2.4rem;
   }
 
-  .testi__title {
+  .testimonial__title {
     font-size: 1.3rem;
   }
 

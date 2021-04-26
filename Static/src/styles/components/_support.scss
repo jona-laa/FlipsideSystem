@@ -1,14 +1,14 @@
 .support {
   .container {
-    @include container(10px, 20px, 150px);
+    // @include container(10px, 20px, 150px);
 
-    @include maxWidth($bp-tablet) {
-      @include container(10px, 20px, 70px);
-    }
+    // @include maxWidth($bp-tablet) {
+    //   @include container(10px, 20px, 70px);
+    // }
 
-    @include maxWidth($bp-mobile) {
-      @include container(10px, 20px, 70px);
-    }
+    // @include maxWidth($bp-mobile) {
+    //   @include container(10px, 20px, 70px);
+    // }
 
     .row-duo.support__article {
       max-width: 900px;

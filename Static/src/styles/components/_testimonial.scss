@@ -1,0 +1,79 @@
+.testimonials {
+  .container {
+    .carousel {
+      overflow: hidden;
+      width: 100%;
+
+      .carousel__inner {
+        display: flex;
+        transition: all 1s ease-in-out;
+        padding: 10px 0;
+
+        .testimonial {
+          min-width: 30% !important;
+          margin: auto 1.666666666666667%;
+
+          .testimonial__bubble {
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(37, 37, 37, 0.2);
+            padding: 50px 30px;
+            position: relative;
+            margin-bottom: 30px;
+            width: 100%;
+
+            &::after {
+              position: absolute;
+              content: '';
+              border: 20px solid transparent;
+
+              border-top-color: $white;
+              border-bottom: 0;
+              bottom: -20px;
+              left: 20%;
+              margin-left: -20px;
+            }
+
+            .testimonial__text {
+              //
+            }
+          }
+
+          .testimonial__info {
+            display: flex;
+
+            .testimonial__avatar {
+              width: 90px;
+              height: 90px;
+              clip-path: circle(50%);
+              margin-right: 10px;
+            }
+
+            .testimonial__identity {
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+            }
+          }
+        }
+      }
+    }
+    .testimonials__nav {
+      margin: 20px auto;
+      display: flex;
+      justify-content: center;
+
+      button {
+        background: lighten($color: #d5d5d5, $amount: 10);
+        padding: 7.5px;
+        margin: auto 5px;
+        cursor: pointer;
+        border-radius: 50%;
+        border: none;
+
+        &.--current {
+          background: darken($color: #d5d5d5, $amount: 10);
+        }
+      }
+    }
+  }
+}

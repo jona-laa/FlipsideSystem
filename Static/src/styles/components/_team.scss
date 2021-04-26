@@ -1,14 +1,14 @@
 .our-team {
   .container {
-    @include container(30px, 20px, 150px);
+    // @include container(30px, 20px, 150px);
 
-    @include maxWidth($bp-tablet) {
-      @include container(30px, 20px, 70px);
-    }
+    // @include maxWidth($bp-tablet) {
+    //   @include container(30px, 20px, 70px);
+    // }
 
-    @include maxWidth($bp-mobile) {
-      @include container(10px, 20px, 70px);
-    }
+    // @include maxWidth($bp-mobile) {
+    //   @include container(10px, 20px, 70px);
+    // }
 
     .team {
       //

@@ -12,6 +12,7 @@
     width: 32%;
     max-width: 370px;
     min-width: 300px;
+    margin: auto;
 
     @include maxWidth($bp-tablet) {
       width: 47%;

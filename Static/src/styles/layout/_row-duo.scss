@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 75px;
   align-items: center;
 
   &:nth-of-type(even) {
@@ -78,7 +78,7 @@
 
 @include maxWidth($bp-tablet) {
   .row-duo {
-    flex-direction: column;
+    flex-direction: column !important;
     // justify-content: center;
 
     &:nth-of-type(even) {
