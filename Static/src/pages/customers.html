@@ -249,14 +249,29 @@
   <script>
     const testimonialsNav = document.querySelector(".testimonials__nav");
     const testimonialsInner = document.querySelector(".carousel__inner");
+    let testimonialPages;
 
-    // Create carousel nav based on number of posts
-    const pages = Math.ceil(testimonialsInner.children.length / 3);
+    // Create carousel nav based on number of posts and screen size
+    function createCarouselNav() {
+      testimonialsNav.innerHTML = '';
 
-    for (let i = 1; i <= pages; i++) {
-      i == 1 ? testimonialsNav.innerHTML += `<button class="page-${i} --current"></button>` :
-        testimonialsNav.innerHTML += `<button class="page-${i}"></button>`;
-    }
+      if (window.innerWidth > 1024) {
+        testimonialPages = Math.ceil(testimonialsInner.children.length / 3);
+      }
+
+      if (window.innerWidth <= 1024) {
+        testimonialPages = Math.ceil(testimonialsInner.children.length / 2);
+      }
+
+      if (window.innerWidth <= 767) {
+        testimonialPages = Math.ceil(testimonialsInner.children.length);
+      }
+
+      for (let i = 1; i <= testimonialPages; i++) {
+        i == 1 ? testimonialsNav.innerHTML += `<button class="page-${i} --current"></button>` :
+          testimonialsNav.innerHTML += `<button class="page-${i}"></button>`;
+      }
+    };
 
 
     testimonialsNav.addEventListener("click", e => {
@@ -270,6 +285,13 @@
         e.target.classList.add('--current');
       }
     });
+
+    window.onload = () => {
+      createCarouselNav();
+    }
+    window.onresize = () => {
+      createCarouselNav();
+    };
   </script>
 </body>
 

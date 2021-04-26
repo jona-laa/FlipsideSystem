@@ -3,14 +3,29 @@
           <button class="third"></button> --></div></div></section><section class="your-story" id="your-story"><div class="container"><article class="supporting-article--col"><div class="article__text"><h3>Your story will be Here</h3><p class="gray --center-align">Take a leap ahead of Your competition by being the first in Your market to use Flipside®</p></div><a href="demo.html" class="btn">Book your demo now!</a></article></div></section></main><footer class="footer"><div class="footer__content"><div class="footer__about"><img src="../images/FLIPSIDE_logo.png" class="footer__logo" alt="Flipside Logotype"><p class="footer__text">We created Flipside® as a response to the challenges around the information explosion. As we are experts in eCommerce and Crowdsourcing, we saw an opportunity to build something truly disruptive.</p><p class="footer__text">The technology behind Flipside® empowers Your visitors, increases loyalty and helps you mitigate faulty information,</p><a href="demo.html" class="try-us">Try us out!</a></div><div class="footer__links"><h3 class="footer__heading">Quick Links</h3><ul><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="products.html">Products</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="about.html">About Flipside®</a></li></ul></div><div class="footer__contact"><div><h3 class="footer__heading">Contact Us</h3><ul><li>0046-8897-989</li><li>email: info@flipsidesystems.com</li></ul></div><span class="footer__copy">© Copyright 2021 All Rights Reserved.</span></div></div><!-- To Top Button --> <a href="#" id="goTop" class="btn-top" aria-label="Go To Top"><svg class="arrow up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="5 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" points="
     		        0.375, 35.375 28.375, 0.375 58.67, 35.375 "/></svg></a></footer><script src="//code.jquery.com/jquery-latest.js"></script><script src="../js/main.js"></script><script>const testimonialsNav = document.querySelector(".testimonials__nav");
     const testimonialsInner = document.querySelector(".carousel__inner");
+    let testimonialPages;
 
-    // Create carousel nav based on number of posts
-    const pages = Math.ceil(testimonialsInner.children.length / 3);
+    // Create carousel nav based on number of posts and screen size
+    function createCarouselNav() {
+      testimonialsNav.innerHTML = '';
 
-    for (let i = 1; i <= pages; i++) {
-      i == 1 ? testimonialsNav.innerHTML += `<button class="page-${i} --current"></button>` :
-        testimonialsNav.innerHTML += `<button class="page-${i}"></button>`;
-    }
+      if (window.innerWidth > 1024) {
+        testimonialPages = Math.ceil(testimonialsInner.children.length / 3);
+      }
+
+      if (window.innerWidth <= 1024) {
+        testimonialPages = Math.ceil(testimonialsInner.children.length / 2);
+      }
+
+      if (window.innerWidth <= 767) {
+        testimonialPages = Math.ceil(testimonialsInner.children.length);
+      }
+
+      for (let i = 1; i <= testimonialPages; i++) {
+        i == 1 ? testimonialsNav.innerHTML += `<button class="page-${i} --current"></button>` :
+          testimonialsNav.innerHTML += `<button class="page-${i}"></button>`;
+      }
+    };
 
 
     testimonialsNav.addEventListener("click", e => {
@@ -23,4 +38,11 @@
         testimonialsInner.style.transform = `translateX(-${page - 1}00%)`;
         e.target.classList.add('--current');
       }
-    });</script></body></html>
+    });
+
+    window.onload = () => {
+      createCarouselNav();
+    }
+    window.onresize = () => {
+      createCarouselNav();
+    };</script></body></html>
