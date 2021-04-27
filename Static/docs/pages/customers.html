@@ -8,6 +8,7 @@
     // Create carousel nav based on number of posts and screen size
     function createCarouselNav() {
       testimonialsNav.innerHTML = '';
+      testimonialsInner.style.transform = 'translateX(-00%)';
 
       if (window.innerWidth > 1024) {
         testimonialPages = Math.ceil(testimonialsInner.children.length / 3);
