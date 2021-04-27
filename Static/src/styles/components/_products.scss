@@ -1,0 +1,33 @@
+.products {
+  .row-duo {
+    min-width: 100%;
+    justify-content: center;
+    &:nth-of-type(even) {
+      flex-direction: initial;
+    }
+
+    .article__figure {
+      max-width: 200px;
+    }
+    .article__text {
+      max-width: 812px;
+      width: 100%;
+    }
+  }
+  .carousel {
+    //
+    .carousel__inner {
+      //
+    }
+  }
+  .carousel__nav {
+    //
+    button {
+      //
+
+      &.--current {
+        //
+      }
+    }
+  }
+}

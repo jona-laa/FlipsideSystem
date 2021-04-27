@@ -1,14 +1,7 @@
 .testimonials {
   .container {
     .carousel {
-      overflow: hidden;
-      width: 100%;
-
       .carousel__inner {
-        display: flex;
-        transition: all 1s ease-in-out;
-        padding: 10px 0;
-
         .testimonial {
           min-width: 30% !important;
           margin: auto 1.666666666666667%;
@@ -62,13 +55,6 @@
           .testimonial__info {
             display: flex;
 
-            .testimonial__avatar {
-              width: 90px;
-              height: 90px;
-              clip-path: circle(50%);
-              margin-right: 10px;
-            }
-
             .testimonial__identity {
               display: flex;
               justify-content: center;
@@ -78,21 +64,13 @@
         }
       }
     }
-    .testimonials__nav {
-      margin: 20px auto;
-      display: flex;
-      justify-content: center;
-
+    .carousel__nav {
+      //
       button {
-        background: lighten($color: #d5d5d5, $amount: 10);
-        padding: 7.5px;
-        margin: auto 5px;
-        cursor: pointer;
-        border-radius: 50%;
-        border: none;
+        //
 
         &.--current {
-          background: darken($color: #d5d5d5, $amount: 10);
+          //
         }
       }
     }

@@ -7,7 +7,15 @@
   }
 }
 
-// .supporting-article--row {
-//   max-width: 900px;
-//   margin: auto;
-// }
+.supporting-article--row {
+  // max-width: 900px;
+  margin: auto;
+
+  .article__text {
+    min-width: 50%;
+  }
+
+  .article__figure {
+    max-width: 50%;
+  }
+}

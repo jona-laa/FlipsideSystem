@@ -1,0 +1,29 @@
+.carousel {
+  overflow: hidden;
+  width: 100%;
+
+  .carousel__inner {
+    display: flex;
+    transition: all 1s ease-in-out;
+    padding: 10px 0;
+  }
+}
+
+.carousel__nav {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+
+  button {
+    background: lighten($color: #d5d5d5, $amount: 10);
+    padding: 7.5px;
+    margin: auto 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+
+    &.--current {
+      background: darken($color: #d5d5d5, $amount: 10);
+    }
+  }
+}
