@@ -1,4 +1,6 @@
 .supporting-article--col {
+  @include container(25px, 20px, 100px);
+
   margin: auto;
   text-align: center;
 
@@ -6,18 +8,26 @@
     margin: auto;
   }
 
-  .btn {
-    margin-top: 20px;
+  .article__text {
+    .btn {
+      margin-top: -20px;
+    }
   }
 }
 
 .supporting-article--row {
+  @include container(25px, 20px, 100px);
+
   display: flex;
   margin: auto;
   justify-content: center;
 
   .article__text {
     min-width: 50%;
+
+    .btn {
+      margin-top: -20px;
+    }
   }
 
   .article__spacer {
@@ -31,10 +41,12 @@
 
 @include maxWidth($bp-tablet) {
   .supporting-article--col {
-    //
+    @include container(0px, 20px, 50px);
   }
 
   .supporting-article--row {
+    @include container(0px, 20px, 50px);
+
     flex-direction: column;
     align-items: center;
     text-align: center;

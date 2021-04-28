@@ -1,76 +1,67 @@
-.testimonials {
-  .container {
-    .carousel {
-      .carousel__inner {
-        .testimonial {
-          min-width: 30% !important;
-          margin: auto 1.666666666666667%;
+.testimonial {
+}
 
-          @include maxWidth($bp-tablet) {
-            min-width: 45% !important;
-            margin: auto 2.5%;
-          }
+// Carousel testimonial
 
-          @include maxWidth($bp-mobile) {
-            min-width: 70% !important;
-            margin: auto 15%;
-          }
+.carousel {
+  .carousel__inner {
+    .testimonial {
+      min-width: 30% !important;
+      margin: auto 1.666666666666667%;
 
-          @include maxWidth(480px) {
-            min-width: 96% !important;
-            margin: auto 2%;
-          }
+      @include maxWidth($bp-tablet) {
+        min-width: 45% !important;
+        margin: auto 2.5%;
+      }
 
-          .testimonial__bubble {
-            border-radius: 10px;
-            box-shadow: 0px 10px 20px rgba(37, 37, 37, 0.2);
-            padding: 50px 30px;
-            position: relative;
-            margin-bottom: 30px;
-            width: 100%;
+      @include maxWidth($bp-mobile) {
+        min-width: 70% !important;
+        margin: auto 15%;
+      }
 
-            &::after {
-              position: absolute;
-              content: '';
-              border: 20px solid transparent;
+      @include maxWidth(480px) {
+        min-width: 96% !important;
+        margin: auto 2%;
+      }
 
-              border-top-color: $white;
-              border-bottom: 0;
-              bottom: -20px;
-              left: 20%;
-              margin-left: -20px;
-            }
+      .testimonial__bubble {
+        border-radius: 10px;
+        box-shadow: 0px 10px 20px rgba(37, 37, 37, 0.2);
+        padding: 50px 30px;
+        position: relative;
+        margin-bottom: 30px;
+        width: 100%;
 
-            @include maxWidth(480px) {
-              box-shadow: 0px 7.5px 7.5px rgba(37, 37, 37, 0.2),
-                0px 0px 7.5px rgba(37, 37, 37, 0.2);
-              padding: 30px 15px;
-            }
+        &::after {
+          position: absolute;
+          content: '';
+          border: 20px solid transparent;
 
-            .testimonial__text {
-              //
-            }
-          }
+          border-top-color: $white;
+          border-bottom: 0;
+          bottom: -20px;
+          left: 20%;
+          margin-left: -20px;
+        }
 
-          .testimonial__info {
-            display: flex;
+        @include maxWidth(480px) {
+          box-shadow: 0px 7.5px 7.5px rgba(37, 37, 37, 0.2),
+            0px 0px 7.5px rgba(37, 37, 37, 0.2);
+          padding: 30px 15px;
+        }
 
-            .testimonial__identity {
-              display: flex;
-              justify-content: center;
-              flex-direction: column;
-            }
-          }
+        .testimonial__text {
+          //
         }
       }
-    }
-    .carousel__nav {
-      //
-      button {
-        //
 
-        &.--current {
-          //
+      .testimonial__info {
+        display: flex;
+
+        .testimonial__identity {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
         }
       }
     }
