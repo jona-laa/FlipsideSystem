@@ -1,0 +1,51 @@
+.supporting-article--col {
+  margin: auto;
+  text-align: center;
+
+  figure {
+    margin: auto;
+  }
+
+  .btn {
+    margin-top: 20px;
+  }
+}
+
+.supporting-article--row {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+
+  .article__text {
+    min-width: 50%;
+  }
+
+  .article__spacer {
+    padding: 20px;
+  }
+
+  .article__figure {
+    max-width: 50%;
+  }
+}
+
+@include maxWidth($bp-tablet) {
+  .supporting-article--col {
+    //
+  }
+
+  .supporting-article--row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .article__spacer {
+      padding: 10px;
+    }
+
+    .article__figure {
+      width: 100%;
+      max-width: 370px;
+    }
+  }
+}

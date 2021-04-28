@@ -11,10 +11,6 @@
   align-items: center;
 }
 
-.container {
-  @include container(125px, 20px);
-}
-
 .--reverse {
   flex-direction: row-reverse;
 }
@@ -22,4 +18,16 @@
 .full-width {
   width: 100% !important;
   max-width: none !important;
+}
+
+.--nth-reverse-even {
+  &:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+}
+
+.--nth-reverse-odd {
+  &:nth-of-type(odd) {
+    flex-direction: row-reverse;
+  }
 }

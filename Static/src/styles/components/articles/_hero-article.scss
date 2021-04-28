@@ -1,0 +1,40 @@
+.hero-article {
+  @extend .row-duo;
+  @include container(200px, 20px, 0px);
+
+  .article__text {
+    width: 50%;
+
+    .btn {
+      margin: 10px 0;
+    }
+
+    .stars {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+}
+
+@include maxWidth($bp-tablet) {
+  .hero-article {
+    flex-direction: column;
+    @include container(150px, 20px, 20px);
+
+    .article__text {
+      width: 100%;
+    }
+
+    .article__figure {
+      width: 80%;
+      max-width: 400px;
+    }
+  }
+}
+
+@include maxWidth(850px) {
+  .hero-article {
+    @include container(60px, 20px, 0);
+  }
+}

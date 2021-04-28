@@ -3,28 +3,37 @@
 @import 'base/base';
 @import 'base/typography';
 
+// Header & Footer
+@import 'components/header';
+@import 'components/footer';
+
 // Sections
-@import 'components/header/hero';
-@import 'components/pricing';
 @import 'components/products';
 @import 'components/team';
 @import 'components/faq';
 @import 'components/support';
 
 // Blocks & Elements
-@import 'components/header/header';
-@import 'components/footer';
+@import 'components/pricing-card';
 @import 'components/buttons';
 @import 'components/icons';
 @import 'components/avatar';
 @import 'components/form';
-@import 'components/form-article';
-@import 'components/supporting-article';
 @import 'components/testimonial';
 @import 'components/carousel';
 
+// Articles
+@import 'components/articles/form-article';
+@import 'components/articles/image-article';
+@import 'components/articles/icon-article';
+@import 'components/articles/pitch-article';
+@import 'components/articles/supporting-content';
+@import 'components/articles/product-article';
+@import 'components/articles/demo-article';
+@import 'components/articles/contact-article';
+@import 'components/articles/hero-article';
+
 // Layout
-// @import 'layout/layout';
 @import 'layout/row-duo';
 @import 'layout/row-trio';
 @import 'layout/row-quad';

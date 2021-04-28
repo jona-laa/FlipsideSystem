@@ -2,9 +2,6 @@
   .row-duo {
     min-width: 100%;
     justify-content: center;
-    &:nth-of-type(even) {
-      flex-direction: initial;
-    }
 
     .article__figure {
       max-width: 200px;
@@ -17,7 +14,10 @@
   .carousel {
     //
     .carousel__inner {
-      //
+      .row-duo {
+        min-width: 100%;
+        justify-content: center;
+      }
     }
   }
   .carousel__nav {

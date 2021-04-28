@@ -1,0 +1,14 @@
+.icon-article {
+  @extend .row-duo;
+
+  min-width: 100%;
+  justify-content: center;
+
+  .article__figure {
+    max-width: 200px;
+  }
+  .article__text {
+    max-width: 812px;
+    width: 100%;
+  }
+}
