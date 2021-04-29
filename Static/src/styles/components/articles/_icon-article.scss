@@ -2,12 +2,21 @@
   @extend .row-duo;
 
   justify-content: center;
-  margin: auto;
+  // margin: 0 auto 50px !important;
   align-items: center;
 
   .article__figure {
     max-width: 200px;
+
+    @include maxWidth($bp-tablet) {
+      max-width: 150px;
+    }
   }
+
+  .article__spacer {
+    // padding: 100px;
+  }
+
   .article__text {
     max-width: 812px;
     width: 100%;
