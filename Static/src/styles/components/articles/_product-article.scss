@@ -1,3 +1,19 @@
 .product-article {
   @extend .row-duo;
+
+  min-width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  .article__figure {
+    max-width: 200px;
+
+    @include maxWidth($bp-mobile) {
+      max-width: 150px;
+    }
+  }
+  .article__text {
+    max-width: 812px;
+    width: 100%;
+  }
 }

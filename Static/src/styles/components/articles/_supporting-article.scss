@@ -1,32 +1,55 @@
+// COLUMN LAYOUT
 .supporting-article--col {
   @include container(25px, 20px, 100px);
 
   margin: auto;
   text-align: center;
+  max-width: 960px;
 
   figure {
     margin: auto;
+    max-width: 50%;
+    width: fit-content;
   }
 
   .article__text {
+    .sub-h {
+      margin-bottom: 20px;
+    }
     .btn {
-      margin-top: -20px;
+      margin-top: 10px;
     }
   }
 }
 
+@include maxWidth($bp-tablet) {
+  .supporting-article--col {
+    @include container(0px, 20px, 50px);
+
+    .article__figure {
+      max-width: 370px;
+    }
+  }
+}
+
+// ROW LAYOUT
 .supporting-article--row {
   @include container(25px, 20px, 100px);
-
   display: flex;
   margin: auto;
   justify-content: center;
+  align-items: center;
 
   .article__text {
     min-width: 50%;
+    max-width: 812px;
+
+    .sub-h {
+      margin-bottom: 30px;
+    }
 
     .btn {
-      margin-top: -20px;
+      //
     }
   }
 
@@ -35,15 +58,12 @@
   }
 
   .article__figure {
-    max-width: 50%;
+    width: fit-content;
+    max-width: 300px;
   }
 }
 
 @include maxWidth($bp-tablet) {
-  .supporting-article--col {
-    @include container(0px, 20px, 50px);
-  }
-
   .supporting-article--row {
     @include container(0px, 20px, 50px);
 

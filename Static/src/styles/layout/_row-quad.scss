@@ -10,7 +10,7 @@
       min-width: 50%;
     }
 
-    @include maxWidth($bp-mobile) {
+    @include maxWidth(550px) {
       min-width: 100%;
     }
   }

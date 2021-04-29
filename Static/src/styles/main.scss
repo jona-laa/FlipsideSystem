@@ -11,7 +11,6 @@
 @import 'components/products';
 @import 'components/team';
 @import 'components/faq';
-@import 'components/support';
 
 // Blocks & Elements
 @import 'components/pricing-card';
@@ -23,11 +22,10 @@
 @import 'components/carousel';
 
 // Articles
-@import 'components/articles/form-article';
 @import 'components/articles/image-article';
 @import 'components/articles/icon-article';
 @import 'components/articles/pitch-article';
-@import 'components/articles/supporting-content';
+@import 'components/articles/supporting-article';
 @import 'components/articles/product-article';
 @import 'components/articles/demo-article';
 @import 'components/articles/contact-article';

@@ -1,8 +1,9 @@
 .icon-article {
   @extend .row-duo;
 
-  min-width: 100%;
   justify-content: center;
+  margin: auto;
+  align-items: center;
 
   .article__figure {
     max-width: 200px;

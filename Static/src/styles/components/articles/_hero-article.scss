@@ -1,5 +1,6 @@
 .hero-article {
   @extend .row-duo;
+
   @include container(200px, 20px, 0px);
 
   .article__text {
@@ -29,6 +30,11 @@
     .article__figure {
       width: 80%;
       max-width: 400px;
+    }
+
+    .btn,
+    .article__row .btn {
+      justify-self: center;
     }
   }
 }

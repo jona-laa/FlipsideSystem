@@ -2,7 +2,7 @@
   @extend .row-duo;
 
   .article__pitch {
-    width: 40%;
+    width: fit-content;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -31,6 +31,10 @@
   .article__text {
     max-width: 812px;
     width: 100%;
+
+    .pitch--blue {
+      margin: 20px 0;
+    }
 
     .btn {
       margin-top: 20px;

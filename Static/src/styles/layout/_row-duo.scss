@@ -1,7 +1,7 @@
 /* ROW DUO - Article with 50%/50% row layout */
 .row-duo {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   width: 100%;
   margin-bottom: 75px;
   align-items: center;
@@ -10,28 +10,8 @@
     margin-bottom: 0;
   }
 
-  .article__figure {
-    width: 50%;
-  }
-
   .article__spacer {
     padding: 20px;
-  }
-
-  .article__text {
-    width: 50%;
-
-    .pitch--blue {
-      margin: 20px 0;
-    }
-
-    .btn {
-      margin-top: 10px;
-    }
-  }
-
-  form {
-    width: 50%;
   }
 
   .article__row {
@@ -62,30 +42,16 @@
     .article__spacer {
       padding: 10px;
     }
-
-    .article__figure,
-    .article__text,
-    form {
-      width: 100%;
-      max-width: 650px;
-    }
   }
 }
 
 @include maxWidth($bp-mobile) {
   .row-duo {
-    margin-bottom: 75px;
-
     .article__row {
       flex-direction: column;
-
-      .btn {
-        //
-      }
     }
 
     .btn {
-      margin-top: 20px;
       min-width: 200px;
     }
   }
