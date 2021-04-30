@@ -170,6 +170,7 @@ li {
 }
 
 .prod-nav__link--current {
+  font-size: 2.2rem;
   font-weight: $SemiBold;
   color: $black;
 }
@@ -318,6 +319,18 @@ li {
 
   .testimonial__title {
     font-size: 1.3rem;
+  }
+
+  .prod-nav__link {
+    color: $lightgray;
+    font-size: 2rem;
+    font-weight: $Regular;
+  }
+
+  .prod-nav__link--current {
+    font-size: 2rem;
+    font-weight: $SemiBold;
+    color: $black;
   }
 
   .btn {

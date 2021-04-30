@@ -48,7 +48,7 @@
       <div class="container">
         <h2 class="--center-align">Customer engagement Built for E-Commerce</h2>
         <span class="sub-h --center-align">Engagement Your visitors will love, guaranteed</span>
-        <div class="carousel__nav">
+        <div class="carousel__nav products__nav">
           <!-- Carousel Nav will render here -->
         </div>
         <div class="carousel">
@@ -75,7 +75,8 @@
               </article>
               <div class="testimonial">
                 <div class="testimonial__bubble">
-                  <p class="testimonial__text">“Lower support. 30-40% lower support!”</p>
+                  <p class="testimonial__text">“Lower support. 30-40% lower support! Lower support. 30-40% lower
+                    support!”</p>
                 </div>
                 <div class="testimonial__info">
                   <img class="testimonial__avatar" src="../images/icons/Avatars/man (2).svg" alt="avatar">
@@ -250,36 +251,33 @@
   </footer>
   <script src="//code.jquery.com/jquery-latest.js"></script>
   <script src="../js/main.js"></script>
-  <script>
+  <script defer>
     const carouselNav = document.querySelector(".carousel__nav");
     const carouselInner = document.querySelector(".carousel__inner");
-    const testimonialPages = Math.ceil(carouselInner.children.length);
+    // const testimonialPages = Math.ceil(carouselInner.children.length);
 
-    // Create carousel nav based on number of posts and screen size
+    // Create carousel nav based on number of posts
     function createCarouselNav() {
       carouselNav.innerHTML = '';
       carouselInner.style.transform = 'translateX(-00%)';
 
-      Array.from(carouselInner.children).forEach(child => {
-        console.log(child)
-      })
 
-      for (let i = 1; i <= testimonialPages; i++) {
-        i == 1 ? carouselNav.innerHTML += `<button class="page-${i} --current" aria-label="go to page ${i}"></button>` :
-          carouselNav.innerHTML += `<button class="page-${i}" aria-label="go to page ${i}"></button>`;
-      }
+      document.querySelectorAll('.carousel .sup-h').forEach((elem, i) => {
+        i == 0 ? carouselNav.innerHTML += `<button class="page-${i} prod-nav__link prod-nav__link--current" aria-label="go to page ${i}">${elem.textContent}</button>` :
+          carouselNav.innerHTML += `<button class="page-${i} prod-nav__link" aria-label="go to page ${i}">${elem.textContent}</button>`;
+      });
     };
 
 
     carouselNav.addEventListener("click", e => {
       if (e.target.nodeName === "BUTTON") {
         Array.from(carouselNav.children).forEach(item =>
-          item.classList.remove("--current")
+          item.classList.remove("prod-nav__link--current")
         );
 
-        const page = e.target.className.split('-')[1];
-        carouselInner.style.transform = `translateX(-${page - 1}00%)`;
-        e.target.classList.add('--current');
+        const page = e.target.className.split('page-')[1][0];
+        carouselInner.style.transform = `translateX(-${page}00%)`;
+        e.target.classList.add('prod-nav__link--current');
       }
     });
 

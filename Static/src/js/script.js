@@ -33,5 +33,5 @@ const hideToTopBtn = () => window.pageYOffset > window.screen.height ? elementTo
 window.onscroll = () => {
   hideMenu();
   hideToTopBtn();
-  alterBgColor(5, 'rgba(255, 255, 255, 0.95)', 'transparent', nav);
+  alterBgColor(20, 'rgba(255, 255, 255, 0.95)', 'transparent', nav);
 };
