@@ -3,6 +3,11 @@
 
   .article__figure {
     width: 50%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   .article__text {

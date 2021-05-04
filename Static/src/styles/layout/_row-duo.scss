@@ -1,7 +1,6 @@
 /* ROW DUO - Article with 50%/50% row layout */
 .row-duo {
   display: flex;
-  // justify-content: space-between;
   width: 100%;
   margin-bottom: 50px;
   align-items: center;
@@ -27,10 +26,10 @@
 
 @include maxWidth($bp-tablet) {
   .row-duo {
-    flex-direction: column !important;
+    flex-direction: column;
 
     &:nth-of-type(even) {
-      flex-direction: column;
+      flex-direction: column !important;
     }
 
     .article__spacer {

@@ -33,17 +33,20 @@
     width: 100%;
 
     .pitch--blue {
-      margin: 20px 0;
+      margin: 10px 0;
     }
 
-    .btn {
-      margin-top: 20px;
+    .btn,
+    .wp-block-button__link {
+      margin-top: 10px;
     }
   }
 }
 
 @include maxWidth($bp-tablet) {
   .pitch-article {
+    flex-direction: column-reverse !important;
+
     .article__pitch {
       width: 100%;
       max-width: 450px;

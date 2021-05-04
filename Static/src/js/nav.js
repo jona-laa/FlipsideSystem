@@ -1,5 +1,16 @@
 // Toggle mobile menu
 const mainMenuToggle = document.querySelector('#nav__menu-toggle');
+const mainMenu = document.querySelector('.menu');
+const nav = document.querySelector('.nav');
+
+
+
+// Give last menu link button appearance
+mainMenu.lastElementChild.firstElementChild.classList += 'btn';
+
+
+
+// Toggle mobile menu
 $(mainMenuToggle).click(function () {
   if (mainMenu.getAttribute('aria-hidden') == 'false') {
     mainMenu.setAttribute('aria-hidden', 'true');
@@ -60,6 +71,8 @@ window.onresize = () => {
     mainMenuToggle.setAttribute('aria-expanded', 'true');
   }
 }
+
+
 
 // Set WAI-ARIA on page load
 window.onload = () => {

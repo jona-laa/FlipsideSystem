@@ -18,8 +18,8 @@
   <header>
     <nav class="nav">
       <div class="nav__container">
-        <a href="index.html" class="nav__logo-link">
-          <img class="nav__logo" src="./images/FLIPSIDE_logo.png" alt="Flipside Logo">
+        <a href="index.html" class="custom-logo-link">
+          <img class="custom-logo" src="./images/FLIPSIDE_logo.png" alt="Flipside Logo">
         </a>
         <!-- Mobile meny - Hidden on default -->
         <a href="" onClick=event.preventDefault() id="nav__menu-toggle" aria-label="Toggle Mobile Menu"
@@ -30,14 +30,16 @@
             <rect y="60" width="90" height="15" fill="#252525"></rect>
           </svg>
         </a>
-        <ul class="nav__menu">
-          <li><a href="index.html" class="nav__link--current">Home</a></li>
-          <li><a href="./pages/pricing.html" class="nav__link">Pricing</a></li>
-          <li><a href="./pages/products.html" class="nav__link">Products</a></li>
-          <li><a href="./pages/customers.html" class="nav__link">Customers</a></li>
-          <li><a href="./pages/contact.html" class="nav__link">Contact</a></li>
-          <li><a href="./pages/demo.html" class="btn">Book A Demo</a></li>
-        </ul>
+        <div class="menu-main-menu-container">
+          <ul class="menu">
+            <li class="menu-item current-menu-item"><a href="index.html">Home</a></li>
+            <li class="menu-item"><a href="./pages/pricing.html">Pricing</a></li>
+            <li class="menu-item"><a href="./pages/products.html">Products</a></li>
+            <li class="menu-item"><a href="./pages/customers.html">Customers</a></li>
+            <li class="menu-item"><a href="./pages/contact.html">Contact</a></li>
+            <li class="menu-item"><a href="./pages/demo.html">Book A Demo</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
   </header>
@@ -186,7 +188,18 @@
 
     <section class="--bg-pink">
       <div class="container">
-        <article class="pitch-article --reverse">
+        <article class="pitch-article">
+          <div class="article__text">
+            <h3>Built to Grow Your business, Guaranteed</h3>
+            <p>Flipside® empowers your audience with simple tools that allows heroes to give hyper relevant feedback and
+              content with
+              huge impact on your business.</p>
+            <p class="pitch--blue">
+              Lower support with 30-40%, increase sales with 15%, improve customer loyalty with 15%.
+            </p>
+            <a href="./pages/demo.html" class="btn">Book A Demo</a>
+          </div>
+          <div class="article__spacer"></div>
           <div class="article__pitch">
             <div class="article__pitch-item">
               <img src="./images/icons/benefits/reduced-support.svg" alt="">
@@ -212,17 +225,6 @@
                 Customer Lifetime Value
               </p>
             </div>
-          </div>
-          <div class="article__spacer"></div>
-          <div class="article__text">
-            <h3>Built to Grow Your business, Guaranteed</h3>
-            <p>Flipside® empowers your audience with simple tools that allows heroes to give hyper relevant feedback and
-              content with
-              huge impact on your business.</p>
-            <p class="pitch--blue">
-              Lower support with 30-40%, increase sales with 15%, improve customer loyalty with 15%.
-            </p>
-            <a href="./pages/demo.html" class="btn">Book A Demo</a>
           </div>
         </article>
       </div>
@@ -337,13 +339,15 @@
 
       <div class="footer__links">
         <h3 class="footer__heading">Quick Links</h3>
-        <ul>
-          <li><a href="./pages/faq.html">FAQ</a></li>
-          <li><a href="./pages/contact.html">Contact Us</a></li>
-          <li><a href="./pages/products.html">Products</a></li>
-          <li><a href="./pages/pricing.html">Pricing</a></li>
-          <li><a href="./pages/about.html">About Flipside®</a></li>
-        </ul>
+        <div class="menu-footer-menu-container">
+          <ul class="menu">
+            <li><a class="footer__link" href="./pages/faq.html">FAQ</a></li>
+            <li><a class="footer__link" href="./pages/contact.html">Contact Us</a></li>
+            <li><a class="footer__link" href="./pages/products.html">Products</a></li>
+            <li><a class="footer__link" href="./pages/pricing.html">Pricing</a></li>
+            <li><a class="footer__link" href="./pages/about.html">About Flipside®</a></li>
+          </ul>
+        </div>
       </div>
 
       <div class="footer__contact">

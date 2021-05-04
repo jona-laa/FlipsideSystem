@@ -17,18 +17,26 @@
     @include container(100px, 20px);
   }
 
-  .footer__logo {
-    max-width: 200px;
-  }
-
-  .footer__text {
+  .footer__about {
     max-width: 550px;
+
+    .footer__logo,
+    img {
+      max-width: 200px;
+      margin-bottom: 10px;
+    }
   }
 
   .footer__links {
     margin: 0 40px;
-    .footer__links li {
-      line-height: 3.8rem;
+    .menu-footer-menu-container {
+      .menu {
+        li {
+          a {
+            line-height: 3.8rem;
+          }
+        }
+      }
     }
   }
 

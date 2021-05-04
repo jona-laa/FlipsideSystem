@@ -32,6 +32,7 @@ h3 {
   font-size: 3.6rem;
   font-weight: $SemiBold;
   line-height: 4.2rem;
+  margin-bottom: 10px;
 }
 
 h4 {
@@ -60,11 +61,20 @@ li {
   font-size: 1.8rem;
   font-weight: $Regular;
   line-height: 3rem;
-  margin: 0 0 10px;
+  margin-bottom: 10px;
+}
+
+.article__text li {
+  margin: 10px 0;
 }
 
 .gray {
   color: $darkgray;
+}
+
+strong {
+  font-size: 1.8rem;
+  font-weight: $SemiBold;
 }
 
 .highlighted {
@@ -145,13 +155,19 @@ li {
   margin-bottom: 0;
 }
 
-.nav__link {
+.menu-item a {
   color: $lightgray;
   font-size: 2rem;
   font-weight: $Regular;
 }
 
-.nav__link--current {
+.menu-item .btn {
+  color: $white;
+  font-size: 18px;
+  font-weight: $SemiBold;
+}
+
+.current-menu-item a {
   font-size: 2rem;
   color: $black;
   font-weight: $SemiBold;
@@ -207,10 +223,13 @@ li {
 .footer__heading {
   font-size: 2.4rem;
   font-weight: 600;
+  margin-bottom: 10px;
 }
 
-.footer__text {
-  font-size: 1.6rem;
+.footer__about {
+  p {
+    font-size: 1.6rem;
+  }
 }
 
 .footer__copy {
@@ -218,7 +237,16 @@ li {
   font-size: 1.4rem;
 }
 
-.btn {
+.footer__links {
+  a {
+    font-size: 1.8rem;
+    line-height: 3.8rem;
+    color: black;
+  }
+}
+
+.btn,
+.wp-block-buttons .wp-block-button .wp-block-button__link {
   color: $white;
   font-size: 18px;
   font-weight: $SemiBold;
@@ -274,6 +302,10 @@ li {
   li {
     font-size: 1.6rem;
     line-height: 2.8rem;
+  }
+
+  strong {
+    font-size: 1.6rem;
   }
 
   p.small {
