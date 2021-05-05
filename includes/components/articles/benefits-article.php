@@ -37,11 +37,13 @@ function insert_benefits_article( $atts = array()) {
   if ($arr_posts->have_posts()) :
       while ($arr_posts->have_posts()) :
           $arr_posts->the_post();
+          ob_start();
+          the_content();
 
           $output .= '
           <article class="pitch-article ' . $order . '">
             <div class="article__text">' .
-              get_the_content() . 
+              ob_get_clean() . 
             '</div>
             <div class="article__spacer"></div>' . 
             insert_benefits_items($category) .

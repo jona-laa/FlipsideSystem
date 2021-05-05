@@ -1,4 +1,5 @@
 <?php 
+$themeroot = get_theme_root();
 include('./wp-content/themes/Flipside/includes/component-shortcodes.php');
 
 
@@ -21,6 +22,22 @@ add_image_size('media-medium', 650);
 // set_post_thumbnail_size(300);
 // add_image_size('media-thumb', 300);
 // add_image_size('media-big', 1200);
+
+
+
+/**
+ * Remove empty paragraphs created by wpautop()
+ * @author Ryan Hamilton
+ * @link https://gist.github.com/Fantikerz/5557617
+ */
+function remove_empty_p( $content ) {
+	$content = force_balance_tags( $content );
+	$content = preg_replace( '#<p>\s*+(<br\s*/*>)?\s*</p>#i', '', $content );
+	$content = preg_replace( '~\s?<p>(\s|&nbsp;)+</p>\s?~', '', $content );
+	$content = preg_replace( '(^<p>\s*[^\n]*<\/p>$)', '', $content );
+	return $content;
+}
+add_filter('the_content', 'remove_empty_p', 20, 1);
 
 
 

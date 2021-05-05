@@ -24,9 +24,6 @@
         <?php if ( function_exists( 'the_custom_logo' ) ) {
           the_custom_logo();
         } ?>
-        <!-- <a href="<?php home_url()?>" class="nav__logo-link">
-          <img class="nav__logo" src="./images/FLIPSIDE_logo.png" alt="Flipside Logo">
-        </a> -->
         <!-- Mobile Menu Toggle - Hidden on default -->
         <a href="" onClick=event.preventDefault() id="nav__menu-toggle" aria-label="Toggle Mobile Menu"
           aria-expanded="false" aria-hidden="true">
@@ -40,6 +37,10 @@
       </div>
     </nav>
 
+  </header>
+
+
+  <main id="main">
     <!-- Home Page Hero -->
     <?php if (is_page( 'Home' )) { ?>
     <article class="hero-article --reverse">
@@ -77,7 +78,3 @@
     </div>
 
     <?php } ?>
-  </header>
-
-
-  <main id="main">
