@@ -1,18 +1,25 @@
 <?php
   /*
-    * Generates section of image-articles. 
+    * Generates section with "our team"
     *
     * @category   post category to be used in articles
     * @posts      number of articles to render
     *
   */
-  function insert_supporting_article( $atts = array()) {
+  function insert_team( $atts = array()) {
     extract(shortcode_atts(array(
-      'category' => 'Usage Info',
-      'posts' => 1,
-      'order' => 'row',
-      'background' => 'white'
+      'category' => 'Our Team',
+      'heading' => 'Our Team',
+      'posts' => 4,
     ), $atts));
+
+    // Open section and container tags
+    $output = '
+    <section class="team" id="team">
+      <div class="container">
+        <h2 class="--center-align">'.$heading.'</h2>
+        <div class="team">
+      ';
 
     // Create WP-query arguments
     $args = array(
@@ -30,13 +37,12 @@
             ob_start();
             the_content();
             
-            $output = '
-            <div class="supporting-article--' . $order . '">
-              <figure class="article__figure">' . 
-                get_the_post_thumbnail(null, 'media-medium') . 
+            $output .= '
+            <div class="team__item">
+              <figure class="team__figure">' .
+                get_the_post_thumbnail() .
               '</figure>
-              <div class="article__spacer"></div>
-              <div class="article__text">' .
+              <div class="team__info">' .
                 ob_get_clean() . 
               '</div>
             </div>';
@@ -45,8 +51,14 @@
         wp_reset_postdata();
     endif;
 
+    // Close section and container tags
+    $output .= '
+        </div>
+      </div>
+    </section>';
+
     return $output;
   }
 
-  add_shortcode('supporting-article', 'insert_supporting_article');
+  add_shortcode('team', 'insert_team');
 ?>

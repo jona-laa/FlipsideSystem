@@ -9,6 +9,10 @@ include('./wp-content/themes/Flipside/includes/components/icon.php');
 include('./wp-content/themes/Flipside/includes/components/sup-h.php');
 include('./wp-content/themes/Flipside/includes/components/sub-h.php');
 include('./wp-content/themes/Flipside/includes/components/big-blue.php');
+include('./wp-content/themes/Flipside/includes/components/single-button.php');
+include('./wp-content/themes/Flipside/includes/components/spacer.php');
+include('./wp-content/themes/Flipside/includes/components/team.php');
+include('./wp-content/themes/Flipside/includes/components/team-member.php');
 
 // Page components (sections)
 include('./wp-content/themes/Flipside/includes/components/articles/image-article.php');
@@ -20,4 +24,6 @@ include('./wp-content/themes/Flipside/includes/components/articles/pricing-botto
 include('./wp-content/themes/Flipside/includes/components/articles/supporting-article.php');
 include('./wp-content/themes/Flipside/includes/components/articles/testimonials.php');
 include('./wp-content/themes/Flipside/includes/components/articles/products.php');
+include('./wp-content/themes/Flipside/includes/components/articles/icon-article.php');
+include('./wp-content/themes/Flipside/includes/components/articles/faqs.php');
 ?>

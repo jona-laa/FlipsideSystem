@@ -1,6 +1,6 @@
 <?php
   /*
-    * Generates carousel with testimonials
+    * Generates section with articles containing an icon as image 200x200
     *
     * @category   post category to be used in articles
     * @posts      number of articles to render
@@ -8,27 +8,26 @@
     * @subheading section sub-heading
     *
   */
-  function insert_products( $atts = array()) {
+  function insert_icon_article( $atts = array()) {
     extract(shortcode_atts(array(
       'category' => 'Products',
-      'posts' => 3,
+      'posts' => null,
       'order' => null,
-      'heading' => 'heading="your heading here"',
-      'subheading' => 'sub-heading="your sub-heading here"'
+      'heading' => null,
+      'subheading' => null
     ), $atts));
 
+    
     // Open section and container tags
     $output = '
     <section class="products">
       <div class="container">
-        <h2 class="--center-align">' . $heading . '</h2>
-        <span class="sub-h --center-align">' . $subheading . '</span>
-        <div class="carousel__nav products__nav">
-          <!-- Carousel Nav will render here -->
-        </div>
-        <div class="carousel">
-          <div class="carousel__inner">
-      ';
+        <h2 class="--center-align">'.$heading.'</h2>';
+
+    if($subheading) { 
+        $output .= '<span class="sub-h --center-align">'.$subheading.'</span>';
+    };    
+        
 
     // Create WP-query arguments
     $args = array(
@@ -47,17 +46,15 @@
             the_content();
             
             $output .= '
-            <div class="product-wrapper">
-              <article class="product-article '.$order.'">
-                <figure class="article__figure">' .
-                  get_the_post_thumbnail(null, 'media-medium') .
-                '</figure>
-                <div class="article__spacer"></div>
-                <div class="article__text">' . 
-                  ob_get_clean() .
-                '</div>
-              </article>
-            </div>';
+            <article class="icon-article --nth-reverse-odd">
+              <figure class="article__figure">' .
+               get_the_post_thumbnail(null, 'media-medium') .
+              '</figure>
+              <div class="article__spacer"></div>
+              <div class="article__text">' .
+                ob_get_clean() . 
+              '</div>
+            </article>';
             
         endwhile;
         wp_reset_postdata();
@@ -65,13 +62,11 @@
 
     // Close section and container tags
     $output .= '
-          </div>
-        </div>
       </div>
     </section>';
 
     return $output;
   }
 
-  add_shortcode('products-carousel', 'insert_products');
+  add_shortcode('icon-article', 'insert_icon_article');
 ?>
