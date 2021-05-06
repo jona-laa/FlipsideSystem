@@ -19,12 +19,17 @@
 
   .article__figure {
     max-width: 50%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 
 @include maxWidth($bp-tablet) {
   .hero-article {
-    flex-direction: column;
+    flex-direction: column !important;
     @include container(150px, 20px, 20px);
 
     .article__text {

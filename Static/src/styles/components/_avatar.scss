@@ -1,14 +1,16 @@
 .avatar-figure {
   width: 100%;
   max-width: 150px;
+  height: auto;
   .avatar-figure__img {
     clip-path: circle(50%);
   }
 }
-
-.testimonial__avatar {
-  width: 90px;
-  height: 90px;
-  clip-path: circle(50%);
-  margin-right: 10px;
+.testimonial__info {
+  img {
+    width: auto;
+    height: 90px;
+    clip-path: circle(50%);
+    margin-right: 10px;
+  }
 }

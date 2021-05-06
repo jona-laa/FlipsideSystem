@@ -20,7 +20,13 @@
 }
 
 @include maxWidth($bp-tablet) {
-  .image-article {
+  .image-article,
+  .image-article.--nth-reverse-even {
+    &:nth-of-type(even),
+    &:nth-of-type(odd) {
+      flex-direction: column;
+    }
+
     .article__text,
     .article__figure {
       width: 100%;

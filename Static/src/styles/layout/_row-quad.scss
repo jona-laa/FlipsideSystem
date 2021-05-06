@@ -1,10 +1,10 @@
 .row-quad {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 
   .row-quad__item {
-    max-width: 25%;
+    width: 25%;
 
     @include maxWidth($bp-tablet) {
       min-width: 50%;

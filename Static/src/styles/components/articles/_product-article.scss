@@ -21,6 +21,15 @@
         @include maxWidth($bp-tablet) {
           max-width: 150px;
         }
+
+        @include maxWidth($bp-mobile) {
+          max-width: 100px;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+        }
       }
       .article__text {
         max-width: 812px;

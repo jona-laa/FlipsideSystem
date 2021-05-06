@@ -47,6 +47,11 @@
   .pitch-article {
     flex-direction: column-reverse !important;
 
+    &:nth-of-type(even),
+    &:nth-of-type(odd) {
+      flex-direction: column-reverse !important;
+    }
+
     .article__pitch {
       width: 100%;
       max-width: 450px;

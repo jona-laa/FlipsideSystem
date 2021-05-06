@@ -40,14 +40,16 @@ h4 {
   font-weight: $SemiBold;
 }
 
-.sup-h {
+p.sup-h,
+span.sup-h {
   font-size: 2.2rem;
   font-weight: $Meduim;
   color: $lightgray;
   line-height: 3rem;
 }
 
-.sub-h {
+p.sub-h,
+span.sub-h {
   font-size: 2rem;
   font-weight: $Regular;
   color: $lightgray;
@@ -85,7 +87,7 @@ strong {
   font-size: 1.6rem;
 }
 
-.pricing__card-heading {
+.pricing__card .pricing__card-top h3 {
   font-size: 2.8rem;
   font-weight: $SemiBold;
   text-align: center;
@@ -98,6 +100,11 @@ strong {
 
 .pricing__card-select {
   font-size: 1.6rem;
+}
+
+.pricing__card-bottom p {
+  font-size: 1.6rem;
+  min-height: 120px;
 }
 
 .form__label {
@@ -117,11 +124,12 @@ strong {
   color: $lightgray;
 }
 
-.testimonial__text {
+.testimonial__bubble p {
   color: $lightgray;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-style: italic;
-  line-height: 2.8rem;
+  line-height: 2.6rem;
+  margin: 0;
 }
 
 .testimonial__name,
@@ -138,6 +146,7 @@ strong {
   font-size: 1.5rem;
   font-weight: $Regular;
   margin: 0;
+  line-height: 2.2rem;
 }
 
 .team__title {
@@ -197,7 +206,7 @@ strong {
   line-height: 2rem;
 }
 
-.pitch--blue {
+.--big-blue {
   font-size: 2.6rem;
   color: $blue;
   font-weight: $SemiBold;
@@ -288,7 +297,7 @@ strong {
   }
 
   h2 {
-    font-size: 2.6rem;
+    font-size: 2.8rem;
     line-height: 3.6rem;
     margin-bottom: 10px;
   }
@@ -312,12 +321,14 @@ strong {
     // font-size: 1.4rem;
   }
 
-  .sup-h {
+  p.sup-h,
+  span.sup-h {
     font-size: 1.8rem;
     line-height: 2.4rem;
   }
 
-  .sub-h {
+  p.sub-h,
+  span.sub-h {
     font-size: 1.8rem;
     line-height: 2.8rem;
   }
@@ -338,13 +349,14 @@ strong {
     font-size: 1.6rem;
   }
 
-  .testimonial__text {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
+  .testimonial__bubble p {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
   }
 
   .testimonial__title {
     font-size: 1.3rem;
+    line-height: 2rem;
   }
 
   .prod-nav__link {
@@ -368,7 +380,7 @@ strong {
     line-height: 2.4rem;
   }
 
-  .pitch--blue {
+  .--big-blue {
     font-size: 2rem;
   }
 }

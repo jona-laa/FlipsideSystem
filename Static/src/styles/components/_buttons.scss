@@ -41,8 +41,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 0 0;
   .single-btn__btn {
     @extend .btn;
   }
+}
+
+.wp-block-button__link {
+  @extend .btn;
 }

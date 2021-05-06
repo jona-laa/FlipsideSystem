@@ -2,8 +2,14 @@
   @extend .row-duo;
 
   justify-content: center;
-  // margin: 0 auto 50px !important;
   align-items: center;
+
+  @include maxWidth($bp-tablet) {
+    &:nth-of-type(even),
+    &:nth-of-type(odd) {
+      flex-direction: column !important;
+    }
+  }
 
   .article__figure {
     max-width: 200px;
@@ -11,10 +17,19 @@
     @include maxWidth($bp-tablet) {
       max-width: 150px;
     }
+
+    @include maxWidth($bp-mobile) {
+      max-width: 100px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   .article__spacer {
-    // padding: 100px;
+    padding: 5px;
   }
 
   .article__text {

@@ -28,10 +28,6 @@
   .row-duo {
     flex-direction: column;
 
-    &:nth-of-type(even) {
-      flex-direction: column !important;
-    }
-
     .article__spacer {
       padding: 5px;
     }
@@ -42,10 +38,17 @@
   .row-duo {
     .article__row {
       flex-direction: column;
-      .btn {
+      .btn,
+      .wp-block-button__link {
         min-width: 200px;
         align-self: flex-start;
       }
+    }
+
+    .btn,
+    .wp-block-button__link {
+      min-width: 200px;
+      align-self: flex-start;
     }
   }
 }
