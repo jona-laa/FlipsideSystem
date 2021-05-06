@@ -42,9 +42,9 @@
                 get_the_post_thumbnail(null, 'media-medium') . 
               '</figure>
               <div class="article__spacer"></div>
-              <div class="article__text"><p>' .
+              <div class="article__text">' .
                 ob_get_clean() . 
-              '</p></div>
+              '</div>
             </article>';
             
         endwhile;

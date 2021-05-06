@@ -18,5 +18,6 @@ include('./wp-content/themes/Flipside/includes/components/articles/row-trio.php'
 include('./wp-content/themes/Flipside/includes/components/articles/pricing-top.php');
 include('./wp-content/themes/Flipside/includes/components/articles/pricing-bottom.php');
 include('./wp-content/themes/Flipside/includes/components/articles/supporting-article.php');
-include('./wp-content/themes/Flipside/includes/components/articles/carousel.php');
+include('./wp-content/themes/Flipside/includes/components/articles/testimonials.php');
+include('./wp-content/themes/Flipside/includes/components/articles/products.php');
 ?>

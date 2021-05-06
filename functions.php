@@ -41,6 +41,16 @@ add_filter('the_content', 'remove_empty_p', 20, 1);
 
 
 
+// Prevent WP from adding <p> tags on pages
+function disable_wp_auto_p( $content ) {
+    remove_filter( 'the_content', 'wpautop' );
+    remove_filter( 'the_excerpt', 'wpautop' );
+  return $content;
+}
+add_filter( 'the_content', 'disable_wp_auto_p', 0 );
+
+
+
 /* Custom Logo Support */
 add_theme_support( 'custom-logo' );
 // 
