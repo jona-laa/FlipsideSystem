@@ -7,6 +7,10 @@
   display: inline-block;
   max-height: 50px;
   text-align: center;
+
+  &:hover {
+    box-shadow: 0 5px 10px rgba(198, 198, 198, 0.5);
+  }
 }
 
 /* To Top Button */

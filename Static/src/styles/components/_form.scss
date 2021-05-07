@@ -74,6 +74,10 @@
     @include maxWidth($bp-mobile) {
       justify-content: center;
     }
+
+    .form__submit-btn {
+      cursor: pointer;
+    }
   }
 
   .form__info {

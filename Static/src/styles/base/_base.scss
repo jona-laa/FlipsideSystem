@@ -115,6 +115,10 @@ body {
   background: $col-bg;
   line-height: 1.6;
   margin: auto;
+  width: 100%;
+  background: url('../images/header_bg--red.svg') no-repeat;
+  background-position: center -1200px;
+  background-size: 3600px auto;
 }
 ol,
 ul {
@@ -135,8 +139,3 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
-// img {
-//   width: 100%;
-//   height: auto;
-// }

@@ -22,9 +22,14 @@
 
     ul {
       li {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         color: $darkgray;
         margin-bottom: 30px;
+
+        @include maxWidth($bp-tablet) {
+          font-size: 1.6rem;
+          margin-bottom: 20px;
+        }
 
         i {
           font-size: 3rem;
