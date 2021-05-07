@@ -43,7 +43,7 @@
   <main id="main">
     <!-- Home Page Hero -->
     <?php if (is_page( 'Home' )) { ?>
-    <article class="hero-article --reverse">
+    <!-- <article class="hero-article --reverse">
       <figure class="article__figure">
         <img src="./wp-content/themes/Flipside/images/header_img.png" alt="">
       </figure>
@@ -75,6 +75,6 @@
       <a href="#main" class="arrow-link" aria-label="Scroll to About Section">
         <i class="fas fa-chevron-down fa-3x"></i>
       </a>
-    </div>
+    </div> -->
 
     <?php } ?>

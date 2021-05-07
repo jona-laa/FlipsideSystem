@@ -14,6 +14,8 @@ include('./wp-content/themes/Flipside/includes/components/spacer.php');
 include('./wp-content/themes/Flipside/includes/components/team.php');
 include('./wp-content/themes/Flipside/includes/components/team-member.php');
 include('./wp-content/themes/Flipside/includes/components/background-image.php');
+include('./wp-content/themes/Flipside/includes/components/stars.php');
+include('./wp-content/themes/Flipside/includes/components/read-more.php');
 
 // Page components (sections)
 include('./wp-content/themes/Flipside/includes/components/articles/image-article.php');
