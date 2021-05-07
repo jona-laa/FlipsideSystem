@@ -46,7 +46,7 @@
             the_content();
             
             $output .= '
-            <article class="icon-article --nth-reverse-odd">
+            <article class="icon-article '. $order .'">
               <figure class="article__figure">' .
                get_the_post_thumbnail(null, 'media-medium') .
               '</figure>

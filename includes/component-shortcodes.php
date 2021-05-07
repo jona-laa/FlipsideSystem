@@ -26,4 +26,5 @@ include('./wp-content/themes/Flipside/includes/components/articles/testimonials.
 include('./wp-content/themes/Flipside/includes/components/articles/products.php');
 include('./wp-content/themes/Flipside/includes/components/articles/icon-article.php');
 include('./wp-content/themes/Flipside/includes/components/articles/faqs.php');
+include('./wp-content/themes/Flipside/includes/components/articles/contact-article.php');
 ?>

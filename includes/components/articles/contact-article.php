@@ -1,19 +1,25 @@
 <?php
   /*
-    * Generates section of image-articles. 
+    * Generates section with a contact form article
     *
     * @category   post category to be used in articles
     * @posts      number of articles to render
     *
   */
-  function insert_supporting_article( $atts = array()) {
+  function insert_contact_article( $atts = array()) {
     extract(shortcode_atts(array(
-      'category' => 'Usage Info',
+      'category' => 'Contact Us',
       'posts' => 1,
-      'align' => 'row',
       'order' => null,
-      'background' => 'white'
+      'form' => null,
+      'formid' => null
     ), $atts));
+
+    // Open section and container tags
+    $output = '
+    <section class="contact" id="contact">
+      <div class="container">
+      ';
 
     // Create WP-query arguments
     $args = array(
@@ -31,23 +37,26 @@
             ob_start();
             the_content();
             
-            $output = '
-            <div class="supporting-article--'. $align .' '. $order .'">
-              <figure class="article__figure">' . 
-                get_the_post_thumbnail(null, 'media-medium') . 
-              '</figure>
-              <div class="article__spacer"></div>
+            $output .= '
+            <div class="contact-article">
               <div class="article__text">' .
                 ob_get_clean() . 
               '</div>
-            </div>';
+              <div class="article__spacer"></div>' .
+              do_shortcode('[contact-form-7 id="'.$formid.'" title="'.$form.'"]' ) .
+            '</div>';
             
         endwhile;
         wp_reset_postdata();
     endif;
 
+    // Close section and container tags
+    $output .= '
+      </div> <!-- End container -->
+    </section>';
+
     return $output;
   }
 
-  add_shortcode('supporting-article', 'insert_supporting_article');
+  add_shortcode('contact-article', 'insert_contact_article');
 ?>
