@@ -13,6 +13,7 @@ include('./wp-content/themes/Flipside/includes/components/single-button.php');
 include('./wp-content/themes/Flipside/includes/components/spacer.php');
 include('./wp-content/themes/Flipside/includes/components/team.php');
 include('./wp-content/themes/Flipside/includes/components/team-member.php');
+include('./wp-content/themes/Flipside/includes/components/background-image.php');
 
 // Page components (sections)
 include('./wp-content/themes/Flipside/includes/components/articles/image-article.php');
@@ -27,4 +28,5 @@ include('./wp-content/themes/Flipside/includes/components/articles/products.php'
 include('./wp-content/themes/Flipside/includes/components/articles/icon-article.php');
 include('./wp-content/themes/Flipside/includes/components/articles/faqs.php');
 include('./wp-content/themes/Flipside/includes/components/articles/contact-article.php');
+include('./wp-content/themes/Flipside/includes/components/articles/hero-article.php');
 ?>
