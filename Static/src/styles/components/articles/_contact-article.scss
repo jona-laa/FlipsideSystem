@@ -5,8 +5,12 @@
     flex-direction: column-reverse;
   }
 
-  form {
+  .wpcf7 {
     width: 50%;
+
+    form {
+      width: 100%;
+    }
   }
 
   .article__spacer {
@@ -34,7 +38,7 @@
 
 @include maxWidth($bp-tablet) {
   .contact-article {
-    form,
+    .wpcf7,
     .article__text {
       width: 100%;
       max-width: 650px;

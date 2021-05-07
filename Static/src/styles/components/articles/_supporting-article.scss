@@ -74,7 +74,13 @@
 
   .article__figure {
     width: fit-content;
-    max-width: 300px;
+    max-width: 250px;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 
@@ -82,7 +88,7 @@
   .supporting-article--row {
     @include container(0px, 20px, 50px);
 
-    flex-direction: column;
+    flex-direction: column !important;
     align-items: center;
     text-align: center;
 
@@ -92,7 +98,7 @@
 
     .article__figure {
       width: 100%;
-      max-width: 300px;
+      // max-width: 300px;
       margin: auto;
       img {
         width: 100%;

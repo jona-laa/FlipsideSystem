@@ -18,6 +18,9 @@
 .full-width {
   width: 100% !important;
   max-width: none !important;
+  input {
+    width: 100%;
+  }
 }
 
 .--nth-reverse-even {

@@ -64,29 +64,33 @@
             <a class="btn" href="faq.html">Go to FAQs</a>
           </div>
           <div class="article__spacer"></div>
-          <form class="form" aria-label="Send a message">
-            <div class="form__fields">
-              <div class="form__field">
-                <label class="form__label" for="first-name">First Name *</label>
-                <input class="form__input" name="first-name" id="first-name" type="text" placeholder="Enter first name">
+
+          <div class="wpcf7">
+            <form class="form" aria-label="Send a message">
+              <div class="form__fields">
+                <div class="form__field">
+                  <label class="form__label" for="first-name">First Name *</label>
+                  <input class="form__input" name="first-name" id="first-name" type="text"
+                    placeholder="Enter first name">
+                </div>
+                <div class="form__field">
+                  <label class="form__label" for="last-name">Last Name *</label>
+                  <input class="form__input" name="last-name" id="last-name" type="text" placeholder="Enter last name">
+                </div>
+                <div class="form__field full-width">
+                  <label class="form__label" for="email">Email *</label>
+                  <input class="form__input" name="email" id="email" type="email" placeholder="Enter your email">
+                </div>
+                <div class="form__field full-width">
+                  <label class="form__label" for="message">Message *</label>
+                  <textarea class="form__input" name="message" id="message" placeholder="Enter message"></textarea>
+                </div>
               </div>
-              <div class="form__field">
-                <label class="form__label" for="last-name">Last Name *</label>
-                <input class="form__input" name="last-name" id="last-name" type="text" placeholder="Enter last name">
+              <div class="form__submit">
+                <button class="btn form__submit-btn" type="submit">Send Message</button>
               </div>
-              <div class="form__field full-width">
-                <label class="form__label" for="email">Email *</label>
-                <input class="form__input" name="email" id="email" type="email" placeholder="Enter your email">
-              </div>
-              <div class="form__field full-width">
-                <label class="form__label" for="message">Message *</label>
-                <textarea class="form__input" name="message" id="message" placeholder="Enter message"></textarea>
-              </div>
-            </div>
-            <div class="form__submit">
-              <button class="btn form__submit-btn" type="submit">Send Message</button>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </section>
