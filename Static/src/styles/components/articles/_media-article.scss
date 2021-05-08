@@ -1,7 +1,8 @@
-.image-article {
+.media-article {
   @extend .row-duo;
 
-  .article__figure {
+  .article__figure,
+  video {
     width: 50%;
 
     img {
@@ -20,15 +21,16 @@
 }
 
 @include maxWidth($bp-tablet) {
-  .image-article,
-  .image-article.--nth-reverse-even {
+  .media-article,
+  .media-article.--nth-reverse-even {
     &:nth-of-type(even),
     &:nth-of-type(odd) {
       flex-direction: column;
     }
 
     .article__text,
-    .article__figure {
+    .article__figure,
+    video {
       width: 100%;
       max-width: 650px;
 

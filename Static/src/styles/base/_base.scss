@@ -116,9 +116,13 @@ body {
   line-height: 1.6;
   margin: auto;
   width: 100%;
-  background: url('../images/header_bg--red.svg') no-repeat;
+  background: url('./images/header_bg--red.svg') no-repeat;
   background-position: center -1200px;
   background-size: 3600px auto;
+
+  @include maxWidth($bp-mobile) {
+    background-position: center -1000px;
+  }
 }
 ol,
 ul {
