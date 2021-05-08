@@ -18,7 +18,6 @@ include('./wp-content/themes/Flipside/includes/components/stars.php');
 include('./wp-content/themes/Flipside/includes/components/read-more.php');
 
 // Page components (sections)
-include('./wp-content/themes/Flipside/includes/components/articles/image-article.php');
 include('./wp-content/themes/Flipside/includes/components/articles/benefits-article.php');
 include('./wp-content/themes/Flipside/includes/components/articles/grid-3x.php');
 include('./wp-content/themes/Flipside/includes/components/articles/row-trio.php');
@@ -31,4 +30,5 @@ include('./wp-content/themes/Flipside/includes/components/articles/icon-article.
 include('./wp-content/themes/Flipside/includes/components/articles/faqs.php');
 include('./wp-content/themes/Flipside/includes/components/articles/contact-article.php');
 include('./wp-content/themes/Flipside/includes/components/articles/hero-article.php');
+include('./wp-content/themes/Flipside/includes/components/articles/media-article.php');
 ?>
