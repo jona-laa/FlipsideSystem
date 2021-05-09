@@ -15,7 +15,8 @@
 </head>
 
 <body>
-  <header>
+  <header id="header">
+    <a class="skip-link" href='#main'>Skip to content</a>
     <!-- Navigation -->
     <nav class="nav">
       <div class="nav__container">
