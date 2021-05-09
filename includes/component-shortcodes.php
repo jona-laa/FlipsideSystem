@@ -20,7 +20,7 @@ include('./wp-content/themes/Flipside/includes/components/read-more.php');
 // Page components (sections)
 include('./wp-content/themes/Flipside/includes/components/articles/benefits-article.php');
 include('./wp-content/themes/Flipside/includes/components/articles/grid-3x.php');
-include('./wp-content/themes/Flipside/includes/components/articles/row-trio.php');
+include('./wp-content/themes/Flipside/includes/components/articles/pricing.php');
 include('./wp-content/themes/Flipside/includes/components/articles/pricing-top.php');
 include('./wp-content/themes/Flipside/includes/components/articles/pricing-bottom.php');
 include('./wp-content/themes/Flipside/includes/components/articles/supporting-article.php');

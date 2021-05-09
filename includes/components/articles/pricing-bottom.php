@@ -9,7 +9,7 @@
   
   function insert_pricing_bottom( $atts, $content = null) {
     return '<div class="pricing__card-bottom">' .
-              $content .
+              do_shortcode($content) .
             '</div>';
   }
 
