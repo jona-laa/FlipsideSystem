@@ -256,7 +256,7 @@
   <script defer>
     const carouselNav = document.querySelector(".carousel__nav");
     const carouselInner = document.querySelector(".carousel__inner");
-    // const testimonialPages = Math.ceil(carouselInner.children.length);
+    let windowWidth = window.innerWidth;
 
     // Create carousel nav based on number of posts
     function createCarouselNav() {
@@ -288,7 +288,7 @@
     }
 
     window.onresize = () => {
-      createCarouselNav();
+      window.innerWidth !== windowWidth ? createCarouselNav() : null;
     };
   </script>
 </body>

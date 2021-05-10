@@ -13,6 +13,17 @@
   }
 }
 
+/* Skip to content link */
+.skip-link {
+  position: absolute;
+  transform: translate(-100%);
+
+  &:hover,
+  &:focus {
+    transform: translate(0%);
+  }
+}
+
 /* To Top Button */
 .btn-top {
   @extend .btn;

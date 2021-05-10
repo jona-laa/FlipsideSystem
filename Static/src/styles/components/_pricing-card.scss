@@ -18,6 +18,30 @@
     align-items: center;
     padding: 30px 30px 50px;
 
+    p {
+      min-height: 120px;
+    }
+
+    .wp-block-contact-form-7-contact-form-selector {
+      width: 100%;
+      margin-bottom: 30px;
+
+      .wpcf7 {
+        .wpcf7-form {
+          padding: 0;
+
+          p {
+            min-height: initial;
+            margin-bottom: 0;
+
+            .wpcf7-select {
+              margin-bottom: 0 !important;
+            }
+          }
+        }
+      }
+    }
+
     .pricing__card-select {
       padding: 10px;
       margin-bottom: 30px;

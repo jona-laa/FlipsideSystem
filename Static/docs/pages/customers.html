@@ -2,6 +2,8 @@
     		        0.375, 35.375 28.375, 0.375 58.67, 35.375 "/></svg></a></footer><script src="//code.jquery.com/jquery-latest.js"></script><script src="../js/main.js"></script><script>const carouselNav = document.querySelector(".carousel__nav");
     const carouselInner = document.querySelector(".carousel__inner");
     let testimonialPages;
+    let windowWidth = window.innerWidth;
+
 
     // Create carousel nav based on number of posts and screen size
     function createCarouselNav() {
@@ -44,5 +46,5 @@
     }
 
     window.onresize = () => {
-      createCarouselNav();
+      window.innerWidth !== windowWidth ? createCarouselNav() : null;
     };</script></body></html>

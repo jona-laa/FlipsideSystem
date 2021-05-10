@@ -104,7 +104,6 @@ strong {
 
 .pricing__card-bottom p {
   font-size: 1.6rem;
-  min-height: 120px;
 }
 
 .form__label {
@@ -229,7 +228,8 @@ strong {
   font-size: 1.8rem;
 }
 
-.footer__heading {
+.footer h3,
+.footer h3 a {
   font-size: 2.4rem;
   font-weight: 600;
   margin-bottom: 10px;

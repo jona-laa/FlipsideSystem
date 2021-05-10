@@ -1,4 +1,4 @@
-.pitch-article {
+.benefits-article {
   @extend .row-duo;
 
   .article__pitch {
@@ -44,7 +44,7 @@
 }
 
 @include maxWidth($bp-tablet) {
-  .pitch-article {
+  .benefits-article {
     flex-direction: column-reverse !important;
 
     &:nth-of-type(even),
@@ -73,7 +73,7 @@
 }
 
 @include maxWidth($bp-mobile) {
-  .pitch-article {
+  .benefits-article {
     .article__pitch {
       .article__pitch-item {
         img {

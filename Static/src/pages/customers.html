@@ -248,6 +248,8 @@
     const carouselNav = document.querySelector(".carousel__nav");
     const carouselInner = document.querySelector(".carousel__inner");
     let testimonialPages;
+    let windowWidth = window.innerWidth;
+
 
     // Create carousel nav based on number of posts and screen size
     function createCarouselNav() {
@@ -290,7 +292,7 @@
     }
 
     window.onresize = () => {
-      createCarouselNav();
+      window.innerWidth !== windowWidth ? createCarouselNav() : null;
     };
   </script>
 </body>
