@@ -36,7 +36,7 @@
             the_content();
             
             $output .= '
-            <div class="pricing__card --border-red row-trio__item">' .
+            <div class="pricing__card row-trio__item">' .
               ob_get_clean() .
             '</div>';
             

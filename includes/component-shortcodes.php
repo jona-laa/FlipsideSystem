@@ -31,4 +31,5 @@ include('./wp-content/themes/Flipside/includes/components/articles/faqs.php');
 include('./wp-content/themes/Flipside/includes/components/articles/contact-article.php');
 include('./wp-content/themes/Flipside/includes/components/articles/hero-article.php');
 include('./wp-content/themes/Flipside/includes/components/articles/media-article.php');
+include('./wp-content/themes/Flipside/includes/components/articles/text-article.php');
 ?>

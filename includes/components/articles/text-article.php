@@ -4,20 +4,16 @@
     *
     * @category         post category to be used in articles
     * @posts            number of articles to render
-    * @order            reverse or regular
     * @background       background color
-    * @video            video link
     * @heading          section heading
     * @headingdisplay   display or hide heading
     *
   */
-  function insert_media_article( $atts = array()) {
+  function insert_text_article( $atts = array()) {
     extract(shortcode_atts(array(
-      'category' => 'Usage Info',
+      'category' => null,
       'posts' => 1,
-      'order' => null,
       'background' => 'white',
-      'video' => null,
       'heading' => null,
       'headingdisplay' => false
     ), $atts));
@@ -53,25 +49,9 @@
             the_content();
             
             $output .= '
-            <article class="media-article ' . $order . '">';
-              if($video) { 
-                $output .= 
-                  '<video poster="'. get_the_post_thumbnail_url(get_the_ID(),'media-medium') .'" controls>
-                    <source src="'. $video .'" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>';
-              } else {
-                $output .= 
-                  '<figure class="article__figure">' . 
-                    get_the_post_thumbnail(null, 'media-medium') . 
-                  '</figure>';
-              }
-              
-              $output .= '<div class="article__spacer"></div>
-              <div class="article__text">' .
+            <article class="text-article">' .
                 ob_get_clean() . 
-              '</div>
-            </article>';
+            '</article>';
             
         endwhile;
         wp_reset_postdata();
@@ -85,5 +65,5 @@
     return $output;
   }
 
-  add_shortcode('media-article', 'insert_media_article');
+  add_shortcode('text-article', 'insert_text_article');
 ?>
