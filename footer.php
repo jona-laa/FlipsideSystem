@@ -10,11 +10,7 @@
 
     <div class="footer__contact">
       <div>
-        <h3 class="footer__heading">Contact Us</h3>
-        <ul>
-          <li>0046-8897-989</li>
-          <li>email: info@flipsidesystems.com</li>
-        </ul>
+        <?php get_footer_contact(); ?>
       </div>
       <span class="footer__copy">© Copyright 2021 All Rights Reserved.</span>
     </div>
@@ -31,14 +27,17 @@
 <script src="//code.jquery.com/jquery-latest.js"></script>
 <?php wp_footer(); 
   
-// Add scripts to customers and products pages
+
+  
+// Script for Customers page carousel
 if (is_page( 'Customers' )) { ?>
 <script>
 const carouselNav = document.querySelector(".carousel__nav");
 const carouselInner = document.querySelector(".testimonials .carousel__inner");
 let testimonialPages;
+let windowWidth = window.innerWidth;
 
-// Create carousel nav based on number of posts and screen size
+// Create carousel nav based on number of posts and screen width
 function createCarouselNav() {
   carouselNav.innerHTML = '';
   carouselInner.style.transform = 'translateX(-00%)';
@@ -61,7 +60,7 @@ function createCarouselNav() {
   }
 };
 
-
+// Scroll carousel on button press
 carouselNav.addEventListener("click", e => {
   if (e.target.nodeName === "BUTTON") {
     Array.from(carouselNav.children).forEach(item =>
@@ -79,18 +78,19 @@ window.onload = () => {
 }
 
 window.onresize = () => {
-  createCarouselNav();
+  window.innerWidth !== windowWidth ? createCarouselNav() : null;
 };
 </script>
 
 
 
 <?php } 
+// Script for Products page carousel
 if (is_page( 'Products' )) { ?>
 <script>
 const carouselNav = document.querySelector(".carousel__nav");
 const carouselInner = document.querySelector(".carousel__inner");
-// const testimonialPages = Math.ceil(carouselInner.children.length);
+let windowWidth = window.innerWidth;
 
 // Create carousel nav based on number of posts
 function createCarouselNav() {
@@ -124,7 +124,7 @@ window.onload = () => {
 }
 
 window.onresize = () => {
-  createCarouselNav();
+  window.innerWidth !== windowWidth ? createCarouselNav() : null;
 };
 </script>
 <?php } 

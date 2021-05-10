@@ -84,4 +84,17 @@ function include_footer_about() {
 
 add_action('get_footer_about', 'include_footer_about', 1);
 
+
+
+/* Contact Info Hook */
+function get_footer_contact() {
+    do_action('get_footer_contact');
+}
+
+function include_footer_contact() {
+	include './wp-content/themes/Flipside/includes/footer-contact.php';
+}
+
+add_action('get_footer_contact', 'include_footer_contact', 1);
+
 ?>

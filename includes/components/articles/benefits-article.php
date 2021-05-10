@@ -15,13 +15,23 @@ function insert_benefits_article( $atts = array()) {
     'category' => 'Benefits',
     'posts' => 1,
     'order' => null,
-    'background' => 'white'
+    'background' => 'white',
+    'heading' => null,
+    'headingdisplay' => false
   ), $atts));
+
+  // Hide or display section heading
+  if (!$headingdisplay) {
+    $headingdisplay = 'none';
+  } else {
+    $headingdisplay = 'block';
+  }
 
   // Open section and container tags
   $output = '
   <section class="--bg-' . $background . '">
     <div class="container">
+      <h2 style=" display: '.$headingdisplay.'">'.$heading.'</h2>
     ';
 
   // Create WP-query arguments
@@ -41,7 +51,7 @@ function insert_benefits_article( $atts = array()) {
           the_content();
 
           $output .= '
-          <article class="pitch-article ' . $order . '">
+          <article class="benefits-article ' . $order . '">
             <div class="article__text">' .
               ob_get_clean() . 
             '</div>

@@ -2,11 +2,13 @@
   /*
     * Generates section of articles with video or image and text
     *
-    * @category     post category to be used in articles
-    * @posts        number of articles to render
-    * @order        reverse or regular
-    * @background   background color
-    * @video        video link
+    * @category         post category to be used in articles
+    * @posts            number of articles to render
+    * @order            reverse or regular
+    * @background       background color
+    * @video            video link
+    * @heading          section heading
+    * @headingdisplay   display or hide heading
     *
   */
   function insert_media_article( $atts = array()) {
@@ -16,12 +18,22 @@
       'order' => null,
       'background' => 'white',
       'video' => null,
+      'heading' => null,
+      'headingdisplay' => false
     ), $atts));
+
+    // Hide or display section heading
+    if (!$headingdisplay) {
+      $headingdisplay = 'none';
+    } else {
+      $headingdisplay = 'block';
+    }
 
     // Open section and container tags
     $output = '
     <section class="--bg-' . $background . '">
       <div class="container">
+        <h2 style=" display: '.$headingdisplay.'">'.$heading.'</h2>
       ';
 
     // Create WP-query arguments
