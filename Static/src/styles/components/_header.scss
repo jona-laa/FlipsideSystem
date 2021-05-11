@@ -1,3 +1,24 @@
+// Keyframes for mobile menu toggle
+@keyframes slidedown {
+  from {
+    display: none;
+    transform: translateY(-100%);
+  }
+  to {
+    display: block;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slideup {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
 header {
   .nav {
     position: fixed;
@@ -48,6 +69,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
         @include minWidth(851px) {
           display: flex !important;
         }

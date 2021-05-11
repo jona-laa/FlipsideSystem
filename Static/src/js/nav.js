@@ -11,7 +11,17 @@ mainMenu.lastElementChild.firstElementChild.classList += 'btn';
 
 
 // Toggle mobile menu
-$(mainMenuToggle).click(function () {
+mainMenuToggle.addEventListener('click', () => {
+
+  if (mainMenu.style.display !== 'block') {
+    mainMenu.style.display = 'block';
+    mainMenu.style.animation = 'slidedown 0.5s ease-out';
+  } else {
+    mainMenu.style.animation = 'slideup 0.5s ease-out';
+    mainMenu.style.display = 'none';
+  }
+
+
   if (mainMenu.getAttribute('aria-hidden') == 'false') {
     mainMenu.setAttribute('aria-hidden', 'true');
     mainMenuToggle.setAttribute('aria-expanded', 'false');
@@ -19,8 +29,8 @@ $(mainMenuToggle).click(function () {
     mainMenu.setAttribute('aria-hidden', 'false');
     mainMenuToggle.setAttribute('aria-expanded', 'true');
   }
-  $(mainMenu).toggle(200);
-});
+
+})
 
 
 
