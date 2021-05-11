@@ -54,8 +54,9 @@ function createCarouselNav() {
   }
 
   for (let i = 1; i <= testimonialPages; i++) {
-    i == 1 ? carouselNav.innerHTML += `<button class="page-${i} --current" aria-label="go to page ${i}"></button>` :
-      carouselNav.innerHTML += `<button class="page-${i}" aria-label="go to page ${i}"></button>`;
+    i == 1 ? carouselNav.innerHTML +=
+      `<button class="page-${i} --current" aria-label="go to testimonials page ${i}"></button>` :
+      carouselNav.innerHTML += `<button class="page-${i}" aria-label="go to testimonials page ${i}"></button>`;
   }
 };
 
@@ -99,9 +100,9 @@ function createCarouselNav() {
 
   document.querySelectorAll('.products .carousel .sup-h').forEach((elem, i) => {
     i == 0 ? carouselNav.innerHTML +=
-      `<button class="page-${i} prod-nav__link prod-nav__link--current" aria-label="go to page ${i}">${elem.textContent}</button>` :
+      `<button class="page-${i} prod-nav__link prod-nav__link--current" aria-label="read about ${elem.textContent}">${elem.textContent}</button>` :
       carouselNav.innerHTML +=
-      `<button class="page-${i} prod-nav__link" aria-label="go to page ${i}">${elem.textContent}</button>`;
+      `<button class="page-${i} prod-nav__link" aria-label="read about ${elem.textContent}">${elem.textContent}</button>`;
   });
 };
 
