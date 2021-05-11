@@ -12,7 +12,8 @@
       'posts' => 1,
       'align' => 'row',
       'order' => null,
-      'background' => 'white'
+      'background' => 'white',
+      'id' => null
     ), $atts));
 
     // Create WP-query arguments
@@ -32,7 +33,12 @@
             the_content();
             
             $output = '
-            <div class="supporting-article--'. $align .' '. $order .'">
+            <div class="supporting-article--'. $align .' '. $order .'" ';
+              if($id) {
+                $output .= 'id="'. $id .'"';
+              }
+              
+              $output .= '>
               <figure class="article__figure">' . 
                 get_the_post_thumbnail(null, 'media-medium') . 
               '</figure>

@@ -4,10 +4,13 @@ include('./wp-content/themes/Flipside/includes/components/articles/benefits-item
 /*
   * Generates section of benefits-articles. 
   *
-  * @category     post category to be used in articles
-  * @posts        number of articles to render
-  * @direction    order of image and content. default(null) or reverse
-  * @background   background color (pink, blue-figure)
+  * @category         post category to be used in articles
+  * @posts            number of articles to render
+  * @order            flex-direction of text/icons
+  * @background       background color (pink, blue-figure)
+  * @heading          section heading
+  * @headingdisplay   display or hide heading
+  * @id               section id
   *
 */
 function insert_benefits_article( $atts = array()) {
@@ -17,7 +20,8 @@ function insert_benefits_article( $atts = array()) {
     'order' => null,
     'background' => 'white',
     'heading' => null,
-    'headingdisplay' => false
+    'headingdisplay' => false,
+    'id' => null
   ), $atts));
 
   // Hide or display section heading
@@ -29,7 +33,13 @@ function insert_benefits_article( $atts = array()) {
 
   // Open section and container tags
   $output = '
-  <section class="--bg-' . $background . '">
+  <section 
+    class="--bg-' . $background . '"';
+  if($id) {
+    $output .= 'id="'. $id .'"';
+  }
+    
+  $output .= '>
     <div class="container">
       <h2 style=" display: '.$headingdisplay.'">'.$heading.'</h2>
     ';

@@ -4,6 +4,7 @@
     *
     * @category   post category to be used
     * @posts      number of articles to render
+    * @heading    section heading
     *
   */
   function insert_faq( $atts = array()) {

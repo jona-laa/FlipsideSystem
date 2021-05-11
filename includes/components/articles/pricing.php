@@ -9,13 +9,19 @@
   function insert_row_trio( $atts = array()) {
     extract(shortcode_atts(array(
       'category' => 'Pricing',
-      'posts' => 3
+      'posts' => 3,
+      'id' => null
     ), $atts));
 
     // Open section and container tags
     $output = '
-    <section class="pricing" id="pricing">
-      <div class="container">
+    <section ';
+    
+    if($id) {
+      $output .= 'id="'. $id .'"';
+    }
+    
+    $output .= '><div class="container">
         <div class="row-trio">
       ';
 

@@ -13,13 +13,20 @@
       'category' => 'Testimonials',
       'posts' => 9,
       'heading' => 'heading="your heading here"',
-      'subheading' => 'sub-heading="your sub-heading here"'
+      'subheading' => 'sub-heading="your sub-heading here"',
+      'id' => null
     ), $atts));
 
     // Open section and container tags
     $output = '
-    <section class="testimonials" id="testimonials">
-      <div class="container">
+    <section class="testimonials" ';
+    
+    if($id) {
+      $output .= 'id="'. $id .'"';
+    }
+    
+    $output .= '>
+    <div class="container">
         <h2 class="--center-align">' . $heading . '</h2>
         <span class="sub-h --center-align">' . $subheading . '</span>
         <div class="carousel">

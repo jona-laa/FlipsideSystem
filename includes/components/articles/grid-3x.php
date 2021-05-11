@@ -9,12 +9,19 @@
   function insert_grid_3x( $atts = array()) {
     extract(shortcode_atts(array(
       'category' => 'Features',
-      'posts' => 9
+      'posts' => 9,
+      'id' => null
     ), $atts));
 
     // Open section and container tags
     $output = '
-    <section class="benefits" id="benefits">
+    <section ';
+    
+    if($id) {
+      $output .= 'id="'. $id .'"';
+    }
+
+    $output .=  '>
       <div class="container">
         <div class="grid-3x">
       ';

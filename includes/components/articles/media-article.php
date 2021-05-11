@@ -9,6 +9,7 @@
     * @video            video link
     * @heading          section heading
     * @headingdisplay   display or hide heading
+    * @id               section id
     *
   */
   function insert_media_article( $atts = array()) {
@@ -19,7 +20,8 @@
       'background' => 'white',
       'video' => null,
       'heading' => null,
-      'headingdisplay' => false
+      'headingdisplay' => false,
+      'id' => null
     ), $atts));
 
     // Hide or display section heading
@@ -31,7 +33,14 @@
 
     // Open section and container tags
     $output = '
-    <section class="--bg-' . $background . '">
+    <section 
+      class="--bg-' . $background . '"';
+      
+    if($id) {
+      $output .= 'id="'. $id .'"';
+    }
+      
+    $output .= '>
       <div class="container">
         <h2 style=" display: '.$headingdisplay.'">'.$heading.'</h2>
       ';

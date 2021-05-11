@@ -2,10 +2,12 @@
   /*
     * Generates section with articles containing an icon as image 200x200
     *
-    * @category   post category to be used in articles
-    * @posts      number of articles to render
-    * @heading    section heading
-    * @subheading section sub-heading
+    * @category         post category to be used in articles
+    * @posts            number of articles to render
+    * @order            flex-direction of text/icons
+    * @heading          section heading
+    * @subheading       section sub-heading
+    * @id               section id
     *
   */
   function insert_icon_article( $atts = array()) {
@@ -14,13 +16,20 @@
       'posts' => null,
       'order' => null,
       'heading' => null,
-      'subheading' => null
+      'subheading' => null,
+      'id' => null
     ), $atts));
 
     
     // Open section and container tags
     $output = '
-    <section class="products">
+    <section ';
+    
+    if($id) {
+      $output .= 'id="'. $id .'"';
+    }
+    
+    $output .= '>
       <div class="container">
         <h2 class="--center-align">'.$heading.'</h2>';
 

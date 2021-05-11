@@ -16,9 +16,9 @@
 
 <body>
   <header id="header">
-    <a class="skip-link" href='#main'>Skip to content</a>
     <!-- Navigation -->
     <nav class="nav">
+      <a class="skip-link" href='#main'>Skip to main content</a>
       <div class="nav__container">
         <?php if ( function_exists( 'the_custom_logo' ) ) {
           the_custom_logo();

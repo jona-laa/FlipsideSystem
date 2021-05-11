@@ -13,8 +13,8 @@
 
     return '
     <div class="read-more">
-      <span>Read More</span>
-      <a href="'.$link.'" class="arrow-link" aria-label="Scroll to About Section">
+    <a href="'.$link.'" class="arrow-link" aria-label="Scroll to About Section">
+    <span>Read More</span>
         <i class="fas fa-chevron-down fa-3x"></i>
       </a>
     </div>';

@@ -4,6 +4,7 @@
     *
     * @category   post category to be used in articles
     * @posts      number of articles to render
+    * @order      flex-direction of image/text
     *
   */
   function insert_hero_article( $atts = array()) {
