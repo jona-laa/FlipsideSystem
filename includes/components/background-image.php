@@ -11,7 +11,7 @@
     extract(shortcode_atts(array(
       'color' => null,
     ), $atts));
-
+    
     return '<style>
       body {
         background-image: url("'.get_bloginfo('template_url').'/images/header_bg--'.$color.'.svg")
