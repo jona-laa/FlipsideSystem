@@ -24,7 +24,6 @@
     </svg>
   </a>
 </footer>
-<script src="//code.jquery.com/jquery-latest.js"></script>
 <?php wp_footer(); 
   
 
