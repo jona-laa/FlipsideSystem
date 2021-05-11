@@ -52,15 +52,20 @@
 
         .faq__article-content {
           padding: 0px 30px;
+          background: #fff;
           max-height: 0;
           overflow: hidden;
           transition: max-height 0.3s ease-out;
 
-          .faq__article-content p {
+          p {
             margin-bottom: 20px;
             font-family: 'Poppins';
             color: $darkgray;
             max-width: 620px;
+            a {
+              color: blue;
+              text-decoration: underline;
+            }
           }
         }
       }
