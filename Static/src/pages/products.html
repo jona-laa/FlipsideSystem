@@ -252,10 +252,12 @@
     </a>
   </footer>
   <script src="../js/main.js"></script>
-  <script defer>
+  <!-- Carousel Script -->
+  <script>
     const carouselNav = document.querySelector(".carousel__nav");
     const carouselInner = document.querySelector(".carousel__inner");
     let windowWidth = window.innerWidth;
+    let currentPage;
 
     // Create carousel nav based on number of posts
     function createCarouselNav() {
@@ -289,6 +291,13 @@
     window.onresize = () => {
       window.innerWidth !== windowWidth ? createCarouselNav() : null;
     };
+  </script>
+  <script>
+
+    carouselInner.addEventListener('touchstart', () => {
+      console.log('touched')
+    })
+
   </script>
 </body>
 

@@ -9,7 +9,7 @@ i {
   color: #f2d410;
 }
 
-.read-more {
+.read-more a {
   span {
     font-size: 1.6rem;
   }
@@ -21,4 +21,5 @@ i {
   text-align: center;
   display: flex;
   flex-direction: column;
+  text-decoration: none;
 }

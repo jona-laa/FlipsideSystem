@@ -13,15 +13,16 @@ mainMenu.lastElementChild.firstElementChild.classList += 'btn';
 // Toggle mobile menu
 mainMenuToggle.addEventListener('click', () => {
 
+  // Toggle display and animation
   if (mainMenu.style.display !== 'block') {
     mainMenu.style.display = 'block';
     mainMenu.style.animation = 'slidedown 0.5s ease-out';
   } else {
     mainMenu.style.animation = 'slideup 0.5s ease-out';
-    mainMenu.style.display = 'none';
+    mainMenu.addEventListener('animationend', animationEndCallback);
   }
 
-
+  // Toggle wai-aria
   if (mainMenu.getAttribute('aria-hidden') == 'false') {
     mainMenu.setAttribute('aria-hidden', 'true');
     mainMenuToggle.setAttribute('aria-expanded', 'false');
@@ -31,6 +32,11 @@ mainMenuToggle.addEventListener('click', () => {
   }
 
 })
+
+const animationEndCallback = () => {
+  mainMenu.removeEventListener('animationend', animationEndCallback);
+  mainMenu.style.display = 'none';
+}
 
 
 
