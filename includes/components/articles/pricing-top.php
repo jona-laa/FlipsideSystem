@@ -15,7 +15,7 @@
     ), $atts));
 
     return '<div class="pricing__card-top">
-              <h3 class="pricing__card-heading">' . $title . '</h3>
+              <h2 class="pricing__card-heading">' . $title . '</h2>
               <div class="pricing__card-price">' .
                 $price . '<span class="gray small">/Month</span>
               </div>

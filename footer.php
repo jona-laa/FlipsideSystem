@@ -133,21 +133,41 @@ window.onresize = () => {
 
 if (is_page( 'FAQs' )) { ?>
 <script>
+// Hide faq article links from assistive technology
+window.onload = () => {
+  document.querySelectorAll('.faq__article-content a').forEach(link => {
+    link.setAttribute("aria-hidden", true);
+    link.setAttribute("tabindex", -1);
+  });
+}
+
 window.addEventListener("DOMContentLoaded", (event) => {
   let buttons = document.querySelectorAll("#accordion button");
   buttons.forEach((button) => {
     let content = button.nextElementSibling;
+    const contentId = button.nextElementSibling.id;
+
     button.addEventListener("click", (event) => {
       if (button.classList.contains("active")) {
         button.classList.remove("active");
         button.setAttribute("aria-expanded", false);
         content.style.maxHeight = null;
         content.setAttribute("aria-hidden", true);
+        //Hide faq article links from assistive technology
+        document.querySelectorAll(`#${contentId} a`).forEach(link => {
+          link.setAttribute("aria-hidden", true);
+          link.setAttribute("tabindex", -1);
+        });
       } else {
         button.classList.add("active");
         button.setAttribute("aria-expanded", true);
         content.style.maxHeight = content.scrollHeight + "px";
         content.setAttribute("aria-hidden", false);
+        // Make links accessible for assistive tech
+        document.querySelectorAll(`#${contentId} a`).forEach(link => {
+          link.setAttribute("aria-hidden", false);
+          link.removeAttribute("tabindex");
+        });
       }
     });
   });
