@@ -31,8 +31,9 @@
             the_content();
             
             $output .= '
-            <article class="hero-article ' . $order . '">
-              <figure class="article__figure">' . 
+            <article class="hero-article';
+            $order ? $output .= ' ' .$order . '">' : $output .= '">';
+              $output .= '<figure class="article__figure">' . 
                 get_the_post_thumbnail(null, 'media-medium') . 
               '</figure>
               <div class="article__spacer"></div>

@@ -4,6 +4,7 @@
     *
     * @category   post category to be used in articles
     * @posts      number of articles to render
+    * @id         section id
     *
   */
   function insert_grid_3x( $atts = array()) {
@@ -15,13 +16,10 @@
 
     // Open section and container tags
     $output = '
-    <section ';
+    <section';
+      $id ? $output .= ' id="'. $id .'">' : $output .= '>';
     
-    if($id) {
-      $output .= 'id="'. $id .'"';
-    }
-
-    $output .=  '>
+    $output .=  '
       <div class="container">
         <div class="grid-3x">
       ';

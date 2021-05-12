@@ -25,22 +25,16 @@
     ), $atts));
 
     // Hide or display section heading
-    if (!$headingdisplay) {
-      $headingdisplay = 'none';
-    } else {
-      $headingdisplay = 'block';
-    }
+    !$headingdisplay ? $headingdisplay = 'none' : $headingdisplay = 'block';
 
     // Open section and container tags
     $output = '
     <section 
-      class="--bg-' . $background . '"';
+      style="background: '.$background.'" ';
       
-    if($id) {
-      $output .= 'id="'. $id .'"';
-    }
+    $id ? $output .= 'id="'. $id .'">' : $output .='>';
       
-    $output .= '>
+    $output .= '
       <div class="container">
         <h2 style=" display: '.$headingdisplay.'">'.$heading.'</h2>
       ';
@@ -62,11 +56,12 @@
             the_content();
             
             $output .= '
-            <article class="media-article ' . $order . '">';
+            <article class="media-article';
+              $order ? $output .= ' '.$order.'">' : $output .= '">';
               if($video) { 
                 $output .= 
                   '<video poster="'. get_the_post_thumbnail_url(get_the_ID(),'media-medium') .'" controls>
-                    <source src="'. $video .'" type="video/mp4">
+                    <source src="'.$video.'" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>';
               } else {

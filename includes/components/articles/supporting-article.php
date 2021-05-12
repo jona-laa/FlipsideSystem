@@ -4,6 +4,9 @@
     *
     * @category   post category to be used in articles
     * @posts      number of articles to render
+    * @align      flex row or column
+    * @order      default or reverse image/text order
+    * @id         give section an id
     *
   */
   function insert_supporting_article( $atts = array()) {
@@ -12,7 +15,6 @@
       'posts' => 1,
       'align' => 'row',
       'order' => null,
-      'background' => 'white',
       'id' => null
     ), $atts));
 
@@ -33,10 +35,9 @@
             the_content();
             
             $output = '
-            <div class="supporting-article--'. $align .' '. $order .'" ';
-              if($id) {
-                $output .= 'id="'. $id .'"';
-              }
+            <div class="supporting-article--'. $align;
+              $order ? $output .= ' '. $order.'"' : $output .= '"';
+              $id ? $output .= 'id="'. $id .'"' : null;
               
               $output .= '>
               <figure class="article__figure">' . 

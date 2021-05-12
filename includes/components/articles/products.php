@@ -4,8 +4,10 @@
     *
     * @category   post category to be used in articles
     * @posts      number of articles to render
+    * @order      flex direction reverse or regular
     * @heading    section heading
     * @subheading section sub-heading
+    * @id         section id
     *
   */
   function insert_products( $atts = array()) {
@@ -20,13 +22,11 @@
 
     // Open section and container tags
     $output = '
-    <section class="products" ';
+    <section class="products"';
     
-    if($id) {
-      $output .= 'id="'. $id .'"';
-    }
-    
-    $output .= '>
+    $id ? $output .= ' id="'. $id .'">' : $output .= '>';
+        
+    $output .= '
       <div class="container">
         <h2 class="--center-align">' . $heading . '</h2>
         <span class="sub-h --center-align">' . $subheading . '</span>
@@ -55,8 +55,9 @@
             
             $output .= '
             <div class="product-wrapper">
-              <article class="product-article '.$order.'">
-                <figure class="article__figure">' .
+              <article class="product-article';
+                $order ? $output .= ' ' .$order . '">' : $output .= '">';
+                $output .= '<figure class="article__figure">' .
                   get_the_post_thumbnail(null, 'media-medium') .
                 '</figure>
                 <div class="article__spacer"></div>

@@ -23,21 +23,14 @@
     
     // Open section and container tags
     $output = '
-    <section ';
+    <section';
+      $id ? $output .= ' id="'. $id .'">' : $output .= '>';
     
-    if($id) {
-      $output .= 'id="'. $id .'"';
-    }
-    
-    $output .= '>
-      <div class="container">
-        <h2 class="--center-align">'.$heading.'</h2>';
-
-    if($subheading) { 
-        $output .= '<span class="sub-h --center-align">'.$subheading.'</span>';
-    };    
-        
-
+    $output .= '
+      <div class="container">';
+        $heading ? $output .=  '<h2 class="--center-align">'.$heading.'</h2>' : null;
+        $subheading ? $output .= '<span class="sub-h --center-align">'.$subheading.'</span>' : null;
+      
     // Create WP-query arguments
     $args = array(
         'post_type' => 'post',
@@ -55,8 +48,9 @@
             the_content();
             
             $output .= '
-            <article class="icon-article '. $order .'">
-              <figure class="article__figure">' .
+            <article class="icon-article';
+              $order ? $output .= ' ' .$order . '">' : $output .= '">';
+              $output .= '<figure class="article__figure">' .
                get_the_post_thumbnail(null, 'media-medium') .
               '</figure>
               <div class="article__spacer"></div>

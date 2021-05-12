@@ -20,12 +20,9 @@
     // Open section and container tags
     $output = '
     <section class="testimonials" ';
+      $id ? $output .= 'id="'. $id .'">' : $output .= '>';
     
-    if($id) {
-      $output .= 'id="'. $id .'"';
-    }
-    
-    $output .= '>
+    $output .= '
     <div class="container">
         <h2 class="--center-align">' . $heading . '</h2>
         <span class="sub-h --center-align">' . $subheading . '</span>

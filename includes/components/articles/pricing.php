@@ -16,12 +16,10 @@
     // Open section and container tags
     $output = '
     <section ';
+      $id ? $output .= 'id="'. $id .'">' : $output .= '>';
     
-    if($id) {
-      $output .= 'id="'. $id .'"';
-    }
-    
-    $output .= '><div class="container">
+    $output .= '
+      <div class="container">
         <div class="row-trio">
       ';
 

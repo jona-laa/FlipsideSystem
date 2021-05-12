@@ -21,19 +21,21 @@
     ), $atts));
 
     if ($link) {
-      $output .= '<a href="'.$link.'">';
+      $output .= '<a href="'.$link.'" ';
+    }
+
+    if ($arialabel) {
+      $output .= 'aria-label="' . $arialabel . '"';
+    }
+
+    if ($link) {
+      $output .= '>';
     }
 
     $output .= '
       <i class="'. $name . '" 
         style="font-size:' . $size . '; 
-        color:' . $color . ';"';
-
-    if ($arialabel) {
-      $output .= 'aria-label="' . $arialabel . '"';
-    }
-        
-    $output .= '></i>';
+        color:' . $color . ';"></i>';
 
     if ($link) {
       $output .= '</a>';

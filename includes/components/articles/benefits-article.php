@@ -18,28 +18,22 @@ function insert_benefits_article( $atts = array()) {
     'category' => 'Benefits',
     'posts' => 1,
     'order' => null,
-    'background' => 'white',
+    'background' => '#eb623f1a',
     'heading' => null,
     'headingdisplay' => false,
     'id' => null
   ), $atts));
 
   // Hide or display section heading
-  if (!$headingdisplay) {
-    $headingdisplay = 'none';
-  } else {
-    $headingdisplay = 'block';
-  }
+  !$headingdisplay ? $headingdisplay = 'none' : $headingdisplay = 'block';
 
   // Open section and container tags
   $output = '
-  <section 
-    class="--bg-' . $background . '"';
-  if($id) {
-    $output .= 'id="'. $id .'"';
-  }
+  <section
+    style="background: ' .$background. '" ';
+    $id ? $output .= 'id="'. $id .'">' : $output .= '>';
     
-  $output .= '>
+  $output .= '
     <div class="container">
       <h2 style=" display: '.$headingdisplay.'">'.$heading.'</h2>
     ';
@@ -61,8 +55,9 @@ function insert_benefits_article( $atts = array()) {
           the_content();
 
           $output .= '
-          <article class="benefits-article ' . $order . '">
-            <div class="article__text">' .
+          <article class="benefits-article';
+            $order ? $output .= ' ' .$order . '">' : $output .= '">';
+            $output .= '<div class="article__text">' .
               ob_get_clean() . 
             '</div>
             <div class="article__spacer"></div>' . 

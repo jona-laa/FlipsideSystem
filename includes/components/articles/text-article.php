@@ -7,6 +7,7 @@
     * @background       background color
     * @heading          section heading
     * @headingdisplay   display or hide heading
+    * @id               section id
     *
   */
   function insert_text_article( $atts = array()) {
@@ -20,11 +21,7 @@
     ), $atts));
 
     // Hide or display section heading
-    if (!$headingdisplay) {
-      $headingdisplay = 'none';
-    } else {
-      $headingdisplay = 'block';
-    }
+    !$headingdisplay ? $headingdisplay = 'none' : $headingdisplay = 'block';
 
     // Open section and container tags
     $output = '

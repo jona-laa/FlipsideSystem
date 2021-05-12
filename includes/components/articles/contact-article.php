@@ -4,13 +4,14 @@
     *
     * @category   post category to be used in articles
     * @posts      number of articles to render
+    * @form       wpcf7 form name
+    * @formid     wpcf7 form id
     *
   */
   function insert_contact_article( $atts = array()) {
     extract(shortcode_atts(array(
       'category' => 'Contact Us',
       'posts' => 1,
-      'order' => null,
       'form' => null,
       'formid' => null
     ), $atts));
