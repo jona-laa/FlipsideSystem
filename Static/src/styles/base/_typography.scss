@@ -87,10 +87,11 @@ strong {
   font-size: 1.6rem;
 }
 
-.pricing__card .pricing__card-top h3 {
+.pricing__card .pricing__card-top .pricing__card-heading {
   font-size: 2.8rem;
   font-weight: $SemiBold;
   text-align: center;
+  margin-bottom: 0;
 }
 
 .pricing__card-price {
@@ -108,13 +109,13 @@ strong {
 
 .form__label {
   font-size: 1.6rem;
-  color: $lightgray;
+  color: $darkgray;
   font-weight: $SemiBold;
 }
 
 .form__label--small {
   font-size: 1.4rem;
-  color: $lightgray;
+  color: $darkgray;
   font-weight: $SemiBold;
 }
 
@@ -124,7 +125,7 @@ strong {
 }
 
 .testimonial__bubble p {
-  color: $lightgray;
+  color: $darkgray;
   font-size: 1.6rem;
   font-style: italic;
   line-height: 2.6rem;
