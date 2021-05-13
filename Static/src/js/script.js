@@ -1,3 +1,5 @@
+const toTopBtn = document.querySelector('#goTop');
+
 /* Changes background color of elements depending on window.pageYOffset - Used onscroll
  * @param   {number}    offset     Negative offset on window.screen.height
  * @param   {string}    col1       Color if scrolled > (screen height - offset)

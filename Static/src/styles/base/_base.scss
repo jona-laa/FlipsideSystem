@@ -1,11 +1,24 @@
+/*
+Theme Name: Flipside
+Theme URI:
+Author: Jonathan Laasonen
+Author URI: www.github.com/jona-laa
+Description: Theme for flipsidesystem.com
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: Flipside,
+Text Domain:
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 * {
   box-sizing: border-box;
   color: $black;
   font-family: 'poppins', 'sans-serif';
-  padding: 0;
   margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
 }
 
@@ -90,11 +103,11 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
   border: 0;
   box-sizing: border-box;
   font-size: 62.5%;
+  margin: 0;
+  padding: 0;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -112,13 +125,12 @@ section {
   display: block;
 }
 body {
-  background: $col-bg;
+  background: $col-bg url('./images/header_bg--red.svg') no-repeat;
+  background-position: center -1200px;
+  background-size: 3600px auto;
   line-height: 1.6;
   margin: auto;
   width: 100%;
-  background: url('./images/header_bg--red.svg') no-repeat;
-  background-position: center -1200px;
-  background-size: 3600px auto;
 
   @include maxWidth($bp-mobile) {
     background-position: center -1000px;

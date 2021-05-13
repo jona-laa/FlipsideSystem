@@ -32,7 +32,7 @@ mainMenuToggle.addEventListener('click', () => {
   }
 
 })
-
+// Animation callback - display none on menu after slide up
 const animationEndCallback = () => {
   mainMenu.removeEventListener('animationend', animationEndCallback);
   mainMenu.style.display = 'none';

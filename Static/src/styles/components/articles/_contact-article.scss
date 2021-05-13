@@ -24,6 +24,7 @@
       li {
         font-size: 1.8rem;
         color: $darkgray;
+        font-family: 'poppins';
         margin-bottom: 30px;
 
         @include maxWidth($bp-tablet) {

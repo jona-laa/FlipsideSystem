@@ -1,3 +1,4 @@
+/* text-article typography is written in _text-article.scss */
 a {
   text-decoration: none;
   font-size: 1.8rem;
@@ -44,7 +45,7 @@ p.sup-h,
 span.sup-h {
   font-size: 2.2rem;
   font-weight: $Meduim;
-  color: $lightgray;
+  color: $darkgray;
   line-height: 3rem;
 }
 
@@ -52,7 +53,7 @@ p.sub-h,
 span.sub-h {
   font-size: 2rem;
   font-weight: $Regular;
-  color: $lightgray;
+  color: $darkgray;
   line-height: 2.8rem;
   margin-bottom: 50px;
 }
@@ -111,6 +112,9 @@ strong {
   font-size: 1.6rem;
   color: $darkgray;
   font-weight: $SemiBold;
+  span {
+    font-size: 1.6rem;
+  }
 }
 
 .form__label--small {
@@ -121,7 +125,7 @@ strong {
 
 .form__info-text {
   font-size: 1.4rem;
-  color: $lightgray;
+  color: $darkgray;
 }
 
 .testimonial__bubble p {
@@ -133,7 +137,7 @@ strong {
 }
 
 .testimonial__name,
-.benefits__card-heading {
+.features__card-heading {
   color: $blue;
   font-size: 2rem;
   font-weight: $SemiBold;

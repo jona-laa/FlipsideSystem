@@ -15,7 +15,6 @@
 
     .team__figure {
       max-width: 150px;
-      // width: 100%;
       height: auto;
       clip-path: circle(50%);
       display: flex;
@@ -33,12 +32,6 @@
 
     .team__info {
       text-align: center;
-      .team__name {
-        //
-      }
-      .team__title {
-        //
-      }
     }
   }
 }
