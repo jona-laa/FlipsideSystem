@@ -69,6 +69,7 @@ function themename_custom_logo_setup() {
 
 
 /* Use JS files */
+wp_enqueue_style( 'style', get_stylesheet_uri() );
 wp_enqueue_script( 'script', get_template_directory_uri() . '/js/main.js', array ( 'jquery' ), 1.1, true);
 
 

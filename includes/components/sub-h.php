@@ -3,7 +3,6 @@
     * Generates sub-heading text in gray text
     *
     * @text       Text
-    * @returns    <span class="sub-h"> $text </span>
     *
   */
   function insert_sub_h( $atts = array()) {

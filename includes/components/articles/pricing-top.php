@@ -4,7 +4,6 @@
     *
     * @title      card title
     * @ price     card price
-    * @returns    <div class="pricing__card-top"> $content </div>
     *
   */
   

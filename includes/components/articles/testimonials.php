@@ -6,6 +6,7 @@
     * @posts      number of articles to render
     * @heading    section heading
     * @subheading section sub-heading
+    * @id         section id
     *
   */
   function insert_carousel( $atts = array()) {
@@ -17,11 +18,12 @@
       'id' => null
     ), $atts));
 
-    // Open section and container tags
+    // Open section - optional section id
     $output = '
     <section class="testimonials" ';
       $id ? $output .= 'id="'. $id .'">' : $output .= '>';
     
+    // Open container
     $output .= '
     <div class="container">
         <h2 class="--center-align">' . $heading . '</h2>

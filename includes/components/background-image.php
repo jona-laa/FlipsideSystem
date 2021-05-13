@@ -2,8 +2,7 @@
   /*
     * Inserts background styles
     *
-    * @text       text to style
-    * @returns    <p class="--big-blue"> your text here </p>
+    * @coloe       background image color(red/blue/green)
     *
   */
   

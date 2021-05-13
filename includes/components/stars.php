@@ -3,7 +3,6 @@
     * Generates stars section
     *
     * @text         Text to insert
-    * @returns      <div class=stars">...</div>
     *
   */
   function insert_stars( $atts = array()) {

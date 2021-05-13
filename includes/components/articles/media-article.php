@@ -4,7 +4,7 @@
     *
     * @category         post category to be used in articles
     * @posts            number of articles to render
-    * @order            reverse or regular
+    * @order            flex-direction of image/text(--reverse or --nth-reverse-odd/even)
     * @background       background color
     * @video            video link
     * @heading          section heading
@@ -27,13 +27,13 @@
     // Hide or display section heading
     !$headingdisplay ? $headingdisplay = 'none' : $headingdisplay = 'block';
 
-    // Open section and container tags
+    // Open section - optional section id
     $output = '
     <section 
-      style="background: '.$background.'" ';
+      style="background: '.$background.'" ';    
+      $id ? $output .= 'id="'. $id .'">' : $output .='>';
       
-    $id ? $output .= 'id="'. $id .'">' : $output .='>';
-      
+    // Open container
     $output .= '
       <div class="container">
         <h2 style=" display: '.$headingdisplay.'">'.$heading.'</h2>

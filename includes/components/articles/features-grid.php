@@ -7,7 +7,7 @@
     * @id         section id
     *
   */
-  function insert_grid_3x( $atts = array()) {
+  function insert_features_grid( $atts = array()) {
     extract(shortcode_atts(array(
       'category' => 'Features',
       'posts' => 9,
@@ -39,9 +39,9 @@
             $arr_posts->the_post();
 
             $output .= '
-            <div class="benefits__card grid-3x__item">'
+            <div class="features__card grid-3x__item">'
               . get_the_post_thumbnail(null, 'media-medium') .
-              '<h3 class="benefits__card-heading">' 
+              '<h3 class="features__card-heading">' 
                 . get_the_title() . 
               '</h3>' .
                 get_the_content() . 
@@ -60,5 +60,5 @@
     return $output;
   }
 
-  add_shortcode('grid', 'insert_grid_3x');
+  add_shortcode('features-grid', 'insert_features_grid');
 ?>

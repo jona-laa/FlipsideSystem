@@ -4,7 +4,7 @@
     *
     * @category   post category to be used in articles
     * @posts      number of articles to render
-    * @order      flex-direction of image/text
+    * @order      flex-direction of image/text(--reverse or --nth-reverse-odd/even)
     *
   */
   function insert_hero_article( $atts = array()) {

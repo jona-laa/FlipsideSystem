@@ -3,7 +3,6 @@
     * Generates pricing card bottom div
     *
     * @content    div content
-    * @returns    <div class="pricing__card-bottom"> $content </div>
     *
   */
   

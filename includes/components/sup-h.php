@@ -3,7 +3,6 @@
     * Generates sup-heading text in gray text
     *
     * @text       Text
-    * @returns    <span class="sup-h"> $text </span>
     *
   */
   function insert_sup_h( $atts = array()) {

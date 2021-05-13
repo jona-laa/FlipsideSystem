@@ -3,7 +3,6 @@
     * Generates read more
     *
     * @link       link to id
-    * @returns    <i class="@name" style="font-size: @size; color: @color"></i>
     *
   */
   function insert_read_more( $atts = array()) {

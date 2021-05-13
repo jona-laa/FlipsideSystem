@@ -3,7 +3,6 @@
     * Generates big blue text, e.g used for emphasizing message
     *
     * @text       text to style
-    * @returns    <p class="--big-blue"> your text here </p>
     *
   */
   

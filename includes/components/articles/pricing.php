@@ -4,6 +4,7 @@
     *
     * @category   post category to be used in articles
     * @posts      number of articles to render
+    * @id         section id
     *
   */
   function insert_row_trio( $atts = array()) {
@@ -13,11 +14,12 @@
       'id' => null
     ), $atts));
 
-    // Open section and container tags
+    // Open section - optional section id
     $output = '
     <section ';
       $id ? $output .= 'id="'. $id .'">' : $output .= '>';
     
+    // Open container and row-trio
     $output .= '
       <div class="container">
         <div class="row-trio">

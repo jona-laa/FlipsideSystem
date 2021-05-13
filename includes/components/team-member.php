@@ -2,8 +2,8 @@
   /*
     * Generates sup-heading text in gray text
     *
-    * @text       Text
-    * @returns    <span class="sup-h"> $text </span>
+    * @name       team member name
+    * @title      team member title
     *
   */
   function insert_team_member( $atts = array()) {

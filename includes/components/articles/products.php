@@ -4,7 +4,7 @@
     *
     * @category   post category to be used in articles
     * @posts      number of articles to render
-    * @order      flex direction reverse or regular
+    * @order      flex-direction of image/text(--reverse or --nth-reverse-odd/even)
     * @heading    section heading
     * @subheading section sub-heading
     * @id         section id
@@ -20,12 +20,12 @@
       'id' => null
     ), $atts));
 
-    // Open section and container tags
+    // Open section - optional section id
     $output = '
     <section class="products"';
-    
     $id ? $output .= ' id="'. $id .'">' : $output .= '>';
         
+    // Open container
     $output .= '
       <div class="container">
         <h2 class="--center-align">' . $heading . '</h2>

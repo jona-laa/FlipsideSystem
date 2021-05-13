@@ -2,7 +2,8 @@
 /*
   * Generates section of benefits-items
   *
-  * @category   category of associated article
+  * @category        post category to be used in articles
+  *
 */
 
 function insert_benefits_items($category) {

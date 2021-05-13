@@ -3,6 +3,7 @@
     * Generates section with "our team"
     *
     * @category   post category to be used in articles
+    * @heading    section heading
     * @posts      number of articles to render
     *
   */

@@ -4,7 +4,7 @@
     *
     * @category         post category to be used in articles
     * @posts            number of articles to render
-    * @order            flex-direction of text/icons
+    * @order            flex-direction of image/text(--reverse or --nth-reverse-odd/even)
     * @heading          section heading
     * @subheading       section sub-heading
     * @id               section id
@@ -21,11 +21,12 @@
     ), $atts));
 
     
-    // Open section and container tags
+    // Open section - optional section id
     $output = '
     <section';
       $id ? $output .= ' id="'. $id .'">' : $output .= '>';
     
+    // Open container - optional heading and sub-heading
     $output .= '
       <div class="container">';
         $heading ? $output .=  '<h2 class="--center-align">'.$heading.'</h2>' : null;

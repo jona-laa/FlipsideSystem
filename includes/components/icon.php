@@ -6,7 +6,7 @@
     * @size       CSS supported font size value
     * @color      CSS supported color value, e.g rgb, hex, hsl, or color name.
     * @link       If icon should be link, e.g social media icon
-    * @arialabel  Aria-label
+    * @arialabel  Aria-label for e.g social media icons without text
     *
     * @returns    <i class="@name" style="font-size: @size; color: @color"></i>
     *

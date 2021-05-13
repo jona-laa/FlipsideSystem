@@ -27,12 +27,13 @@ function insert_benefits_article( $atts = array()) {
   // Hide or display section heading
   !$headingdisplay ? $headingdisplay = 'none' : $headingdisplay = 'block';
 
-  // Open section and container tags
+  // Open section - optional id is inserted
   $output = '
   <section
     style="background: ' .$background. '" ';
     $id ? $output .= 'id="'. $id .'">' : $output .= '>';
     
+  // Open container - optional id is inserted  
   $output .= '
     <div class="container">
       <h2 style=" display: '.$headingdisplay.'">'.$heading.'</h2>

@@ -4,9 +4,9 @@
     *
     * @category   post category to be used in articles
     * @posts      number of articles to render
-    * @align      flex row or column
-    * @order      default or reverse image/text order
-    * @id         give section an id
+    * @align      flex row or col
+    * @order      flex-direction of image/text(--reverse or --nth-reverse-odd/even)
+    * @id         section id
     *
   */
   function insert_supporting_article( $atts = array()) {
@@ -26,7 +26,7 @@
         'posts_per_page' => $posts
     );
 
-    // Get posts and create articles
+    // Get posts and create articles - optional order and div id
     $arr_posts = new WP_Query( $args );
     if ($arr_posts->have_posts()) :
         while ($arr_posts->have_posts()) :

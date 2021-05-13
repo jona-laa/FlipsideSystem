@@ -4,9 +4,8 @@
     *
     * @link       Button link
     * @text       Text
-    * @returns    <div class="single-btn">
-                    <a href=" $link " class="single-btn__btn"> $text </a>
-                  </div>
+    * @top        margin top
+    * @bottom     margin bottom
     *
   */
   function insert_single_button( $atts = array()) {
