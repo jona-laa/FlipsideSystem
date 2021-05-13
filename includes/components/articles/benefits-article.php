@@ -1,5 +1,5 @@
 <?php
-include('./wp-content/themes/Flipside/includes/components/articles/benefits-items.php');
+include(get_theme_root() . '/Flipside/includes/components/articles/benefits-items.php');
 
 /*
   * Generates section of benefits-articles. 

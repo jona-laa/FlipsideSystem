@@ -20,26 +20,15 @@
       'arialabel' => null
     ), $atts));
 
-    if ($link) {
-      $output .= '<a href="'.$link.'" ';
-    }
-
-    if ($arialabel) {
-      $output .= 'aria-label="' . $arialabel . '"';
-    }
-
-    if ($link) {
-      $output .= '>';
-    }
+    $link ? $output .= '<a href="'.$link.'">' : null;
 
     $output .= '
       <i class="'. $name . '" 
         style="font-size:' . $size . '; 
-        color:' . $color . ';"></i>';
+        color:' . $color . ';"';
+        $arialabel ? $output .= ' aria-label="'.$arialabel.'"></i>' : $output .= '></i>';
 
-    if ($link) {
-      $output .= '</a>';
-    }
+    $link ? $output .= '</a>' : null;
 
     return $output;
   }
