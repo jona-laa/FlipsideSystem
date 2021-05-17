@@ -2,11 +2,12 @@
   /*
     * Generates sub-heading text in gray text
     *
-    * @link       Button link
-    * @text       Text
-    * @top        margin top
-    * @bottom     margin bottom
+    * @param    string    $link        button link
+    * @param    string    $text        text
+    * @param    string    $top         margin top
+    * @param    string    $bottom      margin bottom
     *
+    * @return   html      html div-element
   */
   function insert_single_button( $atts = array()) {
     extract(shortcode_atts(array(

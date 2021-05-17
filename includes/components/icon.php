@@ -2,13 +2,13 @@
   /*
     * Generates font-awesome icon
     *
-    * @name       Font-Aweseome icon name, e.g fab fa-php
-    * @size       CSS supported font size value
-    * @color      CSS supported color value, e.g rgb, hex, hsl, or color name.
-    * @link       If icon should be link, e.g social media icon
-    * @arialabel  Aria-label for e.g social media icons without text
+    * @param    string    $name               Font-Aweseome icon name, e.g fab fa-php
+    * @param    string    $size               CSS supported font-size value
+    * @param    string    $color              CSS supported color value, e.g rgb, hex, hsl, or color name.
+    * @param    string    $link               Link href, if icon should be link, e.g social media icon
+    * @param    string    $arialabel          Aria-label for e.g social media icons without text
     *
-    * @returns    <i class="@name" style="font-size: @size; color: @color"></i>
+    * @return   string    $output             html
     *
   */
   function insert_fa_icon( $atts = array()) {

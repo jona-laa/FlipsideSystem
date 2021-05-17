@@ -1,11 +1,12 @@
 <?php
   /*
-    * Generates section of image-articles. 
+    * Generates a "hero" article. Similar to media article, but wider on tablet.
     *
-    * @category   post category to be used in articles
-    * @posts      number of articles to render
-    * @order      flex-direction of image/text(--reverse or --nth-reverse-odd/even)
+    * @param    string    $category        post category
+    * @param    int       $posts           number of posts
+    * @param    string    $order           flex-order(e.g --reverse)
     *
+    * @return   string    $output          html
   */
   function insert_hero_article( $atts = array()) {
     extract(shortcode_atts(array(

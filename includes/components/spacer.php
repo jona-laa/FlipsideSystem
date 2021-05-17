@@ -2,8 +2,9 @@
   /*
     * Generates space between elements
     *
-    * @gap        Gap in pixels
+    * @param    int/string    gap        gap in pixels
     *
+    * @return   html      html div-element
   */
   function insert_vertical_spacer( $atts = array()) {
     extract(shortcode_atts(array(

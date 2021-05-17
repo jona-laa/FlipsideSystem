@@ -2,9 +2,10 @@
   /*
     * Generates pricing card top div
     *
-    * @title      card title
-    * @ price     card price
+    * @param    string    $title        card title
+    * @param    string    $price        card price
     *
+    * @return   string    $output       html
   */
   
   function insert_pricing_top( $atts, $content = null) {

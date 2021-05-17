@@ -2,22 +2,23 @@
   /*
     * Generates section of articles with video or image and text
     *
-    * @category         post category to be used in articles
-    * @posts            number of articles to render
-    * @order            flex-direction of image/text(--reverse or --nth-reverse-odd/even)
-    * @background       background color
-    * @video            video link
-    * @heading          section heading
-    * @headingdisplay   display or hide heading
-    * @id               section id
+    * @param    string    $category              post category
+    * @param    int       $posts                 number of posts
+    * @param    string    $order                 flex-order(e.g --reverse)
+    * @param    string    $background            background color
+    * @param    string    $video                 video link
+    * @param    string    $heading               section heading
+    * @param    bool      $headingdisplay        display or hide heading
+    * @param    string    $id                    section id
     *
+    * @return   string    $output                html
   */
   function insert_media_article( $atts = array()) {
     extract(shortcode_atts(array(
       'category' => 'Usage Info',
       'posts' => 1,
       'order' => null,
-      'background' => 'white',
+      'background' => 'transparent',
       'video' => null,
       'heading' => null,
       'headingdisplay' => false,

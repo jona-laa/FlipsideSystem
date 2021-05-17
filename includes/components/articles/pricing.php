@@ -1,11 +1,12 @@
 <?php
   /*
-    * Generates section with rows of three
+    * Generates section with row of three pricing cards
     *
-    * @category   post category to be used in articles
-    * @posts      number of articles to render
-    * @id         section id
+    * @param    string    $category        post category
+    * @param    int       $posts           number of posts
+    * @param    string    $id              section id
     *
+    * @return   string    $output          html
   */
   function insert_row_trio( $atts = array()) {
     extract(shortcode_atts(array(

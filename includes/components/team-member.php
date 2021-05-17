@@ -2,9 +2,10 @@
   /*
     * Generates sup-heading text in gray text
     *
-    * @name       team member name
-    * @title      team member title
+    * @param    string    $name         team member name
+    * @param    string    $title        team member title
     *
+    * @return   html      html p-elements
   */
   function insert_team_member( $atts = array()) {
     extract(shortcode_atts(array(

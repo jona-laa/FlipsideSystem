@@ -1,13 +1,16 @@
 <?php
   /*
-    * Generates section of image-articles. 
+    * Generates section of supporting content
     *
-    * @category   post category to be used in articles
-    * @posts      number of articles to render
-    * @align      flex row or col
-    * @order      flex-direction of image/text(--reverse or --nth-reverse-odd/even)
-    * @id         section id
-    *
+    * @param    string    $category              post category
+    * @param    int       $posts                 number of posts
+    * @param    string    $align                 flex-direction(row/col)
+    * @param    string    $order                 flex-direction
+    * @param    string    $heading               section heading
+    * @param    bool      $headingdisplay        display or hide heading
+    * @param    string    $id                    section id
+    * 
+    * @return   string    $output               html
   */
   function insert_supporting_article( $atts = array()) {
     extract(shortcode_atts(array(

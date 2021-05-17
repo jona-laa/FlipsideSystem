@@ -2,12 +2,14 @@
   /*
     * Generates section with articles containing an icon as image 200x200
     *
-    * @category         post category to be used in articles
-    * @posts            number of articles to render
-    * @order            flex-direction of image/text(--reverse or --nth-reverse-odd/even)
-    * @heading          section heading
-    * @subheading       section sub-heading
-    * @id               section id
+    * @param    string    $category          post category
+    * @param    int       $posts             number of posts
+    * @param    string    $order             flex-order(e.g --reverse)
+    * @param    string    $heading           section heading
+    * @param    string    $subheading        display or hide heading
+    * @param    string    $id                section id
+    * 
+    * @return   string    $output            html
     *
   */
   function insert_icon_article( $atts = array()) {

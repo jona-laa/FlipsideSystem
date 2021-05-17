@@ -1,13 +1,15 @@
 <?php
   /*
-    * Generates section of articles with video or image and text
+    * Generates section of articles with text only
     *
-    * @category         post category to be used in articles
-    * @posts            number of articles to render
-    * @background       background color
-    * @heading          section heading
-    * @headingdisplay   display or hide heading
-    * @id               section id
+    * @param    string    $category              post category
+    * @param    int       $posts                 number of posts
+    * @param    string    $background            background color
+    * @param    string    $heading               section heading
+    * @param    bool      $headingdisplay        display or hide heading
+    * @param    string    $id                    section id
+    * 
+    * @return   string    $output               html
     *
   */
   function insert_text_article( $atts = array()) {

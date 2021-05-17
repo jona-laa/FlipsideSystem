@@ -1,7 +1,7 @@
 <?php
 /* 
-  This file consists of includes of custom short codes, made to be used as components in page and/or post editor. 
-  All components are kept separate in folder components.
+  Includes of custom short codes. 
+  All components are kept separate in folder ./components
 */
 
 // Post components 

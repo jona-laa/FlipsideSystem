@@ -4,14 +4,15 @@ include(get_theme_root() . '/Flipside/includes/components/articles/benefits-item
 /*
   * Generates section of benefits-articles. 
   *
-  * @category         post category to be used in articles
-  * @posts            number of articles to render
-  * @order            flex-direction of text/icons
-  * @background       background color (pink, blue-figure)
-  * @heading          section heading
-  * @headingdisplay   display or hide heading
-  * @id               section id
-  *
+  * @param    string    $category              post category
+  * @param    int       $posts                 number of posts
+  * @param    string    $order                 flex-order(e.g --reverse)
+  * @param    string    $background            background color
+  * @param    string    $heading               section heading
+  * @param    bool      $headingdisplay        display or hide heading
+  * @param    string    $id                    section id
+  * 
+  * @return   string    $output                html
 */
 function insert_benefits_article( $atts = array()) {
   extract(shortcode_atts(array(

@@ -1,10 +1,12 @@
 <?php
   /*
-    * Generates section with a 3x grid for shorter articles, e.g features
+    * Generates section with a 3x3 grid for features
     *
-    * @category   post category to be used in articles
-    * @posts      number of articles to render
-    * @id         section id
+    * @param    string    $category        post category
+    * @param    int       $posts           number of posts
+    * @param    string    $id              section id
+    *
+    * @return  string     $output          html 
     *
   */
   function insert_features_grid( $atts = array()) {

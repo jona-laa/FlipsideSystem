@@ -2,10 +2,11 @@
   /*
     * Generates section with "our team"
     *
-    * @category   post category to be used in articles
-    * @heading    section heading
-    * @posts      number of articles to render
+    * @param    string    $category        post category
+    * @param    int       $posts           number of posts
+    * @param    string    $heading         section heading
     *
+    * @return   string    $output          html
   */
   function insert_team( $atts = array()) {
     extract(shortcode_atts(array(

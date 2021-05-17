@@ -2,11 +2,13 @@
   /*
     * Generates carousel with testimonials
     *
-    * @category   post category to be used in articles
-    * @posts      number of articles to render
-    * @heading    section heading
-    * @subheading section sub-heading
-    * @id         section id
+    * @param    string    $category              post category
+    * @param    int       $posts                 number of posts
+    * @param    string    $heading               section heading
+    * @param    bool      $headingdisplay        display or hide heading
+    * @param    string    $id                    section id
+    * 
+    * @return   string    $output               html
     *
   */
   function insert_carousel( $atts = array()) {

@@ -1,14 +1,15 @@
 <?php
   /*
-    * Generates carousel with testimonials
+    * Generates carousel with products
     *
-    * @category   post category to be used in articles
-    * @posts      number of articles to render
-    * @order      flex-direction of image/text(--reverse or --nth-reverse-odd/even)
-    * @heading    section heading
-    * @subheading section sub-heading
-    * @id         section id
-    *
+    * @param    string    $category          post category
+    * @param    int       $posts             number of posts
+    * @param    string    $order             flex-direction
+    * @param    string    $heading           section heading
+    * @param    string    $subheading        display or hide heading
+    * @param    string    $id                section id
+    * 
+    * @return   string    $output            html
   */
   function insert_products( $atts = array()) {
     extract(shortcode_atts(array(

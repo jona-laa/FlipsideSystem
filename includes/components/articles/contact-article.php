@@ -2,11 +2,12 @@
   /*
     * Generates section with a contact form article
     *
-    * @category   post category to be used in articles
-    * @posts      number of articles to render
-    * @form       wpcf7 form name
-    * @formid     wpcf7 form id
+    * @param    string    $category        post category
+    * @param    int       $posts           number of posts
+    * @param    string    $form            wpcf7 form name
+    * @param    int       @formid          wpcf7 form id
     *
+    * @return   string    $output          html
   */
   function insert_contact_article( $atts = array()) {
     extract(shortcode_atts(array(

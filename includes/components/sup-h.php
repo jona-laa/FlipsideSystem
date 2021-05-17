@@ -1,9 +1,10 @@
 <?php
   /*
-    * Generates sup-heading text in gray text
+    * Generates smaller text above heading in gray
     *
     * @text       Text
     *
+    * @return   html      html p-element
   */
   function insert_sup_h( $atts = array()) {
     extract(shortcode_atts(array(

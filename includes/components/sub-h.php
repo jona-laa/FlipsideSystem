@@ -1,9 +1,10 @@
 <?php
   /*
-    * Generates sub-heading text in gray text
+    * Generates smaller text below heading in gray
     *
-    * @text       Text
+    * @param    string    $text        text
     *
+    * @return   html      html p-element
   */
   function insert_sub_h( $atts = array()) {
     extract(shortcode_atts(array(

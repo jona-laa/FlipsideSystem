@@ -2,10 +2,11 @@
   /*
     * Generates section with FAQs
     *
-    * @category   post category to be used
-    * @posts      number of articles to render
-    * @heading    section heading
+    * @param    string    $category        post category
+    * @param    int       $posts           number of posts
+    * @param    string    $heading         section heading
     *
+    * @return  string     $output          html  
   */
   function insert_faq( $atts = array()) {
     extract(shortcode_atts(array(

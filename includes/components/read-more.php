@@ -1,9 +1,10 @@
 <?php
   /*
-    * Generates read more
+    * Generates read more link
     *
-    * @link       link to id
+    * @param    string    $link        link to section id
     *
+    * @return   string    html div-element
   */
   function insert_read_more( $atts = array()) {
     extract(shortcode_atts(array(

@@ -2,8 +2,9 @@
   /*
     * Generates pricing card bottom div
     *
-    * @content    div content
+    * @param    mixed    $content        shortcode content. 
     *
+    * @return  string    $output         html
   */
   
   function insert_pricing_bottom( $atts, $content = null) {
