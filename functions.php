@@ -2,7 +2,7 @@
 include(get_theme_root() . '/Flipside/includes/component-shortcodes.php');
 
 
-/* Registrera meny */
+/* Register menus */
 add_action('init', 'register_my_menus');
 
 function register_my_menus() {
@@ -17,9 +17,6 @@ function register_my_menus() {
 /* Thumbnail Support */
 add_theme_support('post-thumbnails');
 add_image_size('media-medium', 650);
-// set_post_thumbnail_size(300);
-// add_image_size('media-thumb', 300);
-// add_image_size('media-big', 1200);
 
 
 
@@ -66,8 +63,7 @@ function themename_custom_logo_setup() {
 
 
 
-/* Use JS files */
-// wp_enqueue_style( 'style', get_stylesheet_uri() );
+/* Use theme JS files */
 wp_enqueue_script( 'script', get_template_directory_uri() . '/js/main.js', array ( 'jquery' ), 1.1, true);
 
 

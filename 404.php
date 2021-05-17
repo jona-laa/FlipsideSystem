@@ -1,17 +1,22 @@
-<?php get_header(); 
+<?php 
+/* 
+  * Template for 404 - Content not found
+*/
+get_header(); 
 
-      $args = array(
-        'post_type' => 'post',
-        'post_status' => 'publish',
-        'category_name' => '404',
-        'posts_per_page' => 1,
-      );
-      
-      $arr_posts = new WP_Query( $args );
-      
-      if ($arr_posts->have_posts()) :
-        while ($arr_posts->have_posts()) :
-          $arr_posts->the_post(); ?>
+$args = array(
+  'post_type' => 'post',
+  'post_status' => 'publish',
+  'category_name' => '404',
+  'posts_per_page' => 1,
+);
+
+$arr_posts = new WP_Query( $args );
+
+if ($arr_posts->have_posts()) :
+  while ($arr_posts->have_posts()) :
+    $arr_posts->the_post(); 
+?>
 
 <section>
   <h1><?php the_title()?></h1>
@@ -29,7 +34,8 @@
 </section>
 
 <?php
-        endwhile;
-        wp_reset_postdata();
-      endif;
-get_footer(); ?>
+  endwhile;
+  wp_reset_postdata();
+endif;
+get_footer(); 
+?>
