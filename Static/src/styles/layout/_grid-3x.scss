@@ -9,6 +9,10 @@
     padding: 30px 20px;
     width: 33%;
 
+    &:hover {
+      box-shadow: 0px 1px 19px rgb(243, 243, 243);
+    }
+
     @include minWidth($bp-tablet + 1) {
       &:nth-of-type(1n) {
         border-left: none;

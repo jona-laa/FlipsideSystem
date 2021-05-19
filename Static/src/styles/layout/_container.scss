@@ -10,6 +10,6 @@
 
 @include maxWidth($bp-mobile) {
   .container {
-    @include container(75px, 20px);
+    @include container(50px, 20px);
   }
 }

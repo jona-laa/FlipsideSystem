@@ -303,7 +303,7 @@ strong {
   h1 {
     font-size: 3.2rem;
     line-height: 4rem;
-    margin-bottom: -40px;
+    margin-bottom: -10px;
   }
 
   h2 {
@@ -379,6 +379,13 @@ strong {
     font-size: 2rem;
     font-weight: $SemiBold;
     color: $black;
+  }
+
+  .footer__links {
+    a {
+      font-size: 1.8rem;
+      color: black;
+    }
   }
 
   .btn {

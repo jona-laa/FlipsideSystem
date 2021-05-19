@@ -1,16 +1,31 @@
-// Toggle mobile menu
+/**
+ * Mobile menu toggle button
+ * @type {HTMLElement}
+ */
 const mainMenuToggle = document.querySelector('#nav__menu-toggle');
+/**
+ * Main menu <ul>
+ * @type {HTMLElement}
+ */
 const mainMenu = document.querySelector('.menu');
+/**
+ * Header navigation tag <nav>
+ * @type {HTMLElement}
+ */
 const nav = document.querySelector('.nav');
 
 
 
-// Give last menu link button appearance
+/**
+ * Give last menu link button appearance
+ */
 mainMenu.lastElementChild.firstElementChild.classList += 'btn';
 
 
 
-// Toggle mobile menu
+/**
+ * Toggle mobile menu and change aria-hidden/expanded
+ */
 mainMenuToggle.addEventListener('click', () => {
 
   // Toggle display and animation
@@ -32,7 +47,9 @@ mainMenuToggle.addEventListener('click', () => {
   }
 
 })
-// Animation callback - display none on menu after slide up
+/**
+ * Animation callback - adds display: 'none' on menu after slide up
+ */
 const animationEndCallback = () => {
   mainMenu.removeEventListener('animationend', animationEndCallback);
   mainMenu.style.display = 'none';
@@ -40,7 +57,9 @@ const animationEndCallback = () => {
 
 
 
-// Hide Header on scroll
+/**
+ * Hide Header on scroll
+ */
 let prevScrollpos = window.pageYOffset;
 
 const hideMenu = () => {
@@ -74,7 +93,9 @@ const hideMenu = () => {
 
 
 
-// Correct WAI-ARIA on resize
+/**
+ * Corrects menu WAI-ARIA on resize
+ */
 window.onresize = () => {
   if (window.innerWidth <= 850) {
     mainMenu.style.display = 'none';
@@ -90,7 +111,9 @@ window.onresize = () => {
 
 
 
-// Set WAI-ARIA on page load
+/**
+ * Set correct WAI-ARIA on page load, depending on screen size
+ */
 window.onload = () => {
   if (window.innerWidth <= 850) {
     mainMenuToggle.setAttribute('aria-hidden', 'false');
