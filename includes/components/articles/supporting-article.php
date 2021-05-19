@@ -1,5 +1,5 @@
 <?php
-  /*
+  /**
     * Generates section of supporting content
     *
     * @param    string    $category              post category
@@ -11,7 +11,7 @@
     * @param    string    $id                    section id
     * 
     * @return   string    $output               html
-  */
+    */
   function insert_supporting_article( $atts = array()) {
     extract(shortcode_atts(array(
       'category' => 'Usage Info',

@@ -1,5 +1,5 @@
 <?php
-  /*
+  /**
     * Generates font-awesome icon
     *
     * @param    string    $name               Font-Aweseome icon name, e.g fab fa-php
@@ -10,7 +10,7 @@
     *
     * @return   string    $output             html
     *
-  */
+    */
   function insert_fa_icon( $atts = array()) {
     extract(shortcode_atts(array(
       'name' => 'fas fa-check',

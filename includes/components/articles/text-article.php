@@ -1,5 +1,5 @@
 <?php
-  /*
+  /**
     * Generates section of articles with text only
     *
     * @param    string    $category              post category
@@ -11,7 +11,7 @@
     * 
     * @return   string    $output               html
     *
-  */
+    */
   function insert_text_article( $atts = array()) {
     extract(shortcode_atts(array(
       'category' => null,

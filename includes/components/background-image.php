@@ -1,11 +1,11 @@
 <?php
-  /*
+  /**
     * Can be used to change background image color(red/blue/green)
     *
     * @param    string    $color        background image color(red/blue/green)
     *
     * @return   string    html style-element
-  */
+    */
   
   function insert_background_image( $atts = array()) {
     extract(shortcode_atts(array(

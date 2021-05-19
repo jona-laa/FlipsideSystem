@@ -1,5 +1,5 @@
 <?php
-  /*
+  /**
     * Generates carousel with products
     *
     * @param    string    $category          post category
@@ -10,7 +10,7 @@
     * @param    string    $id                section id
     * 
     * @return   string    $output            html
-  */
+    */
   function insert_products( $atts = array()) {
     extract(shortcode_atts(array(
       'category' => 'Products',

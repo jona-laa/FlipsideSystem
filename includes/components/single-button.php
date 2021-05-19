@@ -1,5 +1,5 @@
 <?php
-  /*
+  /**
     * Generates sub-heading text in gray text
     *
     * @param    string    $link        button link
@@ -8,7 +8,7 @@
     * @param    string    $bottom      margin bottom
     *
     * @return   html      html div-element
-  */
+    */
   function insert_single_button( $atts = array()) {
     extract(shortcode_atts(array(
       'link' => '#',

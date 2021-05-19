@@ -1,8 +1,8 @@
 <?php
-/* 
-  Includes of custom short codes. 
-  All components are kept separate in folder ./components
-*/
+/** 
+  * Includes of custom short codes. 
+  * All components are kept separate in folder ./components
+  */
 
 // Post components 
 include(get_theme_root() . '/Flipside/includes/components/icon.php');

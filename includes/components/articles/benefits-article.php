@@ -1,7 +1,7 @@
 <?php
 include(get_theme_root() . '/Flipside/includes/components/articles/benefits-items.php');
 
-/*
+/**
   * Generates section of benefits-articles. 
   *
   * @param    string    $category              post category
@@ -13,7 +13,7 @@ include(get_theme_root() . '/Flipside/includes/components/articles/benefits-item
   * @param    string    $id                    section id
   * 
   * @return   string    $output                html
-*/
+  */
 function insert_benefits_article( $atts = array()) {
   extract(shortcode_atts(array(
     'category' => 'Benefits',

@@ -1,5 +1,5 @@
 <?php
-  /*
+  /**
     * Generates section with a contact form article
     *
     * @param    string    $category        post category
@@ -8,7 +8,7 @@
     * @param    int       @formid          wpcf7 form id
     *
     * @return   string    $output          html
-  */
+    */
   function insert_contact_article( $atts = array()) {
     extract(shortcode_atts(array(
       'category' => 'Contact Us',

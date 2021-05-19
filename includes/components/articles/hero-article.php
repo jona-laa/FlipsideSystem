@@ -1,5 +1,5 @@
 <?php
-  /*
+  /**
     * Generates a "hero" article. Similar to media article, but wider on tablet.
     *
     * @param    string    $category        post category
@@ -7,7 +7,7 @@
     * @param    string    $order           flex-order(e.g --reverse)
     *
     * @return   string    $output          html
-  */
+    */
   function insert_hero_article( $atts = array()) {
     extract(shortcode_atts(array(
       'category' => 'Home Hero',

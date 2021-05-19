@@ -1,5 +1,5 @@
 <?php
-  /*
+  /**
     * Generates section with FAQs
     *
     * @param    string    $category        post category
@@ -7,7 +7,7 @@
     * @param    string    $heading         section heading
     *
     * @return  string     $output          html  
-  */
+    */
   function insert_faq( $atts = array()) {
     extract(shortcode_atts(array(
       'category' => 'FAQs',

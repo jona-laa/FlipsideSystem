@@ -1,5 +1,5 @@
 <?php
-  /*
+  /**
     * Generates carousel with testimonials
     *
     * @param    string    $category              post category
@@ -10,7 +10,7 @@
     * 
     * @return   string    $output               html
     *
-  */
+    */
   function insert_carousel( $atts = array()) {
     extract(shortcode_atts(array(
       'category' => 'Testimonials',

@@ -1,5 +1,5 @@
 <?php
-  /*
+  /**
     * Generates section with "our team"
     *
     * @param    string    $category        post category
@@ -7,7 +7,7 @@
     * @param    string    $heading         section heading
     *
     * @return   string    $output          html
-  */
+    */
   function insert_team( $atts = array()) {
     extract(shortcode_atts(array(
       'category' => 'Our Team',

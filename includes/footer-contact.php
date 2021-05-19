@@ -1,9 +1,9 @@
 <div class="footer__contact">
 
   <?php
-  /* 
+  /** 
     * Renders contact section in footer
-  */
+    */
   $args = array(
       'post_type' => 'post',
       'post_status' => 'publish',

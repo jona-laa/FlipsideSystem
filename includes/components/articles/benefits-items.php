@@ -1,11 +1,11 @@
 <?php
-/*
+/**
   * Generates benefits-items that are featured in benefits-articles
   *
   * @param    string    $category          post category
   *
   * @return   string    $output            html
-*/
+  */
 
 function insert_benefits_items($category) {
   $output = '

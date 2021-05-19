@@ -1,5 +1,5 @@
 <?php
-  /*
+  /**
     * Generates section with row of three pricing cards
     *
     * @param    string    $category        post category
@@ -7,7 +7,7 @@
     * @param    string    $id              section id
     *
     * @return   string    $output          html
-  */
+    */
   function insert_row_trio( $atts = array()) {
     extract(shortcode_atts(array(
       'category' => 'Pricing',

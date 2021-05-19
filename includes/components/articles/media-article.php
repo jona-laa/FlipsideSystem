@@ -1,5 +1,5 @@
 <?php
-  /*
+  /**
     * Generates section of articles with video or image and text
     *
     * @param    string    $category              post category
@@ -12,7 +12,7 @@
     * @param    string    $id                    section id
     *
     * @return   string    $output                html
-  */
+    */
   function insert_media_article( $atts = array()) {
     extract(shortcode_atts(array(
       'category' => 'Usage Info',

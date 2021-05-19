@@ -1,12 +1,12 @@
 <?php
-  /*
+  /**
     * Generates pricing card top div
     *
     * @param    string    $title        card title
     * @param    string    $price        card price
     *
     * @return   string    $output       html
-  */
+    */
   
   function insert_pricing_top( $atts, $content = null) {
     extract(shortcode_atts(array(

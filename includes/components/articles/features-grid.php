@@ -1,5 +1,5 @@
 <?php
-  /*
+  /**
     * Generates section with a 3x3 grid for features
     *
     * @param    string    $category        post category
@@ -8,7 +8,7 @@
     *
     * @return  string     $output          html 
     *
-  */
+    */
   function insert_features_grid( $atts = array()) {
     extract(shortcode_atts(array(
       'category' => 'Features',

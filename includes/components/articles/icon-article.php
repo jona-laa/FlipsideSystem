@@ -1,5 +1,5 @@
 <?php
-  /*
+  /**
     * Generates section with articles containing an icon as image 200x200
     *
     * @param    string    $category          post category
@@ -11,7 +11,7 @@
     * 
     * @return   string    $output            html
     *
-  */
+    */
   function insert_icon_article( $atts = array()) {
     extract(shortcode_atts(array(
       'category' => 'Products',
