@@ -40,7 +40,7 @@
             $output = '
             <div class="supporting-article--'. $align;
               $order ? $output .= ' '. $order.'"' : $output .= '"';
-              $id ? $output .= 'id="'. $id .'"' : null;
+              $id ? $output .= ' id="'. $id .'"' : null;
               
               $output .= '>
               <figure class="article__figure">' . 

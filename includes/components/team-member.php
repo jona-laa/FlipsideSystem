@@ -1,6 +1,6 @@
 <?php
   /**
-    * Generates sup-heading text in gray text
+    * Generates team member for section "our team"
     *
     * @param    string    $name         team member name
     * @param    string    $title        team member title

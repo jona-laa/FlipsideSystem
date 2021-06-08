@@ -60,5 +60,5 @@
     return $output;
   }
 
-  add_shortcode('row-trio', 'insert_row_trio');
+  add_shortcode('pricing', 'insert_row_trio');
 ?>

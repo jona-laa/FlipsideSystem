@@ -61,7 +61,7 @@
               $order ? $output .= ' '.$order.'">' : $output .= '">';
               if($video) { 
                 $output .= 
-                  '<video poster="'. get_the_post_thumbnail_url(get_the_ID(),'media-medium') .'" controls>
+                  '<video preload="none" poster="'. get_the_post_thumbnail_url(get_the_ID(),'media-medium') .'" controls>
                     <source src="'.$video.'" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>';

@@ -5,7 +5,7 @@
     * @param    string    $category              post category
     * @param    int       $posts                 number of posts
     * @param    string    $heading               section heading
-    * @param    bool      $headingdisplay        display or hide heading
+    * @param    string    $subheading            section subheading
     * @param    string    $id                    section id
     * 
     * @return   string    $output               html
